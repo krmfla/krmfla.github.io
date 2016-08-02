@@ -2,343 +2,199 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0 user-scalable=no" name="viewport"/>
-    <script src="data.js"></script>
-    <title>JSFiddle</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>krmfla collection</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <style>
         /* Reset */
-        body, h1, h2, p, ul, li {
+        body, h1, h2, p {
             margin: 0;
             padding: 0;
         }
-      
+        
         /* Basic Element */
-        body {
-            background:#F2FBFF;
-            font-size:0;
-            font-family:"sans-serif";
-        }
-        
-        .header {
-            width:100%;
-            overflow:hidden;
-            background:#333335;
-        }
-        
-        .headerSection {
-            width:100%;
-            height:40px;
-            max-width:990px;
-            margin:0 auto;
-            overflow:hidden;
-            background:#1C90F3;
-            color:white;
-            font-size:16px;
-            line-height:40px;
-            position:relative;
-        }
-        
-        .header p {
-          text-align:center;
-          text-shadow:1px 1px 3px #666;
-        }
-        
-        .functionBtn {
-          height:40px;
-          position:absolute;
-          top:0;
-          left:0;
-          padding:0 20px;
-          border-right:1px solid white;
-          z-index:2;
-          background:#0A7DE1;
-          display:none;
-        }
-        
-        .functionBtn.active {
-          background:#F70458;
-        }
-        
-        .main {
-            width:100%;
-            max-width:990px;
-            overflow:auto;
-            margin:0 auto;
-            position:relative;
-            box-shadow:0 0px 6px gray;
-        }
-        
-        .navigation {
-            width:25%;
-            height:500px;
-            background:#252527;
-            position:absolute;
-            top:0;
-            left:0;
-            overflow-x:hidden;
-        }
-        
-        .navigation ul {
-            color:white;
-            font-size:16px;
-        }
-        
-        .navigation li {
-            border-top:2px solid #2D2D2F;
-            border-bottom:1px solid #19191B;
+        h1 {
+            font-size: 28px;
+            background: -webkit-linear-gradient(top,#55ABDD,#509DCC);
             padding:10px;
-            text-align:left;
-            text-overflow: ellipsis;
-        	  overflow: hidden;
-        	  white-space: nowrap;
-        	  cursor:default;
+            color: white;
+            text-shadow:1px 1px 6px gray;
+            border-bottom:2px solid #3D79A1;
+            box-shadow:0 2px 2px #3D79A1;
         }
         
-        .navigation li:hover {
-            background:#4A4A4E;
+        h2 {
+             font-size: 24px;
+             padding:10px 10px 0px;
+             color:#333;
         }
         
-        .navigation li.active {
-            background:#F3F5F6;
-            color:#333;
-        }
+        /* Basic Layout */
+         body {
+             background-color: #C7C7C7;
+             font-family: sans-serif;
+             letter-spacing:1px;
+         }
+         
+         .page {
+             width: 100%;
+             max-width: 980px;
+             background-color: #EDEDED;
+             box-shadow: 0 0 6px gray;
+             overflow: hidden;
+             margin: 0 auto;
+         }
+         
+         article {
+             width:98%;
+             margin:5px auto;
+             overflow:hidden;
+             padding:10px 0;
+         }
+         
+         hr {
+             border-bottom:2px solid white;
+             width:95%;
+         }
+         
+         
+         /* Content */
+         section {
+             width: 47%;
+             margin: 10px;
+             background-color: white;
+             box-shadow: 0 2px 4px gray;
+             border-radius: 5px;
+             overflow: hidden;
+             float: left;
+             position:relative;
+             font-size:0;
+             cursor:pointer;
+             display:inline-block;
+         }
         
-        .navigation li::before {
-            content:'';
-            width:30px;
-            padding:2px 0;
-            text-align:center;
-            font-size:10px;
-            color:white;
-            margin:-5px 5px 0 0;
-            display:inline-block;
+         section p {
+             font-size:22px;
+             text-align:center;
+             padding-top:10px;
+             padding-bottom:10px;
+             color:#333;
+             text-shadow:1px 1px 4px gray;
+             overflow:hidden;
+             white-space: nowrap;
+             text-overflow: ellipsis; 
+             background:#CACACA;
+             margin-top:10px;
+         }
+         
+        section:hover {
+             background:#43DCDC;
+         }
+         
+         section:hover p {
+             color:white;
+             background:#2CB9B9;
+         }
+         
+         
+         figure {
+             width:94%;
+             overflow:hidden;
+             margin:0 auto;
+             position:absolute;
+             top:10px;
+             left:0;
+             right:0;
+             border:4px solid white;
+         }
+         
+         @media (max-width: 720px) {
+            section {
+                width:100%;
+                margin: 10px 0; 
+                display:block;
+            }
             
         }
-
-        .navigation li.style_css::before {
-            content:'css';
-            background:#5BA009;
-        }
         
-        .navigation li.style_js::before {
-            content:'JS';
-            background:#E5A228;
+        #tabs {
+            overflow:hidden;
         }
-        
-        .navigation li.style_react::before {
-            content:'React';
-            background:#006EB9;
-        }
-        
-        .navigation li.style_mix::before {
-            content:'mix';
-            background:#F70458;
-            
-        }
-        
-        .navigation li.style_ui::before {
-            content:'UI';
-            background:#52B4AF;
-        }
-        
-        .navigation li.style_test::before {
-            content:'test';
-            background:#CC91D8;
-        }
-        
-        .content {
-            width:75%;
-            height:500px;
-            background:white;
-            margin-left:25%;
-            background-image:url('demo.png');
-            background-size:50%;
-            background-repeat:no-repeat;
-            background-position:center center;
-        }
-
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background-color: #333;
-        }
-        ::-webkit-scrollbar-thumb {
-            background-color: #1C90F3;
-        }
-        ::-webkit-scrollbar-button {
-            background-color: black;
-        }
-        ::-webkit-scrollbar-corner {
-            background-color: green;
-        }
-        
-        @media (max-width: 480px) {
-          .headerSection {
-            height:50px;
-            line-height:50px;
-          }
-            
-          .navigation {
-            width:75%;
-            transform:translateX(-100%);
-            transition:all .3s ease-out;
-          }
-            
-          .navigation.active {
-            transform:translateX(0%);
-          }
-            
-          .content {
-            width:100%;
-            margin-left:0;
-          }
-            
-          .functionBtn {
-            height:50px;
-            display:block;
-          }
-        }
-
-        @media (min-width: 991px) {
-          .headerSection {
-            max-width: 1920px;
-          }
-
-          .main {
-            max-width: 1920px;
-          }
-
-          .content {
-            background-size:30%;
-          }
-        }
-
+         
+         
+ 
+         
     </style>
+    
+    <script>
+    $(document).ready(function(){
+        
+    });
+    </script>
+
 </head>
 
 <body>
-    <div class="header">
-        <div class="headerSection">
-          <p id="projectName">JSFiddle Project</p>
-          <div id="functionBtn" class="functionBtn">F</div>
-        </div>
-    </div>
-    <div class="main">
-        <div id="navigation" class="navigation">
-            <ul id="navList">
-            </ul>
-        </div>
-        <div id="mainBG" class="content">
-            <iframe id="sandbox" width="100%" height="500"
-                    src=""
-                    allowfullscreen="allowfullscreen" frameborder="0">
-            </iframe>
-        </div>
+    <div class="page">
+        <h1>krmfla collection</h1>
+        <article>
+            <h2>sample</h2>
+            <section onClick="window.open('http://krmfla.byethost12.com/collection/smart-tv.html')"/>
+                <img src="http://placehold.it/160x90" width="100%" style="opacity:0;"/>
+                <figure>
+                    <img src="images/sample1.jpg" width="100%"/>
+                    <!--img src="http://placehold.it/423x238" width="100%"/-->
+                </figure>
+                <p>Smart-TV UI Reference</p>
+            </section>
+            
+            <section onClick="window.open('http://www.worldfamily.com.tw/index.aspx')">
+                <img src="http://placehold.it/160x90" width="100%" style="opacity:0;"/>
+                <figure>
+                    <img src="images/sample2.jpg" width="100%"/>
+                    <!--img src="http://placehold.it/423x238" width="100%"/-->
+                </figure>
+                <p>WorldFamily TW Website</p>
+            </section>
+            <section onClick="window.open('http://q4u.worldfamily.com.tw/card2/all/all.html')">
+                <img src="http://placehold.it/160x90" width="100%" style="opacity:0;"/>
+                <figure>
+                    <img src="images/sample3.jpg" width="100%"/>
+                    <!--img src="http://placehold.it/423x238" width="100%"/-->
+                </figure>
+                <p>Collection</p>
+            </section>
+            
+            <section onClick="window.open('http://krmfla.byethost12.com/toys/index.html')">
+                <img src="http://placehold.it/160x90" width="100%" style="opacity:0;"/>
+                <figure>
+                    <img src="images/sample4.jpg" width="100%"/>
+                    <!--img src="http://placehold.it/423x238" width="100%"/-->
+                </figure>
+                <p>WorldFamily Baby Test</p>
+            </section>
+        </article>
+        <hr>
+        <article>
+            <h2>jsfiddle</h2>
+            <section>
+                <img src="http://placehold.it/160x90" width="100%" style="opacity:0;"/>
+                <figure>
+                    <iframe width="100%" height="238" src="https://jsfiddle.net/krmfla/6Lncxpc4/embedded/result/" allowfullscreen="" frameborder="0" style="max-height:238px; overflow:hidden"></iframe>
+                </figure>
+                <p>test demo</p>
+            </section>
+            
+            <section>
+                <img src="http://placehold.it/160x90" width="100%" style="opacity:0;"/>
+                <figure>
+                    <iframe width="100%" height="238" src="//jsfiddle.net/krmfla/y7jb3sob/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0" style="max-height:238px; overflow:hidden"></iframe>
+                </figure>
+                <p>test demo</p>
+            </section>
+        </article>
+        
+            
     </div>
 </body>
 </html>
-
-<script>
-var  data = source;
-var app = {
-  "init": function(data) {
-      //initial value
-      this.listEl =  document.getElementById("navList");
-      this.iframeEl = document.getElementById("sandbox");
-      this.funcEl = document.getElementById("functionBtn");
-      this.navEl = document.getElementById("navigation");
-      this.projectEl = document.getElementById("projectName");
-      this.mainBGEl = document.getElementById("mainBG");
-      this.data = data;
-      this.selectEl = null;
-      this.hideMainBG = false;
-      this.open = false;
-      //initial active
-      this.createEl();
-      this.bindEvent();
-      
-  },
-  
-  "createEl": function() {
-      var _content = "";
-      this.data.map(function(item, index){
-          _content += "<li class='style_" + item.tag + "' data-index='" + index + "'>" + item.name + "</li>";
-      });
-      this.renderList(_content);
-  },
-  
-  "bindEvent": function() {
-      this.listEl.addEventListener("click", app.clickEvent);
-      this.funcEl.addEventListener("click", app.funcEvent);
-  },
-  
-  "clickEvent": function(event) {
-      if (app.hideMainBG === false) {
-          document.getElementById("mainBG").style.backgroundImage = "url('')";
-        app.hideMainBG = true;
-      }
-      app.funcEvent();
-      app.listSelected(event.toElement);
-      var index = event.toElement.dataset.index;
-      app.renderSandbox(index);
-  },
-  
-  "funcEvent": function() {
-    if (app.open) {
-      app.navEl.classList.remove("active");
-      app.funcEl.classList.remove("active");
-      app.open = false;
-    } else {
-      app.navEl.classList.add("active");
-      app.funcEl.classList.add("active");
-      app.open = true;
-    }
-  },
-  
-  "renderList": function(innerEl) {
-      this.listEl.innerHTML = innerEl;
-  },
-  
-  "listSelected": function(element) {
-      //console.log(element);
-      if(app.selectEl !== null) {
-          app.selectEl.classList.remove("active");
-      }
-      element.classList.add("active");
-      app.selectEl = element;
-    
-  },
-  
-  "renderSandbox": function(index) {
-      //console.log(this);
-      //console.dir(this.iframeEl);
-      this.iframeEl.setAttribute("src", this.data[index].src);
-      this.projectEl.innerText = this.data[index].name;
-  }
-  
-};
-
-function resizeView() {
-  var setHeight = window.innerHeight - 50 + "px";
-  app.navEl.style.height = setHeight;
-  app.mainBGEl.style.height = setHeight;
-  app.iframeEl.style.height = setHeight;
-}
-
-//event binding
-app.init(data);
-document.addEventListener("DOMContentLoaded", resizeView);
-window.addEventListener("resize", resizeView);
-
-</script>
-
-<!-- 
-issue:
-滑軸樣式
-http://blog.rx836.tw/blog/css-styling-scrollbars/
-分類表 速查 畫面 mix react js css test ui spa
-載入外部spa
-滑入+翻轉
-event binding 跟 app拆分
--->
