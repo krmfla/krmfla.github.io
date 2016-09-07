@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta content="width=device-width, initial-scale=1.0 user-scalable=no" name="viewport" />
+	<title>toast.js example</title>
+	<link rel="stylesheet" href="toast.css">
+	<script type="text/javascript" src="toast.js"></script>
+	<style>
+		
+		.main {
+			width: 100%;
+			max-width: 600px;
+			position: relative;
+			overflow: hidden;
+			font-size:0;
+		}
+		
+		li {
+			line-height:150%;
+			font-size:16px;
+		}
+		
+		.printBox {
+			background-color:#EEE;
+			padding:10px;
+		}
+		
+		.hide {
+			display:none;
+		}
+		
+		.show {
+			display:block;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>toast.js example</h1>
+	<div id="main" class="main">
+		<img src="https://pic.pimg.tw/wang4cbook/1461149408-1422943281_n.jpg" width="100%" />
+	</div>
+	<ul id="testBox">
+		<li><a href="#" data-effect="default">預設樣式(on HTML body)</a></li>
+		<li><a href="#" data-effect="default_onDiv">預設樣式(on div)</a></li>
+		<li><a href="#" data-effect="default_slide">預設樣式(滑入)</a></li>
+		<li><a href="#" data-effect="custom_slide">自定義 由左自右滑入</a></li>
+		<li><a href="#" data-effect="custom_10s">自定義 停留10秒後消失</a></li>
+		<li><a href="#" data-effect="custom_style">自定義 修改樣式</a></li>
+		<li><a href="#" data-effect="method_closeMe">結束漸變效果</a></li>
+	</ul>
+	
+	<pre id="default" class="printBox hide">
+    var toast = new Toast("歡迎使用本服務!~");
+	toast.short();
+    </pre>
+	
+	<pre id="default_onDiv" class="printBox hide">
+	var config = {
+		"targetEl": "main"
+	};
+    var toast = new Toast("歡迎使用本服務!~", config);
+	toast.short();
+    </pre>
+	
+	<pre id="default_slide" class="printBox hide">
+	var config = {
+		"targetEl": "main",
+		"style": "slide"
+	};
+    var toast = new Toast("歡迎使用本服務!~", config);
+	toast.short();
+    </pre>
+	
+	<pre id="custom_slide" class="printBox hide">
+	var config = {
+		"targetEl": "main",
+		"inState": {
+			"left": "50%",
+			"bottom": "50%",
+			"transform": "translate(-50%, 50%)"
+		},
+		"outState": {
+			"left": "-50%",
+			"bottom": "50%",
+			"transform": "translate(-50%, 50%)"
+		}
+	};
+    var toast = new Toast("歡迎使用本服務!~", config);
+	toast.short();
+    </pre>
+	
+	<pre id="custom_10s" class="printBox hide">
+	var config = {
+		"targetEl": "main",
+		"shortTime": 10000
+	};
+    var toast = new Toast("歡迎使用本服務!~", config);
+	toast.short();
+    </pre>
+	
+	<pre id="custom_style" class="printBox hide">
+	var config = {
+		"targetEl": "main",
+		"inState": {
+			"font-size": "20px",
+			"background-color": "green",
+			"opacity": 1
+		},
+		"outState": {
+			"font-size": "24px",
+			"background-color": "green",
+			"opacity": 0
+		}
+	};
+    var toast = new Toast("歡迎使用本服務!~", config);
+	toast.short();
+    </pre>
+	
+	<pre id="method_closeMe" class="printBox hide">
+    toast.closeMe();
+    </pre>
+	
+</body>
+</html>
+
+<script>
+	var elEffect = null;
+	var toast = null;
+	var configObj = {};
+	var testBoxEl = document.getElementById("testBox");
+	
+	//Event Binding
+	testBoxEl.addEventListener("click", effect);
+	
+	//Function Kits
+	function effect(event) {
+		if (event.target.tagName !== "A") { return }
+		elEffect = event.target.dataset.effect;
+		if (toast !== null) {
+			document.getElementsByClassName("show")[0].classList.remove("show");
+		}
+		document.getElementById(elEffect).classList.add("show");
+		
+		switch (elEffect) {
+			case "default":
+				useToast();
+				break;
+				
+			case "default_onDiv":
+				configObj = {
+					"targetEl": "main"
+				};
+				useToast(configObj);
+				break;
+				
+			case "default_slide":
+				configObj = {
+					"targetEl": "main",
+					"style": "slide"
+				};
+				useToast(configObj);
+				break;
+				
+			case "custom_slide":
+				configObj = {
+					"targetEl": "main",
+					"inState": {
+						"left": "50%",
+						"bottom": "50%",
+						"transform": "translate(-50%, 50%)"
+					},
+					"outState": {
+						"left": "-50%",
+						"bottom": "50%",
+						"transform": "translate(-50%, 50%)"
+					}
+				};
+				useToast(configObj);
+				break;
+		
+			case "custom_10s":
+				configObj = {
+					"targetEl": "main",
+					"shortTime": 10000
+				};
+				useToast(configObj);
+				break;
+		
+			case "custom_style":
+				configObj = {
+					"targetEl": "main",
+					"inState": {
+						"font-size": "20px",
+						"background-color": "green",
+						"opacity": 1
+					},
+					"outState": {
+						"font-size": "24px",
+						"background-color": "green",
+						"opacity": 0
+					}
+				};
+				useToast(configObj);
+				break;
+		
+			case "method_closeMe":
+				if (toast !== null) {
+					toast.closeMe();
+				}
+				break;
+		}
+		
+		function useToast(obj) {
+			var obj = obj || {};
+			if (!toast) {
+				toast = new Toast("歡迎使用本服務!~", obj);
+				toast.short();
+			} else {
+				toast.closeMe();
+				setTimeout(function(){
+					toast = null;
+					toast = new Toast("歡迎使用本服務!~", obj);
+					toast.short();
+				}, 500);
+			}
+		}
+	}
+</script>

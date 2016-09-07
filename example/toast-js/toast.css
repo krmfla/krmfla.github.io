@@ -1,0 +1,20 @@
+.toastWrapper {
+  color:white;
+  font-size:14px;
+  padding:5px 15px;
+  background:rgba(0, 0, 0, .7);
+  border-radius:5px;
+  text-shadow:2px 2px 2px black;
+  max-height:20%;
+  max-width:80%;
+  position:absolute;
+  left:50%;
+  bottom:15px;
+  z-index:999;
+  transform:translateX(-50%);
+  -webkit-transform:translateX(-50%);
+  transition: all .5s ease-out;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
