@@ -30,3 +30,5 @@ Action / Dispatcher / Store(API) / database / View
 問題簡單化
 
 對CSS理解的深度
+
+###樣式統一寫在CSS class, id留給Javascript使用
