@@ -24,3 +24,9 @@ Action / Dispatcher / Store(API) / database / View
 <br>
 
 ###CSS能解決的問題，就不用Javascript解決
+
+效能
+
+問題簡單化
+
+對CSS理解的深度
