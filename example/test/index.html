@@ -38,9 +38,10 @@
         });
     */
     setTimeout(function(){
-        var el = document.getElementsByTagName("iframe");
+        var el = document.getElementsByTagName("iframe")[0];
         console.dir(el);
-        console.log(el.contents);
+        console.log(el.contentWindow);
+        console.log(el.content());
     }, 3000);
 </script>
 </html>
