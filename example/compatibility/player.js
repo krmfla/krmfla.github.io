@@ -76,6 +76,7 @@ function Player() {
 		};
 		
 		debug.log("- reload -");
+		debug.log("- resource: " + sourceUrl + " -");
 	}
 
 	function play() {
