@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>compatibility test</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="debug.js"></script>
+<script type="text/javascript" src="player.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+
+<div class="main">
+	<nav>
+		<h1 id="itemTitle">Compatibility Test</h1>
+		<!-- navagation list -->
+		<div id="navItemBox" class="itemBox active">
+			<div class="navItem" category="playerBox">Player</div>
+			<div class="navItem" category="keycodeBox">Keycode</div>
+		</div>
+		<!-- end navagation list -->
+		<!-- Player control -->
+		<div id="playerBox" class="itemBox hide">
+			<div class="navItem" act="load1">load video: Ideal world</div>
+			<div class="navItem" act="load2">load video: All Sports</div>
+			<div class="navItem" category="navItemBox">return</div>
+		</div>
+		<!-- end Player control -->
+		<!-- Keycode control -->
+		<div id="keycodeBox" class="itemBox hide">
+			<div class="navItem">[press any key]</div>
+			<div class="navItem" category="navItemBox">return</div>
+		</div>
+		<!-- end Keycode control -->
+	</nav>
+	<div class="presentSection">
+		<p class="layerName">Present</p>
+		<video id="videoPlayer" width="960" height="540">
+			
+		</video>
+		<div id="timeLine" class="controlBar hide">
+			<div id="current" class="controlTime">00:00:00</div>
+			<div class="seekBar">
+				<div id="currentSeek" class="seekBarCurrentTime"></div>
+			</div>
+			<div id="duration" class="controlTime">00:00:00</div>
+		</div>
+		<div id="live" class="controlBar hide">
+			<div class="controlTime"><span style="color:#15d6c9;">● </span> Live</div>
+		</div>
+		<div id="playerHint" class="playerHint hide">loading...</div>
+	</div>
+	<div id="logSection" class="logSection">
+		<p class="layerName">Log</p>
+	</div>
+</div>
+
+</body>
+</html>
