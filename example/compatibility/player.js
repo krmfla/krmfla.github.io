@@ -88,7 +88,7 @@ function Player() {
 	function pause() {
 		if (isLive) { return }
 		_player.pause();
-		debug.log("- pause -");
+		//debug.log("- pause -");
 	}
 
 	function stop() {
@@ -101,7 +101,7 @@ function Player() {
 		}
 		_player.load();
 		hintEl.classList.add("hide");
-		debug.log("- stop -");
+		//debug.log("- stop -");
 	}
 
 	function seek(value) {
