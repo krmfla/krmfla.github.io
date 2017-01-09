@@ -1,0 +1,160 @@
+body {	
+		background-color: #202020;
+		padding:0;
+		margin:0;
+		overflow:initial;
+}
+
+h1 {
+	margin-left:10px;
+}
+
+.main {
+	width: 100%;
+	height:100vh;
+	overflow:hidden;
+	position:relative;
+}
+
+/* === player === */
+
+video {
+	width:960px;
+	height:540px;
+	/*background:black;*/
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+.controlBar {
+	width:88%;
+	padding:1%;
+	background:rgba(0, 0, 0, .8);
+	left:5%;
+	bottom:10px;
+	position:absolute;
+	z-index:5;
+	font-size:0;
+}
+
+.controlTime {
+	width:10%;
+	height:20px;
+	text-align:center;
+	color:white;
+	display:inline-block;
+	font-size:16px;
+	line-height:20px;
+}
+
+.seekBar {
+	width:78%;
+	height:10px;
+	margin:0 1%;
+	background:white;
+	display:inline-block;
+	font-size:0;
+}
+
+.seekBarCurrentTime {
+	width:0%;
+	height:10px;
+	background:#15d6c9;
+}
+
+.playerHint {
+	color:white;
+	font-size:16px;
+	padding:10px 15px;
+	position:absolute;
+	background:rgba(0, 0, 0, .8);
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+}
+
+/* === end player === */
+
+nav {
+	color:white;
+	width:50%;
+	height:50vh;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.navItemBox {
+	width:100%;
+}
+
+.navItem {
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+	transition:all .3s;
+}
+
+.navItem.active {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#15d6c9+0,15d6c9+67,15d6c9+100&1+0,0+100 */
+	 /* FF3.6-15 */
+    background: -moz-linear-gradient(left, rgba(21,214,201,1) 0%, rgba(21,214,201,0.33) 50%, rgba(21,214,201,0) 100%);
+     /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-linear-gradient(left, rgba(21,214,201,1) 0%,rgba(21,214,201,0.33) 50%,rgba(21,214,201,0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(to right, rgba(21,214,201,1) 0%,rgba(21,214,201,0.33) 50%,rgba(21,214,201,0) 100%); 
+    /* IE6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15d6c9', endColorstr='#0015d6c9',GradientType=1 );
+
+	color:black;
+	font-size:20px;
+}
+
+.presentSection {
+	width:50%;
+	height:50vh;
+	overflow:hidden;
+	position:absolute;
+	top:50vh;
+	left:0;
+	border-top:1px solid #15d6c9;
+}
+
+.logSection {
+	width:50%;
+	height:100vh;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	right:0;
+	border-left:1px solid #15d6c9;
+}
+
+.layerName {
+	margin:0;
+	padding:5px 10px;
+	color:#15d6c9;
+	border:1px solid #15d6c9;
+	position:absolute;
+	top:10px;
+	right:10px;
+	z-index:10;
+}
+
+@media screen and (min-width: 1919px) {
+    body {
+	    overflow:hidden;
+    }
+
+    .main {
+    	width:1920px;
+		height:1080px;
+    }
+}
+
+/* === plugin === */
+.hide {
+	display:none;
+}
