@@ -12,4 +12,5 @@
   "console_log"       :false,
   "allowed_domain"    :[
                        ],
+  "key_repeat": true
 }
