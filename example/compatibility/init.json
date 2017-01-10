@@ -9,7 +9,7 @@
   },
   "mode"              : "key",
   "user_agent"        : "",
-  "console_log"       :true,
+  "console_log"       :false,
   "allowed_domain"    :[
                        ],
 }
