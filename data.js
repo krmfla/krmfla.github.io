@@ -1,11 +1,148 @@
+//mix react js css test ui
 var source = [
-    { "name": "物件導向概念-訂書系統",
+    { "name": "自動調整高度",
+      "tag" : "css",
+      "src" : "https://jsfiddle.net/krmfla/hqmt224g/1/embedded/result,css/"
+    },
+	{ "name": "文字超出時淡出效果",
       "tag" : "mix",
+      "src" : "https://jsfiddle.net/krmfla/m435b0t7/3/embedded/result,js,css/"
+    },
+    { "name": "ES6 #1",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/hL6ccqp7/2/embedded/js/"
+    },
+	{ "name": "用時間格式建key",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/sx4us9e6/1/embedded/js/"
+    },
+    { "name": "firebase #1",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/pjzv0kva/4/embedded/result,js/"
+    },
+    { "name": "線性漸層做圖片淡出",
+      "tag" : "css",
+      "src" : "https://jsfiddle.net/krmfla/64v0xakw/1/embedded/result,css/"
+    },
+	{ "name": "垂直對齊練習",
+      "tag" : "css",
+      "src" : "https://jsfiddle.net/krmfla/rgo3z17q/embedded/result,css/"
+    },
+    { "name": "bootstrap - table",
+      "tag" : "css",
+      "src" : "https://jsfiddle.net/krmfla/egsz79qu/12/embedded/result,css/"
+    },
+    { "name": "Slide-Box Weather",
+      "tag" : "ui",
+      "src" : "https://jsfiddle.net/krmfla/uh8ej1g5/8/embedded/result,css,js/"
+    },
+	{ "name": "no Jquery - load",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/teeh3nzv/embedded/js/"
+    },
+    { "name": "一行水平置中，多行靠左對齊",
+      "tag" : "css",
+      "src" : "https://jsfiddle.net/krmfla/w7vxuwoL/3/embedded/result,css/"
+    },
+    { "name": "正規表達式 #2",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/dp4xa2ge/1/embedded/js/"
+    },
+	{ "name": "inline-block沒有內容，造成破版",
+      "tag" : "test",
+      "src" : "https://jsfiddle.net/krmfla/deqo7vam/embedded/result,css/"
+    },
+    { "name": "Asynchronous & Deferred",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/xqfygyeq/1/embedded/js/"
+    },
+    { "name": "Vue.js #1",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/6m8278Lz/embedded/js,result/"
+    },
+    { "name": "insertAdjacentHTML",
+      "tag" : "test",
+      "src" : "https://jsfiddle.net/krmfla/gpp5fkud/embedded/result,js/"
+    },
+    { "name": "文字漸層淡出",
+      "tag" : "css",
+      "src" : "https://jsfiddle.net/krmfla/ujzyne1L/2/embedded/result,css/"
+    },
+    { "name": "css Blur",
+      "tag" : "css",
+      "src" : "https://jsfiddle.net/krmfla/dmpqur36/embedded/result,css/"
+    },
+    { "name": "觀察者模式",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/89rkwfgo/embedded/js/"
+    },
+    { "name": "背景自動滿版",
+      "tag" : "css",
+      "src" : "https://jsfiddle.net/krmfla/ysux9qv1/embedded/result,css/"
+    },
+    { "name": "線性漸層 | 滑入展開",
+      "tag" : "css",
+      "src" : "https://jsfiddle.net/krmfla/bL2hxnao/1/embedded/result,css/"
+    },
+    { "name": "cookie | storage 測試",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/euatqdkn/3/embedded/result,js/"
+    },
+    { "name": "Debug模組化",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/kc08tptt/2/embedded/result,js/"
+    },
+    { "name": "演算法練習",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/jnhp19wv/embedded/result,js/"
+    },
+    { "name": "手機陀螺儀練習",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/2e1dbtr4/8/embedded/result,js/"
+    },
+    { "name": "常用小程式整合",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/yL69f7db/2/embedded/js/"
+    },
+    { "name": "toast模組",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/2Lqpxwfv/10/embedded/result,js/"
+    },
+    { "name": "bootstrap練習",
+      "tag" : "test",
+      "src" : "https://jsfiddle.net/krmfla/6toopxbL/12/embedded/result/"
+    },
+    { "name": "client端即時留言",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/1q8yn644/9/embedded/result,js,html/"
+    },
+    { "name": "VOD React",
+      "tag" : "react",
+      "src" : "https://jsfiddle.net/krmfla/gvcw86es/16/embedded/result,js,html/"
+    },
+    { "name": "輸入框同步更新",
+      "tag" : "react",
+      "src" : "https://jsfiddle.net/krmfla/xthkL0vh/2/embedded/result,js,html/"
+    },
+    { "name": "搜尋功能",
+      "tag" : "react",
+      "src" : "https://jsfiddle.net/krmfla/j2j35d2c/6/embedded/result,js,html/"
+    },
+    { "name": "振動式 editor",
+      "tag" : "mix",
+      "src" : "https://jsfiddle.net/krmfla/hn2wr6h2/2/embedded/result,js/"
+    },
+    { "name": "Component試做",
+      "tag" : "js",
+      "src" : "https://jsfiddle.net/krmfla/xshmmq3e/3/embedded/result,js/"
+    },
+    { "name": "物件導向概念-訂書系統",
+      "tag" : "js",
       "src" : "https://jsfiddle.net/krmfla/5o3hha0m/embedded/result,js/"
     },
     { "name": "任務管理器",
       "tag" : "mix",
-      "src" : "https://jsfiddle.net/krmfla/bk2cLdgt/11/embedded/result,js/"
+      "src" : "https://jsfiddle.net/krmfla/bk2cLdgt/15/embedded/result,js/"
     },
     { "name": "中英翻譯對照",
       "tag" : "mix",
