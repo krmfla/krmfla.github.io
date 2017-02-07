@@ -1,7 +1,7 @@
 {
   "rendering_size"    :{
-          "width"     : 1920,
-          "height"    : 1080,
+          "width"     : 1280,
+          "height"    : 720,
   },
   "keyboard"          :{
           "use"       :true,
@@ -10,6 +10,5 @@
   "mode"              : "key",
   "user_agent"        : "",
   "console_log"       :true,
-  "allowed_domain"    :[
-                       ],
+  "allowed_domain"    :[],
 }
