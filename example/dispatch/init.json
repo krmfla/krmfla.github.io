@@ -11,5 +11,5 @@
   "mode"              : "key",
   "user_agent"        : "",
   "console_log"       :true,
-  "allowed_domain"    :[],
+  "allowed_domain"    :[]
 }
