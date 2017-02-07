@@ -3,106 +3,11 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="refresh" content="0;url=https://webtv.svc.litv.tv/LTLGE02/">
-	<!--<meta http-equiv="refresh" content="0;url=http://172.21.100.70:8081/index.html">-->
-	<title>Memory Game</title>
-	
-	<link rel="stylesheet" type="text/css" href="css/css.css" />
-	<script type="text/javascript" src="js/global.js"></script>
+	<title>dispatch</title>
 	<style>
-		.hide {
-			display:none;
-		}
-		
-		p {
-			font-size:20px;
-			color:white;
-		}
+		body { background:black }
 	</style>
 </head>
 <body style="opacity:1; background:black;">
-	<p><span>mac:</span><span id="mac"></span></p>
-	<p id="x1"></p>
-	<p id="x2"></p>
-	<p id="x3"></p>
-	<p id="x4"></p>
-	
-	<!----------------------------------------------------------------------------->
-	<!-- All cards will be shown in the table -->
-	<div id="table hide">
-		<!-- HTML tags here -->
-	</div>
-	<!----------------------------------------------------------------------------->
-	
-	
-	
-	<!----------------------------------------------------------------------------->
-	<!-- Pop up message -->
-	<div id="gameOverPanel" class="hide">
-		<div class="gameTitle gameOver">
-			Finish! You got  <span id="alertScore">0</span>
-			<br />
-			<br />
-			<br />
-			New game will be started after 5 seconds
-		</div>
-<!--		<input type="button" id="closeAlert" value="OK" tabIndex="10001"></input>	-->
-	</div>
-	<!----------------------------------------------------------------------------->
-	
-	
-	
-	<!----------------------------------------------------------------------------->
-	<!-- Information panel -->	
-	<div id="infoPanel" class="hide">
-		<div class="clsHeight5Percent">&nbsp;</div>
-		<div class="gameTitle">Colour Memory</div>
-		<div class="clsHeight15Percent">&nbsp;</div>
-		<span class="infoRow">Pair left:</span><span id="pairLeft">0</span>
-		<p></p>
-		<span class="infoRow">Score:</span><span id="score">0</span>
-		<div class="clsHeight15Percent">&nbsp;</div>
-		<input type="button" id="restartGame" value="Restart" tabIndex="10002"></input>
-	</div>
-	<!----------------------------------------------------------------------------->
-	
-	
-	
-	<script type="text/javascript">
-		// Entry Point of the HTML5 application
-		window.onload = function() {
-			//var g = window.global;
-			
-			//g.initGame(8, 4);
-			
-			// Count the total dom objects have been created
-//			g.printDomUsage(3000);
-		};
-		var macEl = document.getElementById("mac");
-		var x1El = document.getElementById("x1");
-		var x2El = document.getElementById("x2");
-		var x3El = document.getElementById("x3");
-		var x4El = document.getElementById("x4");
-		try {
-			x1El.innerText = typeof PanasonicDevice;
-			var macID = PanasonicDevice.configuration.localSystem.networkInterfaces.item(0).macAddress || "fail";
-			
-			macEl.innerText = macID;
-			
-			x2El.innerText = JSON.stringify( PanasonicDevice.configuration.localSystem.networkInterfaces);
-			x3El.innerText = JSON.stringify( PanasonicDevice.configuration.localSystem);
-			x4El.innerText = JSON.stringify( PanasonicDevice.configuration);
-		} catch(e) {
-			
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	</script>
 </body>
 </html>
