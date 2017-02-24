@@ -127,7 +127,7 @@ var source = [
     },
     { "name": "常用小程式整合",
       "tag" : "js",
-      "src" : "https://jsfiddle.net/krmfla/yL69f7db/3/embedded/js/", 
+      "src" : "https://jsfiddle.net/yL69f7db/3/embed/js", 
 	  "favorite": false
     },
     { "name": "toast模組",
