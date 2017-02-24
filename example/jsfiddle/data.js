@@ -127,7 +127,7 @@ var source = [
     },
     { "name": "常用小程式整合",
       "tag" : "js",
-      "src" : "https://jsfiddle.net/krmfla/yL69f7db/2/embedded/js/", 
+      "src" : "https://jsfiddle.net/krmfla/yL69f7db/3/embedded/js/", 
 	  "favorite": false
     },
     { "name": "toast模組",
@@ -562,7 +562,7 @@ var source = [
     },
     { "name": "常用函數",
       "tag" : "js",
-      "src" : "https://jsfiddle.net/krmfla/fpnamn7e/4/embedded/result,js/", 
+      "src" : "https://jsfiddle.net/krmfla/fpnamn7e/4/embedded/html,js/", 
 	  "favorite": false
     },
     { "name": "彈珠",
