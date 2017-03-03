@@ -1,5 +1,15 @@
 //mix react js css test ui
 var source = [
+    { "name": "彈跳史來姆",
+      "tag" : "mix",
+      "src" : "http://krmfla.byethost12.com/testProject/index.html",
+	  "favorite": true
+    },
+    { "name": "番茄工作法(new)",
+      "tag" : "mix",
+      "src" : "http://krmfla.byethost12.com/testProject/timeApp/index.html",
+	  "favorite": true
+    },
     { "name": "krmfla collection",
       "tag" : "mix",
       "src" : "https://krmfla.github.io/",
