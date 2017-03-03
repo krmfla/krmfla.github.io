@@ -1,5 +1,10 @@
 //mix react js css test ui
 var source = [
+    { "name": "krmfla collection",
+      "tag" : "mix",
+      "src" : "https://krmfla.github.io/",
+	  "favorite": true
+    },
     { "name": "自動調整高度",
       "tag" : "css",
       "src" : "https://jsfiddle.net/krmfla/hqmt224g/1/embedded/result,html,css/",
