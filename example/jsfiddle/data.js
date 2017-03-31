@@ -1,5 +1,10 @@
-//mix react js css test ui
+//tag: mix, react, js, css, test, ui
 var source = [
+	{ "name": "google map",
+      "tag" : "test",
+      "src" : "https://jsfiddle.net/krmfla/f9jhcxnq/2/embedded/result,html,css/",
+      "favorite": false
+    },
     { "name": "krmfla collection",
       "tag" : "mix",
       "src" : "https://krmfla.github.io/",
@@ -8,7 +13,7 @@ var source = [
     { "name": "自動調整高度",
       "tag" : "css",
       "src" : "https://jsfiddle.net/krmfla/hqmt224g/1/embedded/result,html,css/",
-	  "favorite": true
+      "favorite": true
     },
 	{ "name": "文字超出時淡出效果",
       "tag" : "mix",
