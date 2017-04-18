@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 	var app = new App();
 	//AJAX
-	getJSON("http://172.21.100.70:3000/data/list.json", function(isSuccess, response) {
+	getJSON("https://krmfla.github.io/example/jsfiddle/data/list.json", function(isSuccess, response) {
 		app.init(response);
 	});
 });
