@@ -1,0 +1,275 @@
+/* Reset */
+body, h1, h2, p, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+/* Basic Element */
+html {
+	height:100%;
+}
+body {
+	width:100%;
+	height:100%;
+	background: #F2FBFF;
+	font-size: 0;
+	font-family: "sans-serif";
+	background:#DDD;
+	overflow:hidden;
+}
+
+.header {
+	width: 100%;
+	overflow: hidden;
+	height:40px;
+	background: #1C90F3;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	box-shadow:0 0px 4px #666;
+}
+
+.headerSection {
+	width: 100%;
+	height: 40px;
+	color: white;
+	font-size: 16px;
+}
+
+.header p {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	text-shadow: 1px 1px 3px #666;
+}
+
+.functionBtn {
+	height: 40px;
+	line-height:40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 15px;
+	border-right: 1px solid white;
+	z-index: 2;
+	background: #0A7DE1;
+	display: none;
+}
+
+.functionBtn.active {
+	background: #F70458;
+}
+
+.main {
+	width: 100%;
+	height: calc(100% - 40px);
+	margin-top:40px;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 0px 6px gray;
+	background:white;
+}
+
+.searchBar {
+	border-bottom: 1px solid #19191B;
+	padding:10px;
+	box-sizing:border-box;
+	display:none;
+}
+
+.searchInput {
+	width:50%;
+	height:18px;
+	background:none;
+	border:1px solid #1C90F3;
+	color:white;
+	padding:2px 5px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-right:10px;
+}
+
+::-webkit-input-placeholder {
+	color:#777;
+}
+
+.searchBtn {
+	width:26px;
+	height:26px;
+	background-image:url('/images/search.png');
+	background-size:100% 100%;
+	display:inline-block;
+	vertical-align:middle;
+	cursor:pointer;
+	margin-right:10px;
+}
+
+
+.favoriteBtn {
+	width:26px;
+	height:26px;
+	background-image:url('/images/favorite.png');
+	background-size:100% 100%;
+	display:inline-block;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+.favoriteBtn.showAll {
+	opacity:.6;
+}
+
+.navigation {
+	width: 25%;
+	height: 100%;
+	background: #252527;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+}
+
+.navigation ul {
+	color: white;
+	font-size: 16px;
+}
+
+.navigation li {
+	border-top: 2px solid #2D2D2F;
+	border-bottom: 1px solid #19191B;
+	padding: 10px;
+	text-align: left;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: default;
+}
+
+.navigation li:hover {
+	background: #4A4A4E;
+}
+
+.navigation li.active {
+	background: #F3F5F6;
+	color: #333;
+}
+
+.navigation li::before {
+	content: '';
+	width: 30px;
+	padding: 2px 0;
+	text-align: center;
+	font-size: 10px;
+	color: white;
+	margin: -5px 5px 0 0;
+	display: inline-block;
+}
+
+.navigation li.style_css::before {
+	content: 'css';
+	background: #5BA009;
+}
+
+.navigation li.style_js::before {
+	content: 'JS';
+	background: #E5A228;
+}
+
+.navigation li.style_react::before {
+	content: 'React';
+	background: #006EB9;
+}
+
+.navigation li.style_mix::before {
+	content: 'mix';
+	background: #F70458;
+}
+
+.navigation li.style_ui::before {
+	content: 'UI';
+	background: #52B4AF;
+}
+
+.navigation li.style_test::before {
+	content: 'test';
+	background: #CC91D8;
+}
+
+.content {
+	width: 75%;
+	height: 100%;
+	margin-left: 25%;
+	background-image: url('/images/demo.png');
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #333;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #1C90F3;
+}
+
+::-webkit-scrollbar-button {
+	background-color: black;
+}
+
+::-webkit-scrollbar-corner {
+	background-color: green;
+}
+
+/* === media query === */
+@media (max-width: 480px) {
+	.headerSection {
+		height: 50px;
+		line-height: 50px;
+	}
+	.navigation {
+		width: 75%;
+		transform: translateX(-100%);
+		transition: all .3s ease-out;
+	}
+	.navigation.active {
+		transform: translateX(0%);
+	}
+	.content {
+		width: 100%;
+		margin-left: 0;
+	}
+	.functionBtn {
+		height: 50px;
+		display: block;
+	}
+	
+	.searchBar {
+		display:block;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 800px) {
+	.searchBar {
+		display:none;
+	}
+}
+
+@media (min-width: 801px) {
+	.searchBar {
+		display:block;
+	}
+	.content {
+		background-size: 30%;
+	}
+}
+
+/* === extend === */
+.hide {
+	display:none;
+}
