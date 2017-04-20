@@ -1,5 +1,29 @@
 [
   {
+    "name": "卡片滑動效果",
+    "tag": "mix",
+    "src": "https://jsfiddle.net/krmfla/chb2nuk8/13/embedded/result,js,css/",
+    "favorite": true
+  },
+  {
+    "name": "HTML5 Player",
+    "tag": "mix",
+    "src": "https://jsfiddle.net/krmfla/gLa63f3w/3/embedded/result,js/",
+    "favorite": true
+  },
+  {
+    "name": "Vue.js #4",
+    "tag": "js",
+    "src": "https://jsfiddle.net/krmfla/xj39757L/4/embedded/result,js,html/",
+    "favorite": true
+  },
+  {
+    "name": "Vue.js #3",
+    "tag": "js",
+    "src": "https://jsfiddle.net/krmfla/bu1f29wq/2/embedded/result,js,html/",
+    "favorite": false
+  },
+  {
     "name": "google map",
     "tag": "test",
     "src": "https://jsfiddle.net/krmfla/f9jhcxnq/2/embedded/result,html,css/",
