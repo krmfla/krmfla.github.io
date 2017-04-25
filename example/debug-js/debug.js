@@ -11,6 +11,7 @@ function Debug() {
   targetEl.style.background = "black";
   targetEl.style.minHeight = "100vh";
   targetEl.style.zIndex = 999;
+  targetEl.style.fontSize = "14px";
 
   bodyEl.appendChild(targetEl);
   
