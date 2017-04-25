@@ -10,6 +10,7 @@ function Debug() {
   targetEl.style.color = "gray";
   targetEl.style.background = "black";
   targetEl.style.minHeight = "100vh";
+  targetEl.style.zIndex = 999;
 
   bodyEl.appendChild(targetEl);
   
