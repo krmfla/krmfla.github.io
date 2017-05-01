@@ -8,7 +8,7 @@ function Debug() {
   targetEl.style.left = 0;
   targetEl.style.bottom = 0;
   targetEl.style.color = "gray";
-  targetEl.style.background = "black";
+  targetEl.style.background = "green";
   targetEl.style.minHeight = "100vh";
   targetEl.style.zIndex = 999;
   targetEl.style.fontSize = "14px";
