@@ -12,6 +12,7 @@ function Debug() {
   targetEl.style.minHeight = "100vh";
   targetEl.style.zIndex = 999;
   targetEl.style.fontSize = "14px";
+   targetEl.style.opacity = .7;
 
   bodyEl.appendChild(targetEl);
   
