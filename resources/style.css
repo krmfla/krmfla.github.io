@@ -1,0 +1,116 @@
+/* === Reset === */
+body, h1, h2, p {
+	margin: 0;
+	padding: 0;
+}
+
+/* === Layout Element === */
+body {
+	font-family: sans-serif, 'Arial';
+	background-color: #fffced;
+	background-image: url("../images/background.png");
+	font-size:0;
+	letter-spacing: 1px;
+}
+
+.page {
+	width:100%;
+	max-width:1120px;
+	overflow:hidden;
+	background-color:white;
+	margin:0 auto;
+	border-left:1px solid white;
+	border-right:1px solid white;
+	border-bottom:1px solid white;
+	box-shadow:0 0 4px #666;
+}
+
+header {
+	padding:15px 0 5px 10px;
+	background: -webkit-linear-gradient(top, #27A3F5, #1188D8);
+}
+
+h1 {
+	font-size:20px;
+	color:white;
+}
+
+main {
+	box-sizing:border-box;
+	padding:15px 5px;
+	overflow:hidden;
+}
+
+article {
+	width:100%;
+	overflow:hidden;
+	padding-bottom:10px;
+	margin-bottom:10px;
+	border-bottom:0.5px solid #27A3F5;
+}
+
+.projectThumbnail {
+	width:33%;
+	border-width:4px;
+	border-style: solid;
+	border-color: #EEE;
+	transition:all .3s ease-out;
+	cursor:pointer;
+	float:left;
+}
+
+.projectThumbnail:hover {
+	border-color: orange;
+}
+
+.projectThumbnail img {
+	width:100%;
+}
+
+.projectContent {
+	width:65%;
+	text-align:justify;
+	float:right;
+}
+
+.projectContent h2 {
+	font-size:18px;
+	font-weight:bold;
+	color:#1188D8;
+	margin-bottom:5px;
+}
+
+.projectContent p {
+	font-size:14px;
+	line-height:150%;
+	color:#333;
+}
+
+detail {
+	font-size:14px;
+	color:#AAA;
+}
+
+/* === Media Query === */
+@media (max-width: 720px) {
+	main {
+		width:98%;
+		margin:0 auto;
+	}
+	.projectThumbnail {
+		width:97%;
+		margin-bottom:5px;
+	}
+	
+	.projectContent {
+		width:98%;
+		float:left;
+	}
+	
+	.projectContent h2 {
+		font-size:16px;
+	}
+	
+}
+
+/* === extend === */
