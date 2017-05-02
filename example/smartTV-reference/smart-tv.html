@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>smart TV UI</title>
+	<link rel="stylesheet" href="smart-tv.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div id="btTop" class="scrollTop"></div>
+		
+		<nav>
+			<ul>
+				<li id="mainMenu"><p>main menu</p></li>
+				<li id="vod"><p>VOD</p></li>
+				<li id="player"><p>player</p></li>
+				<li id="fullLayout"><p>full layout</p></li>
+				<li id="switch"><p>switch</p></li>
+				<li id="all"><p>all</p></li>
+			</ul>
+		</nav>
+		
+		<div id="mainMenuSection" class="section">
+			<div class="imageBox"><img class="imageFit" src="images/Smart_TV-1.jpg"/></div>
+			<div class="imageBox">
+				<img class="imageFit" src="images/02-homepage-big-focus.png"/>
+			</div>
+		</div>
+		
+		<div id="vodSection" class="section">
+			<div class="imageBox">
+				<img class="imageFit" src="images/tv_app.png"/>
+			</div>
+			<div class="imageBox">
+				<img class="imageFit" src="images/41c6bca0e28ccec2189bcd4955ee52f7.jpg"/>
+			</div>
+			<div class="imageBox">
+				<img class="imageFit" src="images/dribbble_1x.jpg"/>
+			</div>
+			<div class="imageBox">
+				<img class="imageFit" src="images/webos-tv-rdio-concept.png"/>
+			</div>
+		</div>
+		
+		<div id="playerSection" class="section">
+			<div class="imageBox">
+				<img class="imageFit" src="images/videoplayer-f.jpg"/>
+			</div>
+		</div>
+		
+		<div id="fullLayoutSection" class="section">
+			<div class="imageBox">
+				<img class="imageFit" src="images/ba1267bcb5509636eeba20baf331465d.jpg"/>
+			</div>
+			<div class="imageBox">
+				<img class="imageFit" src="images/00c2307c1d31f6f16c8ceb4db4f6c350.jpg"/>
+			</div>
+			<div class="imageBox">
+				<img class="imageFit" src="images/30f77ab28bb3eea05db2bf3b591bcdd9.jpg"/>
+			</div>
+			<div class="imageBox">
+				<img class="imageFit" src="images/b8c01b0d8c24366d5e4b8d3aa9b1c92e.jpg"/>
+			</div>
+			<div class="imageBox">
+				<img class="imageFit" src="images/cf52d19128293de5e8cc23d4d553ccd1.jpg"/>
+			</div>
+			<div class="imageBox">
+				<img class="imageFit" src="images/e8daf6ecccd5b661ae85cf7702ffd002.jpg"/>
+			</div>
+		</div>
+		<!--
+		<div class="imageBox">
+				<img class="imageFit" src="images/"/>
+		</div>
+		-->
+	</div>
+</body>
+</html>
+
+<script>
+$(document).ready(function() {
+	/* default */
+	var clickable = false;
+	$("#mainMenu").attr("class", "active");
+	$("#mainMenuSection").css("display", "block");
+	$("#btTop").hide();
+	
+	var clientWidth = parseInt($(".main").css('width'), 10);
+	console.log(clientWidth);
+	
+	if (clientWidth < 600) {
+		$("nav li p").css('fontSize', '14px');
+	}
+	
+	/* nav click */
+	$("li").click(function(){
+		$(".active").attr("class", "");
+		$(this).attr("class", "active");
+		$(".section").css("display", "none");
+		if (clickable) {
+			console.info(clickable);
+			$(".switch").animate({'width': '98%'}, 500);
+		}
+		$(".imageBox").removeClass("switch");
+		var thisId = $(this).attr("id");
+		console.log(thisId);
+		
+		switch (thisId) {
+			case "mainMenu":
+				$("#mainMenuSection").css("display", "block");
+				break;
+			case "vod":
+				$("#vodSection").css("display", "block");
+				break;
+			case "player":
+				$("#playerSection").css("display", "block");
+				break;
+			case "fullLayout":
+				$("#fullLayoutSection").css("display", "block");
+				break;
+			case "switch":
+				$(".section").css("display", "block");
+				$(".imageBox").addClass("switch");
+				$(".switch").animate({'width': '31.3%'}, 500);
+				
+				clickable = true;
+				break;
+			case "all":
+				$(".section").css("display", "block");
+				break;
+		}
+	});
+
+	/* scroll top */
+	$(window).scroll(function(){
+       var  myHeight = $(window).scrollTop();
+		if (myHeight > 768) {
+			$("#btTop").fadeIn();
+		} else if (myHeight <= 768) {
+			$("#btTop").fadeOut();
+		}
+	});
+	$('#btTop').click(function(){
+		$('html,body').animate({'scrollTop': '0px'}, 1500);
+	});
+	
+	/* switch */
+	$("img").click(function() {
+		if (clickable) {
+			$(this).addClass("selected");
+			$(".switch").animate({'width': '98%'}, 500, function() {
+				if (clickable) {
+					clickable = false;
+					var thisEl = $(".selected");
+					var thisAnchor = thisEl[0].offsetTop;
+					console.log(thisAnchor);
+					$('html,body').animate({'scrollTop': thisAnchor}, 1000);
+					$(".selected").removeClass("selected");
+				}
+			});
+		$(".imageBox").removeClass("switch");	
+		} else {
+			return false;
+		}
+		
+	});
+});
+</script>
