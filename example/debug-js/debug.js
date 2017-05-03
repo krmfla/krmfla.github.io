@@ -1,20 +1,19 @@
-function Debug() {
+function Debug(wrapperId) {
   var timer = null;
   var timerEnd = null;
-  var bodyEl = document.getElementsByTagName("body")[0];
+  var wrapperEl = (typeof wrapperId === "string") ? document.getElementById(wrapperId)
+                                                  : document.querySelector('body');
+  var targetEl;
+  var itemStyle = {};
   
-  var targetEl = document.createElement("DIV");
+  targetEl = document.createElement("DIV");
   targetEl.style.position = "absolute";
   targetEl.style.left = 0;
   targetEl.style.bottom = 0;
   targetEl.style.color = "gray";
-  targetEl.style.background = "black";
   targetEl.style.minHeight = "100vh";
-  targetEl.style.zIndex = 999;
-  targetEl.style.fontSize = "14px";
-   targetEl.style.opacity = .7;
 
-  bodyEl.appendChild(targetEl);
+  wrapperEl.appendChild(targetEl);
   
   //ONWINDOW ERROR
   window.onerror = function (errorMsg, url, lineNumber) {
@@ -27,19 +26,25 @@ function Debug() {
     var element = document.createElement("P");
     element.style.margin = 0;
     element.style.marginBottom = "5px";
+    for (key in itemStyle) {
+        element.style[key] = itemStyle[key];
+    }
     element.innerText = text;
     targetEl.appendChild(element);
   }
   
   function setTimer() {
+    if (timer === null) {
+        log(">>> Timer Start >>>");
+    } else {
+        log(">>> reset Timer >>>");
+    }
     timer = Date.now();
-    log(">>> Timer Start >>>");
   }
   
   function endTimer() {
     if (timer === null) {
       log(">>> Timer was not set yet >>>");
-      return;
     } else {
       timerEnd = Date.now();
       log(">>> process: " + (timerEnd - timer) + "ms >>>");
@@ -47,10 +52,22 @@ function Debug() {
     }
   }
   
+  function setBackground(configObject) {
+      for (key in configObject) {
+          targetEl.style[key] = configObject[key];
+      }
+  }
+  
+  function setItem(configObject) {
+      itemStyle = configObject;
+  }
+  
   //API export
   return {
-    "log": log,
-    "time": setTimer,
-    "end": endTimer
+    "log"          : log,
+    "start"         : setTimer,
+    "end"          : endTimer,
+    "setBackground": setBackground,
+    "setItem"      : setItem
   };
 }
