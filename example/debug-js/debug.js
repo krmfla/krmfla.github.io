@@ -19,7 +19,7 @@ function Debug(wrapperId) {
   window.onerror = function (errorMsg, url, lineNumber) {
     log('Error: ' + errorMsg);
     log('Script: ' + url);
-    log('Line: ' + lineNumber);   
+    log('Line: ' + lineNumber);
   };
   
   function log(text) {
@@ -61,13 +61,13 @@ function Debug(wrapperId) {
   function setItem(configObject) {
       itemStyle = configObject;
   }
-  
+
   //API export
   return {
-    "log"          : log,
-    "start"         : setTimer,
-    "end"          : endTimer,
-    "setBackground": setBackground,
-    "setItem"      : setItem
+    "log"            : log,
+    "start"          : setTimer,
+    "end"            : endTimer,
+    "setBackground"  : setBackground,
+    "setItem"        : setItem
   };
 }
