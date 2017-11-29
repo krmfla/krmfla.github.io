@@ -1,8 +1,26 @@
 [
   {
-    "name": "TEST",
+    "name": "略過片段",
     "tag": "mix",
-    "src": "https://codepen.io/krmfla/embed/EaBmxb/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "src": "https://jsfiddle.net/krmfla/v2a7mj7b/2/embedded/resultㄝ,js/",
+    "favorite": false
+  },
+  {
+    "name": "3D海報翻轉",
+    "tag": "mix",
+    "src": "https://jsfiddle.net/krmfla/oh5yukwm/embedded/result,css/",
+    "favorite": false
+  },
+  {
+    "name": "3D翻轉練習",
+    "tag": "css",
+    "src": "https://jsfiddle.net/krmfla/ftyyct0f/4/embedded/result,css/",
+    "favorite": false
+  },
+  {
+    "name": "超出元件，左右滑動效果",
+    "tag": "mix",
+    "src": "https://jsfiddle.net/krmfla/ttwvzvgn/3/embedded/result,js,css/",
     "favorite": false
   },
   {
