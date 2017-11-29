@@ -3,115 +3,115 @@
     "name": "TEST",
     "tag": "mix",
     "src": "https://codepen.io/krmfla/embed/EaBmxb/?height=265&theme-id=0&default-tab=result&embed-version=2",
-    "favorite": true
+    "favorite": false
   },
   {
-    "name": "Happy Csser - Card Interaction",
+    "name": "卡片放大推出版型",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/7phug2fk/4/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
    {
-    "name": "Responsive Table Layout",
+    "name": "RWD 表格版型",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/agy1k1nc/7/embedded/result,html,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "Method Chaining",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/qeju2q1h/embedded/js/",
-    "favorite": true
+    "favorite": false
   },
    {
-    "name": "Controller Interface - 方格概念",
+    "name": "Controller 方格概念",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/877ahddz/5/embedded/result,js,css/",
-    "favorite": true
+    "favorite": false
   },
   {
-    "name": "Responisve Orgniaztion Chart",
+    "name": "RWD樹狀圖",
     "tag": "ui",
     "src": "https://codepen.io/krmfla/embed/YEJYPV/?height=265&theme-id=0&default-tab=result&embed-version=2",
-    "favorite": true
+    "favorite": false
   },
    {
-    "name": "float layout 破版",
+    "name": "float 破版",
     "tag": "test",
-    "src": "https://codepen.io/krmfla/embed/POQPbM/?height=265&theme-id=0&default-tab=css,result&embed-version=2",
-    "favorite": true
+    "src": "https://codepen.io/krmfla/embed/POQPbM/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
   },
   {
-    "name": "Drap & Touch Sort",
+    "name": "拖曳排序",
     "tag": "js",
-    "src": "https//codepen.io/krmfla/embed/NwyKYV/?height=265&theme-id=0&default-tab=js,result&embed-version=2",
-    "favorite": true
+    "src": "https://codepen.io/krmfla/embed/NwyKYV/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
   },
    {
-    "name": "Horizontal Scroll Menu & Drop Down Options",
+    "name": "導航列 + 下拉選單",
     "tag": "ui",
-    "src": "https://codepen.io/krmfla/embed/wPMxyp/?height=265&theme-id=0&default-tab=css,result&embed-version=2",
-    "favorite": true
+    "src": "https://codepen.io/krmfla/embed/wPMxyp/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
   },
   {
-    "name": "Web Storage Test",
+    "name": "Storage 測試",
     "tag": "mix",
     "src": "https://codepen.io/krmfla/embed/YrmLgV/?height=265&theme-id=0&default-tab=result&embed-version=2",
-    "favorite": true
+    "favorite": false
   },
    {
-    "name": "Happy Csser - Rainbow Spinners",
+    "name": "彩球旋轉",
     "tag": "css",
     "src": "https://codepen.io/krmfla/embed/OjKNyp/?height=265&theme-id=0&default-tab=result&embed-version=2",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "CSS Loading",
     "tag": "css",
-    "src": "https://codepen.io/krmfla/embed/QMOaEX/?height=265&theme-id=0&default-tab=css,result&embed-version=2",
-    "favorite": true
+    "src": "https://codepen.io/krmfla/embed/QMOaEX/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
   },
   {
     "name": "ratio | 比例",
     "tag": "ui",
     "src": "https://codepen.io/krmfla/embed/brEzyv/?height=265&theme-id=0&default-tab=result&embed-version=2",
-    "favorite": true
+    "favorite": false
   },
   {
-    "name": "Happy Csser - Plus expanded",
+    "name": "Mobile 功能特效",
     "tag": "mix",
     "src": "https://codepen.io/krmfla/embed/NvxvEb/?height=265&theme-id=0&default-tab=result&embed-version=2",
-    "favorite": true
+    "favorite": false
   },
   {
-    "name": "Animation loop - Wolf Runing",
+    "name": "野狼奔跑動畫",
     "tag": "css",
-    "src": "https://codepen.io/krmfla/embed/rwEEbB/?height=265&theme-id=0&default-tab=css,result&embed-version=2",
-    "favorite": true
+    "src": "https://codepen.io/krmfla/embed/rwEEbB/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
   },
   {
     "name": "切換語系範例",
     "tag": "mix",
     "src": "https://codepen.io/krmfla/embed/yXWBdG/?height=265&theme-id=0&default-tab=result&embed-version=2",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "卡片滑動效果",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/zpbg4tcp/embedded/result,js,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "HTML5 Player",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/gLa63f3w/3/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "Vue.js #4",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/xj39757L/4/embedded/result,js,html/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "Vue.js #3",
@@ -129,19 +129,19 @@
     "name": "自動調整高度",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/hqmt224g/1/embedded/result,html,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "文字超出時淡出效果",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/m435b0t7/5/embedded/result,js,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "ES6 #1",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/hL6ccqp7/2/embedded/js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "用時間格式建key",
@@ -153,13 +153,13 @@
     "name": "firebase #1",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/pjzv0kva/4/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "線性漸層做圖片淡出",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/64v0xakw/1/embedded/result,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "垂直對齊練習",
@@ -177,7 +177,7 @@
     "name": "Slide-Box Weather",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/uh8ej1g5/8/embedded/result,css,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "no Jquery - load",
@@ -189,7 +189,7 @@
     "name": "一行水平置中，多行靠左對齊",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/w7vxuwoL/3/embedded/result,html,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "正規表達式 #2",
@@ -207,13 +207,13 @@
     "name": "Asynchronous & Deferred",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/xqfygyeq/1/embedded/js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "Vue.js #1",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/6m8278Lz/embedded/js,result/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "insertAdjacentHTML",
@@ -225,7 +225,7 @@
     "name": "文字漸層淡出",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/ujzyne1L/2/embedded/result,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "css Blur",
@@ -243,13 +243,13 @@
     "name": "背景自動滿版",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/ysux9qv1/embedded/result,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "線性漸層 | 滑入展開",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/bL2hxnao/1/embedded/result,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "cookie | storage 測試",
@@ -285,7 +285,7 @@
     "name": "toast模組",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/2Lqpxwfv/12/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "bootstrap練習",
@@ -303,7 +303,7 @@
     "name": "VOD React",
     "tag": "react",
     "src": "https://jsfiddle.net/krmfla/gvcw86es/16/embedded/result,js,html/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "輸入框同步更新",
@@ -315,13 +315,13 @@
     "name": "搜尋功能",
     "tag": "react",
     "src": "https://jsfiddle.net/krmfla/j2j35d2c/6/embedded/result,js,html/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "振動式 editor",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/hn2wr6h2/2/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "Component試做",
@@ -333,31 +333,31 @@
     "name": "物件導向概念-訂書系統",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/5o3hha0m/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "任務管理器",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/bk2cLdgt/15/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "中英翻譯對照",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/d4b9wkLx/6/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "乒乓球+滑鼠點擊/滑過效果",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/wcf2cqcw/5/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "發牌效果",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/qL1sytrt/1/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "OOP + Flux設計模式練習",
@@ -369,7 +369,7 @@
     "name": "卡片翻轉效果",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/q8r8543v/7/embedded/result,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "no JQuery",
@@ -381,19 +381,19 @@
     "name": "番茄工作法",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/w754p2gg/18/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "按讚Module",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/c0qk6jev/6/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "彈跳動畫transition",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/1ooya597/2/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "垂直水平置中",
@@ -405,25 +405,25 @@
     "name": "旅遊APP(藍)",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/azuvnyre/9/embedded/result/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "循環動畫",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/o33og5zm/3/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "用偽元素做標籤",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/gap7ku91/6/embedded/result,html,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "圓形遮罩切換動畫",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/qnvt6j6r/4/embedded/result/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "用偽元素做check box",
@@ -441,7 +441,7 @@
     "name": "長按ok鍵",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/48586wos/1/embedded/result/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "咖啡色按鈕",
@@ -453,7 +453,7 @@
     "name": "RWD flip切換",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/dqw1vqrg/6/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "map & each",
@@ -477,13 +477,13 @@
     "name": "底線transition",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/ftj9xesn/6/embedded/result,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "JQuery滑動效果",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/fg5ou9q6/3/embedded/result/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "避免觸發reflow",
@@ -507,25 +507,25 @@
     "name": "RWD flip box",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/y7jb3sob/3/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "RWD 柵格系統",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/6Lncxpc4/embedded/result/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "RWD 動畫效果",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/juxogxa5/2/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "太空子彈",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/e9oy9ddu/1/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "VOD列表",
@@ -537,13 +537,13 @@
     "name": "Methods & Lifecycle",
     "tag": "react",
     "src": "https://jsfiddle.net/krmfla/dxbbz6cr/1/embedded/result/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "RX-93-ν2 Hi-ν Gundam",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/j19et01L/1/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "垂直跑馬燈模組",
@@ -555,19 +555,19 @@
     "name": "用偽元素自定ol樣式",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/gdbnsge7/embedded/result,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "react練習4 - 計時器",
     "tag": "react",
     "src": "https://jsfiddle.net/krmfla/r8r25zzh/2/embedded/result,html/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "文字滑入動畫",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/7ez3pfr1/5/embedded/result,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "多行文字垂直置中",
@@ -585,19 +585,19 @@
     "name": "仿bootstrap樣式",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/7u6hLtdc/3/embedded/result,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "canvas + 動畫",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/v38L488r/2/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "遮罩換色切換",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/xdaub6sv/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "手機版popup",
@@ -609,19 +609,19 @@
     "name": "100 Days UI",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/m2vcL7a6/11/embedded/result/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "react練習3",
     "tag": "react",
     "src": "https://jsfiddle.net/krmfla/onhkmcg5/2/embedded/result,html/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "側邊欄UI",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/gptzfmcu/embedded/result/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "react練習 nav menu",
@@ -633,7 +633,7 @@
     "name": "let yourself in",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/2fz4pg1d/4/embedded/result,html,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "if else 簡寫 + 帶參數",
@@ -645,7 +645,7 @@
     "name": "css:before+:after",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/rumnzzpz/embedded/result,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "new img listener",
@@ -675,13 +675,13 @@
     "name": "圓餅圖",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/75h5oyox/4/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "陣列Running",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/gzrhsk5a/5/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "捲動畫面，超過自訂高度",
@@ -693,25 +693,25 @@
     "name": "陣列增減排序",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/u340yj0k/2/embedded/result/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "社群APP",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/7vhdv2aw/10/embedded/result/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "英文學習APP",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/3ffjf5wy/18/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "react練習",
     "tag": "react",
     "src": "https://jsfiddle.net/krmfla/jpqxvrdu/8/embedded/result,html/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "操作DOM el",
@@ -741,7 +741,7 @@
     "name": "皇帝撲克",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/oekq7ukp/embedded/result,js/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "cookie, storage",
@@ -789,7 +789,7 @@
     "name": "直條圖",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/kkz7721c/18/embedded/result,html/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "設置focus",
@@ -807,7 +807,7 @@
     "name": "彈珠",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/9p7dqnrr/12/embedded/result,html/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "文字圖片垂直置中",
@@ -885,7 +885,7 @@
     "name": "pure css UI",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/0cxb1fk8/7/embedded/result,css/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "用clearfix,撐開父元素",
