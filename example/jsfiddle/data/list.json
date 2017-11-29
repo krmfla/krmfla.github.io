@@ -9,7 +9,7 @@
     "name": "3D海報翻轉",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/oh5yukwm/embedded/result,css/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "3D翻轉練習",
@@ -33,7 +33,7 @@
     "name": "RWD 表格版型",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/agy1k1nc/7/embedded/result,html,css/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "Method Chaining",
@@ -51,7 +51,7 @@
     "name": "RWD樹狀圖",
     "tag": "ui",
     "src": "https://codepen.io/krmfla/embed/YEJYPV/?height=265&theme-id=0&default-tab=result&embed-version=2",
-    "favorite": false
+    "favorite": true
   },
    {
     "name": "float 破版",
@@ -81,7 +81,7 @@
     "name": "彩球旋轉",
     "tag": "css",
     "src": "https://codepen.io/krmfla/embed/OjKNyp/?height=265&theme-id=0&default-tab=result&embed-version=2",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "CSS Loading",
@@ -93,7 +93,7 @@
     "name": "ratio | 比例",
     "tag": "ui",
     "src": "https://codepen.io/krmfla/embed/brEzyv/?height=265&theme-id=0&default-tab=result&embed-version=2",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "Mobile 功能特效",
@@ -117,7 +117,7 @@
     "name": "卡片滑動效果",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/zpbg4tcp/embedded/result,js,css/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "HTML5 Player",
@@ -195,7 +195,7 @@
     "name": "Slide-Box Weather",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/uh8ej1g5/8/embedded/result,css,js/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "no Jquery - load",
@@ -315,13 +315,13 @@
     "name": "client端即時留言",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/1q8yn644/9/embedded/result,js,html/",
-    "favorite": true
+    "favorite": false
   },
   {
     "name": "VOD React",
     "tag": "react",
     "src": "https://jsfiddle.net/krmfla/gvcw86es/16/embedded/result,js,html/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "輸入框同步更新",
@@ -357,7 +357,7 @@
     "name": "任務管理器",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/bk2cLdgt/15/embedded/result,js/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "中英翻譯對照",
@@ -369,13 +369,13 @@
     "name": "乒乓球+滑鼠點擊/滑過效果",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/wcf2cqcw/5/embedded/result,js/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "發牌效果",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/qL1sytrt/1/embedded/result,js/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "OOP + Flux設計模式練習",
@@ -411,7 +411,7 @@
     "name": "彈跳動畫transition",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/1ooya597/2/embedded/result,js/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "垂直水平置中",
@@ -525,13 +525,13 @@
     "name": "RWD flip box",
     "tag": "mix",
     "src": "https://jsfiddle.net/krmfla/y7jb3sob/3/embedded/result,js/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "RWD 柵格系統",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/6Lncxpc4/embedded/result/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "RWD 動畫效果",
@@ -603,7 +603,7 @@
     "name": "仿bootstrap樣式",
     "tag": "css",
     "src": "https://jsfiddle.net/krmfla/7u6hLtdc/3/embedded/result,css/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "canvas + 動畫",
@@ -627,7 +627,7 @@
     "name": "100 Days UI",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/m2vcL7a6/11/embedded/result/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "react練習3",
@@ -651,7 +651,7 @@
     "name": "let yourself in",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/2fz4pg1d/4/embedded/result,html,css/",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "if else 簡寫 + 帶參數",
