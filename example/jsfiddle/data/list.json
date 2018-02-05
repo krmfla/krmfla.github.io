@@ -1,11 +1,5 @@
 [
   {
-    "name": "VOD收藏功能",
-    "tag": "react",
-    "src": "https://codepen.io/krmfla/embed/OzQKyv/?height=265&theme-id=0&default-tab=result&embed-version=2",
-    "favorite": true
-  },
-  {
     "name": "3D立體卡片效果",
     "tag": "css",
     "src": "https://codepen.io/krmfla/embed/vpyeNQ/?height=265&theme-id=0&default-tab=result&embed-version=2",
@@ -330,9 +324,9 @@
     "favorite": false
   },
   {
-    "name": "VOD React",
+    "name": "加到最愛收藏功能",
     "tag": "react",
-    "src": "https://jsfiddle.net/krmfla/gvcw86es/16/embedded/result,js,html/",
+    "src": "https://codepen.io/krmfla/embed/OzQKyv/?height=265&theme-id=0&default-tab=result&embed-version=2",
     "favorite": true
   },
   {
