@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>template</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+    
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    
+    <!--<script type="text/javascript" src="script.js"></script>-->
+    <style>
+        /* Reset */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Basic Element */
+        .main {
+            width:100%;
+            max-width:568px;
+            margin:0 auto;
+        }
+
+        h1 {
+            text-align:center;
+        }
+
+        h1.hide {
+            color:transparent;
+        }
+
+        p {
+            color:#999;
+            text-align:center;
+        }
+         
+        @media (max-width: 720px) {
+            mediaSection {
+                width:100%;
+            }
+        }
+
+    </style>
+    
+    <script>
+    // $(document).ready(function(){
+        
+    // });
+    
+    // document.addEventListener("DOMContentLoaded", function() {
+
+    // });
+    
+    </script>
+
+</head>
+
+<body>
+    <div class="main">
+      <h1 id="title" >NETWORK</h1>
+      <img src="panda.jpg" width="100%" />
+      <img src="cache.png" width="100%" />
+    </div>
+
+    <script>
+        var h1 = document.getElementById("title");
+        if (navigator.onLine) {
+            h1.innerText = "網路連線正常";
+        } else {
+            h1.innerText = "離線狀態";
+        }
+        h1.classList.remove("hide'");
+
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(reg){
+                    console.log("Yes, it did.");
+                }).catch(function(err) {
+                    console.log("No it didn't. This happened: ", err)
+            });
+        }
+
+        var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+
+        document.addEventListener('click', function() {
+            console.dir(navigator);
+        })
+    </script>
+</body>
+</html>
