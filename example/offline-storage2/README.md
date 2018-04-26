@@ -27,6 +27,8 @@ FALLBACK 當進到 /other 失敗時，會導向 404.html
 
 檔案內容有修改時，manifest 也需更新，否則會用 cache 檔案
 
+用 js 更新, window.applicationCache.update()
+
 <br />
 
 ## 清除暫存檔的方式
