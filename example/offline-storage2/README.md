@@ -21,9 +21,13 @@ NETWORK 區的資料都從 server 取得
 
 FALLBACK 當進到 /other 失敗時，會導向 404.html
 
+<br />
+
 ## 檔案更新
 
 檔案內容有修改時，manifest 也需更新，否則會用 cache 檔案
+
+<br />
 
 ## 清除暫存檔的方式
 
