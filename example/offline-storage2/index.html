@@ -61,7 +61,7 @@
             } else {
                 h1.innerText = "離線狀態";
             }
-        } cache(e) {
+        } catch (e) {
             h1.innerText = "不支援 navigator.onLine";
             desc.innerText = JSON.stringify(e);
         }
