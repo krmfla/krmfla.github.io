@@ -36,3 +36,7 @@ FALLBACK 當進到 /other 失敗時，會導向 404.html
 删除 manifest 文件，并且删除 html 的 manifest 屬性
 
 再次進入時，就會載最新内容
+
+### Reference
+
+http://louiszhai.github.io/2016/11/25/manifest/
