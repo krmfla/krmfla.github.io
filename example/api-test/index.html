@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>template</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+        /* Reset */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Basic Element */
+        .main {
+            width:100%;
+            max-width:568px;
+            margin:0 auto;
+        }
+
+        h1 {
+            text-align:center;
+        }
+
+        h1.hide {
+            color:transparent;
+        }
+
+        p {
+            color:#999;
+            text-align:center;
+        }
+         
+        @media (max-width: 720px) {
+            mediaSection {
+                width:100%;
+            }
+        }
+
+    </style>
+    
+    <script>
+    // $(document).ready(function(){
+        
+    // });
+    
+    // document.addEventListener("DOMContentLoaded", function() {
+
+    // });
+    
+    </script>
+
+</head>
+
+<body>
+    <h1>login</h1>
+    <script>
+        $.ajax({
+            url: "https://ns2-nissan.azurewebsites.net/CarMember/Index",
+            method: "GET",
+            data: { "state" : "P486ZGhmO4KqAJDrrzsinQ==" },
+            dataType: "html"
+        }).done(function(response) {
+          $("body").html(response);  
+        });
+    </script>
+</body>
+</html>
