@@ -1,9 +1,8 @@
-# Offline Storage 2
+# Manifest
 
 <br />
 
 html 中加上 .manifest
-
 ```html
 <html manifest="offline.manifest">
 ```
@@ -68,6 +67,8 @@ if (appCache.status == window.applicationCache.UPDATEREADY) {
 删除 manifest 文件，并且删除 html 的 manifest 屬性
 
 再次進入時，就會載最新内容
+
+<br />
 
 ### Reference
 
