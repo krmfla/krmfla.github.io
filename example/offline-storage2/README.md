@@ -1,21 +1,37 @@
 # Offline Storage 2
 
+<br />
+
+html 中加上 .manifest
+
+```html
+<html manifest="offline.manifest">
+```
+
+<br />
+
 ## manifest
 
 FILENAME.manifest 格式
 ```
 CACHE MANIFEST
-# v1.0.0
-content.css
+#2018-05-02 v1.0.1
 
+# Explicitly cached 'master entries'.
+CACHE:
+index.html
+panda.jpg
+
+# Resources that require the user to be online.
 NETWORK:
-app.js
+*
+# * = All other resources (e.g. sites) require the user to be online.
 
 FALLBACK:
 /other 404.html
 ```
 
-CACHE MANIFEST 後的檔案會被暫存
+CACHE 區的檔案會被暫存
 
 NETWORK 區的資料都從 server 取得
 
@@ -27,7 +43,23 @@ FALLBACK 當進到 /other 失敗時，會導向 404.html
 
 檔案內容有修改時，manifest 也需更新，否則會用 cache 檔案
 
-用 js 更新, `window.applicationCache.update()`
+可在 manifest 檔中，將修改的檔案加上版本號，如：
+```
+index.html?v=1
+```
+**real time 的更新方式**
+
+```javascript
+var appCache = window.applicationCache;
+
+appCache.update(); // Attempt to update the user's cache.
+
+...
+
+if (appCache.status == window.applicationCache.UPDATEREADY) {
+  appCache.swapCache();  // The fetch was successful, swap in the new cache.
+}
+```
 
 <br />
 
@@ -40,3 +72,7 @@ FALLBACK 當進到 /other 失敗時，會導向 404.html
 ### Reference
 
 http://louiszhai.github.io/2016/11/25/manifest/
+
+应用缓存初级使用指南
+
+https://www.html5rocks.com/zh/tutorials/appcache/beginner/
