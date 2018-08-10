@@ -1,0 +1,57 @@
+.main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bg {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff0084+0,ff0084+100;Pink+Flat */
+    background: #ff0084;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ff0084 0%, #ff0084 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ff0084 0%, #ff0084 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ff0084 0%, #ff0084 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0084', endColorstr='#ff0084', GradientType=0);
+    /* IE6-9 */
+    padding-top: 10px;
+}
+
+select {
+    padding: 5px;
+    margin: 5px;
+    display: block;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.blue {
+    color: blue;
+}
+
+.word_box {
+    width: 100%;
+    height: 35vh;
+    background-color: #EEE;
+    padding: 5%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+#result {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
