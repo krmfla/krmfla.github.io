@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>template</title>
+    <style>
+        /* Reset */
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic Element */
+        .main {
+            width: 100%;
+            max-width: 568px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        h1.hide {
+            color: transparent;
+        }
+
+        img {
+            width: 100%;
+            margin-bottom: 25px;
+
+        }
+
+        p {
+            color: #777;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        @media (max-width: 720px) {
+            mediaSection {
+                width: 100%;
+            }
+        }
+
+        button {
+            padding: 2px 5px;
+        }
+    </style>
+    <script>
+        function share() {
+            window.open("https://social-plugins.line.me/lineit/share?url=" + window.location.href);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <h1 id="title">分享測試</h1>
+        <img src="https://kathycaprino.com/wp-content/uploads/2014/07/iStock_000020158359Large.jpg" />
+        <p id="desc">Have faith that I am in the Father and that the Father is in me: at least, have faith in me
+            because of what I do.</p>
+        <p id="desc">Jesus said to him, I am the true and living way: no one comes to the Father but by me.</p>
+        <button onclick="share()">share</button>
+    </div>
+</body>
+
+</html>
