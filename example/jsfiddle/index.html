@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0 user-scalable=no" name="viewport"/>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
+    <meta content="width=device-width, initial-scale=1.0 user-scalable=no" name="viewport" />
     <title>JS-Fiddle</title>
+    <meta name="description"
+        content="因不滿意jsfiddle沒有好的收納作品功能，就自己實作出來啦~整合在jsfiddle及codepen上試做的小品，包含native javascript、Vue、React、pure CSS、UI 試驗、RWD" />
+    <meta itemprop="name" content="Krmfla JSfiddle Collection" />
+    <meta itemprop="image" content="https://krmfla.github.io/example/jsfiddle/images/demo.png" />
+    <meta property="og:title" content="Krmfla JSfiddle Collection" />
+    <meta property="og:description"
+        content="因不滿意jsfiddle沒有好的收納作品功能，就自己實作出來啦~整合在jsfiddle及codepen上試做的小品，包含native javascript、Vue、React、pure CSS、UI 試驗、RWD" />
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://krmfla.github.io/example/jsfiddle/images/demo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
+
 </head>
+
 <body>
     <div class="header">
         <div class="headerSection">
-          <p id="projectName">JSFiddle Project</p>
-          <div id="functionBtn" class="functionBtn">F</div>
+            <p id="projectName">JSFiddle Projects</p>
+            <div id="functionBtn" class="functionBtn">F</div>
         </div>
     </div>
     <div class="main">
         <div id="navigation" class="navigation">
-	    <div class="searchBar">
-	        <input id="searchInput" class="searchInput" placeholder="search..."/>
-	        <div id="searchBtn" class="searchBtn" title="search"></div>
-	        <div id="favoriteBtn" class="favoriteBtn" title="favorite"></div>
-	    </div>
+            <div class="searchBar">
+                <input id="searchInput" class="searchInput" placeholder="search..." />
+                <div id="searchBtn" class="searchBtn" title="search"></div>
+                <div id="favoriteBtn" class="favoriteBtn" title="favorite"></div>
+            </div>
             <ul id="navList">
             </ul>
         </div>
         <div id="mainBG" class="content">
-            <iframe id="sandbox" width="100%" height="100%"
-                    src=""
-                    allowfullscreen="allowfullscreen" frameborder="0">
+            <iframe id="sandbox" width="100%" height="100%" src="" allowfullscreen="allowfullscreen" frameborder="0">
             </iframe>
         </div>
     </div>
 </body>
+
 </html>
