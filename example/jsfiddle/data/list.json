@@ -1,5 +1,59 @@
 [
   {
+    "name": "水波紋效果 JQuery Ripples",
+    "tag": "mix",
+    "src": "https://codepen.io/krmfla/embed/LvVPPg/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
+  },
+  {
+    "name": "疊蛋糕(DOM轉靜態圖)",
+    "tag": "mix",
+    "src": "https://codepen.io/krmfla/embed/BbwxNa/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": true
+  },
+  {
+    "name": "登錄多筆資料暫存模組",
+    "tag": "mix",
+    "src": "https://codepen.io/krmfla/embed/NoOjmj/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
+  },
+  {
+    "name": "響應式網站基本開發規格參考",
+    "tag": "css",
+    "src": "https://codepen.io/krmfla/embed/REooBp/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
+  },
+  {
+    "name": "3D Box Moving",
+    "tag": "css",
+    "src": "https://codepen.io/krmfla/embed/vVagMp/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
+  },
+  {
+    "name": "聊天機器人(語音辨識/輸出)",
+    "tag": "js",
+    "src": "https://codepen.io/krmfla/embed/XBomQr/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
+  },
+  {
+    "name": "名單轉換器",
+    "tag": "mix",
+    "src": "https://codepen.io/krmfla/embed/xJpEKZ/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
+  },
+  {
+    "name": "選轉跳躍我閉著眼",
+    "tag": "mix",
+    "src": "https://codepen.io/krmfla/embed/VxbdYM/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
+  },
+  {
+    "name": "Toggle Button Effect",
+    "tag": "css",
+    "src": "https://codepen.io/krmfla/embed/xWLvKR/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": true
+  },
+  {
     "name": "3D立體卡片效果",
     "tag": "css",
     "src": "https://codepen.io/krmfla/embed/vpyeNQ/?height=265&theme-id=0&default-tab=result&embed-version=2",
@@ -29,7 +83,7 @@
     "src": "https://jsfiddle.net/krmfla/7phug2fk/4/embedded/result,js/",
     "favorite": false
   },
-   {
+  {
     "name": "RWD 表格版型",
     "tag": "ui",
     "src": "https://jsfiddle.net/krmfla/agy1k1nc/7/embedded/result,html,css/",
@@ -41,7 +95,7 @@
     "src": "https://jsfiddle.net/krmfla/qeju2q1h/embedded/js/",
     "favorite": false
   },
-   {
+  {
     "name": "Controller 方格概念",
     "tag": "js",
     "src": "https://jsfiddle.net/krmfla/877ahddz/5/embedded/result,js,css/",
@@ -53,7 +107,7 @@
     "src": "https://codepen.io/krmfla/embed/YEJYPV/?height=265&theme-id=0&default-tab=result&embed-version=2",
     "favorite": true
   },
-   {
+  {
     "name": "float 破版",
     "tag": "test",
     "src": "https://codepen.io/krmfla/embed/POQPbM/?height=265&theme-id=0&default-tab=result&embed-version=2",
@@ -65,7 +119,7 @@
     "src": "https://codepen.io/krmfla/embed/NwyKYV/?height=265&theme-id=0&default-tab=result&embed-version=2",
     "favorite": false
   },
-   {
+  {
     "name": "導航列 + 下拉選單",
     "tag": "ui",
     "src": "https://codepen.io/krmfla/embed/wPMxyp/?height=265&theme-id=0&default-tab=result&embed-version=2",
@@ -77,7 +131,7 @@
     "src": "https://codepen.io/krmfla/embed/YrmLgV/?height=265&theme-id=0&default-tab=result&embed-version=2",
     "favorite": false
   },
-   {
+  {
     "name": "彩球旋轉",
     "tag": "css",
     "src": "https://codepen.io/krmfla/embed/OjKNyp/?height=265&theme-id=0&default-tab=result&embed-version=2",
@@ -336,9 +390,9 @@
     "favorite": false
   },
   {
-    "name": "振動式 editor",
+    "name": "震動式 editor",
     "tag": "mix",
-    "src": "https://jsfiddle.net/krmfla/hn2wr6h2/2/embedded/result,js/",
+    "src": "https://codepen.io/krmfla/embed/OGyXrz/?height=265&theme-id=0&default-tab=result&embed-version=2",
     "favorite": false
   },
   {
