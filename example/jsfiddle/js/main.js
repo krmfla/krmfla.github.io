@@ -1,8 +1,8 @@
 //On Document Ready
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
 	var app = new App();
 	//AJAX
-	getJSON("https://krmfla.github.io/example/jsfiddle/data/list.json", function(isSuccess, response) {
+	getJSON("./data/list.json", function (isSuccess, response) {
 		app.init(response);
 	});
 });
@@ -22,14 +22,14 @@ function App() {
 	var data = null;
 	var hideMainBG = false;
 	var isOpen = false; //is function button used
-	
+
 	// === Public Action ===
 	function initialize(jsonData) {
 		data = jsonData;
 		creatElement();
 		bindEvent();
 	}
-	
+
 	// === Private Function Kits ===
 	function creatElement() {
 		var _content = "";
@@ -38,7 +38,7 @@ function App() {
 		});
 		listEl.innerHTML = _content;
 	}
-	
+
 	function bindEvent() {
 		listEl.addEventListener("click", clickEvent);
 		funcEl.addEventListener("click", funcEvent);
@@ -46,7 +46,7 @@ function App() {
 		searchEl.addEventListener("click", searchEvent);
 		favoriteEl.addEventListener("click", favoriteEvent);
 	}
-	
+
 	function clickEvent(event) {
 		if (hideMainBG === false) {
 			document.getElementById("mainBG").style.backgroundImage = "url('')";
@@ -61,7 +61,7 @@ function App() {
 			console.log("no src");
 		}
 	}
-	
+
 	function funcEvent() {
 		if (isOpen) {
 			navEl.classList.remove("active");
@@ -73,7 +73,7 @@ function App() {
 			isOpen = true;
 		}
 	}
-	
+
 	function listSelected(element) {
 		if (selectEl !== null) {
 			selectEl.classList.remove("active");
@@ -81,12 +81,12 @@ function App() {
 		element.classList.add("active");
 		selectEl = element;
 	}
-	
+
 	function renderSandbox(index) {
 		iframeEl.setAttribute("src", data[index].src);
 		projectEl.innerText = data[index].name;
 	}
-	
+
 	function onKeydown(event) {
 		if (event.keyCode === 13) {
 			searchEvent();
@@ -96,7 +96,7 @@ function App() {
 			}
 		}
 	}
-	
+
 	function searchEvent() {
 		var value = (inputEl.value).toLowerCase();
 		if (!value) { return };
@@ -109,7 +109,7 @@ function App() {
 			}
 		}
 	}
-	
+
 	function favoriteEvent() {
 		if (favoriteEl.className.indexOf("showAll") >= 0) {
 			for (var i = 0, max = listEl.childNodes.length; i < max; i++) {
@@ -128,7 +128,7 @@ function App() {
 			favoriteEl.classList.add("showAll");
 		}
 	}
-	
+
 	// === API ===
 	return {
 		init: initialize
@@ -136,16 +136,16 @@ function App() {
 }
 
 function getJSON(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-      var status = xhr.status;
-      if (status == 200) {
-        callback(true, xhr.response);
-      } else {
-        callback(false, status);
-      }
-    };
-    xhr.send();
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', url, true);
+	xhr.responseType = 'json';
+	xhr.onload = function () {
+		var status = xhr.status;
+		if (status == 200) {
+			callback(true, xhr.response);
+		} else {
+			callback(false, status);
+		}
+	};
+	xhr.send();
 }
