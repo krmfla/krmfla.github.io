@@ -1,21 +1,29 @@
+var linkData = {
+	"goJsfiddle": "https://krmfla.github.io/example/jsfiddle/",
+	"goWorldFamily": "https://www.worldfamily.com.tw/",
+	"goCollection": "https://q4u.worldfamily.com.tw/card2/all/all.html",
+	"goKidTest": "http://krmfla.byethost12.com/toys/index.html"
+};
+
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-	var linkData = {
-		"goJsfiddle"   : "https://krmfla.github.io/example/jsfiddle/",
-		"goWorldFamily": "http://www.worldfamily.com.tw/index.aspx",
-		"goCollection" : "http://q4u.worldfamily.com.tw/card2/all/all.html",
-		"goKidTest"    : "http://krmfla.byethost12.com/toys/index.html"
-	};
-	
-	for (var key in linkData) {
-		var elements = document.getElementsByClassName(key);
-		for (var i = 0, max = elements.length; i < max; i++) {
-			elements[i].linkUrl = linkData[key];
-			elements[i].addEventListener("click", function() {
-				window.open(this.linkUrl);
+	var elements = document.querySelectorAll('.links');
+	// console.log(elements);
+	for (var i = 0, max = elements.length; i < max; i++) {
+		var category = elements[i].dataset.url;
+		// console.log(category);
+		elements[i].linkUrl = linkData[category];
+		elements[i].addEventListener("click", function () {
+			// console.log(this.linkUrl);
+			window.open(this.linkUrl);
+			gtag('event', 'click', {
+				'event_category': "index",
+				'event_label': this.dataset.url,
+				'transport_type': 'beacon'
 			});
-		}
-		elements = null;
+			// console.log(this.dataset.url);
+		});
+
 	}
 }
