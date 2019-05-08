@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<!-- SEO -->
 	<!-- github -->
 	<!-- node sample -->
-    <title>Krmfla Collection</title>
+	<title>Krmfla Collection</title>
 	<link rel="stylesheet" href="resources/style.css">
-    <script src="resources/script.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83200136-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+	<script src="resources/script.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-83200136-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-83200136-2');
+	</script>
 
-        gtag('config', 'UA-83200136-2');
-    </script>
 </head>
 
 <body>
@@ -28,51 +29,53 @@
 		<main>
 			<article>
 				<div class="projectThumbnail">
-					<img src="images/sample1.jpg" class="goJsfiddle" onClick="ga('send', 'event', 'Link', 'Click', 'click jsfiddle')"/>
+					<img src="images/sample1.jpg" class="links" data-url="goJsfiddle" />
 				</div>
 				<div class="projectContent">
-					<h2 class="goJsfiddle">JSFiddle 作品集</h2>
-					<p>將在JSFiddle上練習的作品，整理成Web Application<br>
-					   有javascript、CSS、UI設計、bootstrap、React、Vue、Firebase...<br>
-					   並支援RWD~
+					<h2 class="links" data-url="goJsfiddle">JSFddle 作品集</h2>
+					<p>因不滿意 JSFddle 的收納功能，就自己實作出來啦~
+						<br />
+						整合在 jsfiddle 及 codepen 上試做的小品，包含native javascript、Vue、React、pure
+						CSS、daily UI、RWD...
 					</p>
 				</div>
 			</article>
 			<article>
 				<div class="projectThumbnail">
-					<img src="images/sample2.jpg" class="goWorldFamily"/>
+					<img src="images/sample2.jpg" class="links" data-url="goWorldFamily" />
 				</div>
 				<div class="projectContent">
-					<h2 class="goWorldFamily">World Family官網設計及建置</h2>
+					<h2 class="links" data-url="goWorldFamily">World Family官網設計及建置</h2>
 					<p>
 					</p>
-					<detail>官網已重新設計，此為備份網頁</detail>
+					<detail>官網已重新設計，此為舊版畫面</detail>
 				</div>
 			</article>
 			<article>
 				<div class="projectThumbnail">
-					<img src="images/sample3.jpg" class="goCollection"/>
+					<img src="images/sample3.jpg" class="links" data-url="goCollection" />
 				</div>
 				<div class="projectContent">
-					<h2 class="goCollection">網頁設計作品集</h2>
+					<h2 class="links" data-url="goCollection">網頁設計作品集</h2>
 					<p>包含Landing Page、活動網站、互動式Web App
 					</p>
 				</div>
 			</article>
 			<article>
 				<div class="projectThumbnail">
-					<img src="images/sample4.jpg" class="goKidTest"/>
+					<img src="images/sample4.jpg" class="links" data-url="goKidTest" />
 				</div>
 				<div class="projectContent">
-					<h2 class="goKidTest">幼兒氣質評量</h2>
+					<h2 class="links" data-url="goKidTest">幼兒氣質評量</h2>
 					<p>
 					</p>
 					<detail>活動網站已下架，此為備份網頁</detail>
 				</div>
 			</article>
 		</main>
-		
+
 		<footer></footer>
 	</div>
 </body>
+
 </html>
