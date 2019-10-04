@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>template</title>
+    <style>
+        /* Reset */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        iframe {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <iframe id='iframe' width='80%' height='80%'src=''></iframe>
+    </div>
+
+    <script>
+        var body = document.querySelector("body");
+        var iframe = document.getElementById("iframe");
+        var query = window.location.search.substring(1);
+        var qs = parse_query_string(query);
+        console.log(qs);
+
+        if (qs.iframe) {
+            iframe.setAttribute('src', qs.iframe);
+        }
+
+        function parse_query_string(query) {
+            var vars = query.split("&");
+            var query_string = {};
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                var key = decodeURIComponent(pair[0]);
+                var value = decodeURIComponent(pair[1]);
+                // If first entry with this name
+                if (typeof query_string[key] === "undefined") {
+                    query_string[key] = decodeURIComponent(value);
+                    // If second entry with this name
+                } else if (typeof query_string[key] === "string") {
+                    var arr = [query_string[key], decodeURIComponent(value)];
+                    query_string[key] = arr;
+                    // If third or later entry with this name
+                } else {
+                    query_string[key].push(decodeURIComponent(value));
+                }
+            }
+            return query_string;
+        }
+    </script>
+</body>
+</html>
