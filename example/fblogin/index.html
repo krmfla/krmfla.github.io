@@ -27,14 +27,14 @@
 </head>
 
 <body>
-  <p> ver 0.6 </p>
+  <p> ver 0.7 async defer </p>
   <script>
     window.fbAsyncInit = function() {
         FB.init({
             appId: '473587996563835',
             autoLogAppEvents : true,
             xfbml : true,
-            version: 'v3.2'
+            version: 'v4.0'
         });
         FB.AppEvents.logPageView();
     };
@@ -51,7 +51,7 @@
     }(document, 'script', 'facebook-jssdk'));
     */
   </script>
-  <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+  <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
   <button id='btn'>login</button>
   <div id='result'></div>
   <script>
