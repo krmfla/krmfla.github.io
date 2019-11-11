@@ -27,14 +27,16 @@
 </head>
 
 <body>
-  <p> ver 0.9 change script load </p>
+  <p> ver 0.9 change parameter </p>
   <script>
     window.fbAsyncInit = function() {
         FB.init({
             appId: '473587996563835',
             autoLogAppEvents : true,
             cookie : true,
-            xfbml : true,
+            // xfbml : true,
+            status:true,
+            xfbml: false,
             version: 'v4.0'
         });
         FB.AppEvents.logPageView();
