@@ -27,7 +27,7 @@
 </head>
 
 <body>
-  <p> ver 0.8 add cookie </p>
+  <p> ver 0.9 change script load </p>
   <script>
     window.fbAsyncInit = function() {
         FB.init({
@@ -39,7 +39,7 @@
         });
         FB.AppEvents.logPageView();
     };
-    /*
+    
     (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {
@@ -50,9 +50,9 @@
         js.src = "https://connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-    */
+    
   </script>
-  <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+  <!--script async defer src="https://connect.facebook.net/en_US/sdk.js"></script -->
   <button id='btn'>login</button>
   <div id='result'></div>
   <script>
