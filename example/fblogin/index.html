@@ -27,15 +27,15 @@
 </head>
 
 <body>
-  <p> ver 0.12 change fb id </p>
+  <p> ver 0.13 set xfbml to false </p>
   <script>
     window.fbAsyncInit = function() {
         FB.init({
             appId: '254199185263294',
             autoLogAppEvents : true,
-            cookie : true,
+            // cookie : true,
             // status:true,
-            // xfbml: false,
+            xfbml: false,
             version: 'v4.0'
         });
         FB.AppEvents.logPageView();
