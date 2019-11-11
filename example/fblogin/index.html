@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=750, user-scalable=no" name="viewport">
+    <title>template</title>
+    <script>
+      window.fbAsyncInit = function() {
+          FB.init({
+          appId            : '254199185263294',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v4.0'
+          });
+      };
+    </script>
+    <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <style>
+        /* Reset */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            width: 100%;
+            height: 100vh;
+        }
+        
+    </style>
+</head>
+
+<body>
+  <button id='btn'>login</button>
+  <result id='result'></result>
+  <script>
+    var btn = document.getElementById('btn');
+    var result = document.getElementById('result');
+    btn.onclick = function() {
+      FB.login(function(response) {
+          if (response.status === 'connected') {
+            var str = '';
+            str += response.authResponse.userID + '\r\n';
+            str += response.authResponse.accessToken;
+            result.innerText = str;
+          } else {
+              alert('登入失敗, 請重新再試');
+          }
+      });
+    }
+  </script>
+</body>
+</html>
