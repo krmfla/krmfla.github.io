@@ -4,17 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta content="width=device-width, user-scalable=no" name="viewport">
     <title>template</title>
-    <script>
-      window.fbAsyncInit = function() {
-          FB.init({
-          appId            : '254199185263294',
-          autoLogAppEvents : true,
-          xfbml            : true,
-          version          : 'v3.2'
-          });
-      };
-    </script>
-    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
     <style>
         /* Reset */
         body, h1, h2, p {
@@ -35,6 +24,19 @@
 </head>
 
 <body>
+  <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId            : '254199185263294',
+            status:true,
+            cookie: true,
+            xfbml: false,
+            version          : 'v3.2'
+        });
+        FB.AppEvents.logPageView();
+    };
+  </script>
+  <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
   <button id='btn'>login</button>
   <div id='result'></div>
   <script>
