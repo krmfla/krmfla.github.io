@@ -1,8 +1,50 @@
 [
   {
-    "name": "水波紋效果 JQuery Ripples",
+    "name": "爬格子",
     "tag": "mix",
-    "src": "https://codepen.io/krmfla/embed/LvVPPg/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "src": "https://codepen.io/krmfla/embed/BEPzap/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
+  },
+  {
+    "name": "紙飛機效果",
+    "tag": "ui",
+    "src": "https://codepen.io/krmfla/embed/vYBLEoN/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
+  },
+  {
+    "name": "SVG Map",
+    "tag": "ui",
+    "src": "https://codepen.io/krmfla/embed/ExYPZvN/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": true
+  },
+  {
+    "name": "達成率進度條",
+    "tag": "ui",
+    "src": "https://codepen.io/krmfla/embed/BaBKWqN/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": false
+  },
+  {
+    "name": "三消遊戲",
+    "tag": "react",
+    "src": "https://codepen.io/krmfla/embed/GRKBwqB/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": true
+  },
+  {
+    "name": "即時文字翻牌效果",
+    "tag": "react",
+    "src": "https://codepen.io/krmfla/embed/KKPRjZa/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": true
+  },
+  {
+    "name": "ffmpeg-語音與音軌合成",
+    "tag": "mix",
+    "src": "https://codepen.io/krmfla/embed/dybrWLQ/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite":true
+  },
+  {
+    "name": "多個物件垂直置中",
+    "tag": "ui",
+    "src": "https://codepen.io/krmfla/embed/vYEOPzR/?height=265&theme-id=0&default-tab=result&embed-version=2",
     "favorite": false
   },
   {
