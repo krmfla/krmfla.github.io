@@ -1,0 +1,189 @@
+body {
+    background-color: #faf8c8;
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+}
+
+.main {
+    width: 100%;
+    max-width: 1280px;
+    overflow: auto;
+    padding: 50px 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.card {
+    width: 23%;
+    padding-top: 29%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    background-color: white;
+    border-radius: 10px;
+    float: left;
+    box-shadow: 0 0 3px #cfc847;
+    border: 10px solid white;
+    background-size: 100%;
+    background-position: center center;
+    box-sizing: border-box;
+    transition: all .6s;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.card2 {
+    width: 48%;
+}
+
+.card a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* .card2 {
+    padding-top: 32.568%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    background-color: white;
+    border-radius: 10px;
+    float: left;
+    box-shadow: 0 0 3px #cfc847;
+    border-radius: 10px solid white;
+    background-size: 100%;
+    background-position: center center;
+    box-sizing: border-box;
+    transition: all .6s;
+    cursor: pointer;
+} */
+
+.c_family_points {
+    background-image: url('images/family_points.jpg');
+}
+
+.c_fareastern {
+    background-image: url('images/fareastern.png');
+}
+
+.c_family {
+    background-image: url('images/family.png');
+}
+
+.c_taishin_atm {
+    background-image: url('images/taishin_atm.jpg');
+}
+
+.c_2019Q2tiida {
+    background-image: url('images/2019Q2tiida.png');
+}
+
+.c_tsatm201901 {
+    background-image: url('images/tsatm201901.png');
+}
+
+.c_richart_point {
+    background-image: url('images/richart_point.jpg');
+}
+
+.c_taishin {
+    background-image: url('images/taishin.png');
+}
+
+.c_fuma {
+    background-image: url('images/fuma.png');
+}
+
+.c_xtrail-left {
+    background-image: url('images/xtrail-left.jpg');
+}
+
+.c_xtrail-right {
+    background-image: url('images/xtrail-right.jpg');
+}
+
+.c_dashboard_1 {
+    background-image: url('images/dashboard_1.png');
+}
+
+.c_sentra19my {
+    background-image: url('images/sentra19my.jpg');
+}
+/*
+.c_family {
+    background-image: url('images/');
+} */
+
+.card:hover,  .card2:hover {
+    transform: scale(1.05, 1.05);
+    box-shadow: 0 0 8px #cfca67;
+}
+
+.lightbox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.box-mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.7);
+    z-index: -1;
+}
+
+.box-wrapper {
+    width: 60%;
+    /* max-width: 1400px; */
+    /* padding-top: 34.01%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: -1;
+    
+}
+
+.swiper-container, .swiper-wrapper {
+    width: 100%;
+    /* height: 100%; */
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 0;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
