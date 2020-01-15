@@ -152,6 +152,7 @@ body {
     border-radius: 10px;
     padding: 10px;
     z-index: -1;
+    display: none;
     
 }
 
