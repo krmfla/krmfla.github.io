@@ -3,6 +3,11 @@ body {
     background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
 }
 
+body.dev {
+    background-color: white;
+    background-image: none;
+}
+
 .main {
     width: 100%;
     max-width: 1280px;
@@ -14,7 +19,7 @@ body {
 
 .card {
     width: 23%;
-    padding-top: 29%;
+    padding-top: 30%;
     margin-right: 2%;
     margin-bottom: 2%;
     background-color: white;
@@ -35,7 +40,7 @@ body {
     width: 48%;
 }
 
-.card a {
+.card a, .card .content_btn {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -115,7 +120,31 @@ body {
     background-image: url('images/gashapon.png');
 }
 
-.card:hover,  .card2:hover {
+.c_demo-box {
+    background-image: url('images/demo_box.png');
+}
+
+.c_tank {
+    background-image: url('images/tank.png');
+}
+
+.c_toys {
+    background-image: url('images/toys.png');
+}
+
+.c_litv {
+    background-image: url('images/litv.png');
+}
+
+.c_markdown {
+    background-image: url('images/markdown.png');
+}
+
+.c_run {
+    background-image: url('images/run.png');
+}
+
+.card:hover, .card2:hover {
     transform: scale(1.05, 1.05);
     box-shadow: 0 0 8px #cfca67;
 }
@@ -127,7 +156,7 @@ body {
     top: 0;
     left: 0;
     z-index: 1;
-    display: none;
+    /* display: none; */
 }
 
 .box-mask {
@@ -153,14 +182,39 @@ body {
     padding: 10px;
 }
 
+.close_btn {
+    position: absolute;
+    display: table-cell;
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    right: -20px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    /* padding: 5px; */
+    border-radius: 25px;
+    background-color: #333;
+    color: white;
+    border: 2px solid white;
+    z-index: 10;
+    box-shadow: 0 0 4px #333;
+    cursor: pointer;
+}
+
 .swiper-container, .swiper-wrapper {
     width: 100%;
     /* height: 100%; */
 }
 
-.swiper-pagination {
+/* .swiper-pagination {
     position: absolute;
     bottom: 0;
+} */
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: -2px;
 }
 
 .swiper-slide {
@@ -180,8 +234,47 @@ body {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+    padding: 20px 45px;
+    box-sizing: border-box;
 }
 
 .swiper-slide img {
     width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+    .card {
+        width: 31.33%;
+        padding-top: 40.854%;
+    }
+    .card2 {
+        width: 64.66%
+    }
+    .box-wrapper {
+        width: 85%;
+    }
+
+    .swiper-slide {
+        padding: 10px 25px;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        width: 13.5px;
+        height: 22px;
+        margin-top: -11px;
+        background-size: 100%;
+    }
+    .swiper-button-prev {
+        left: 0;
+    }
+
+    .swiper-button-next {
+        right: 0;
+    }
+}
+
+.back {
+    visibility: hidden;
+    z-index: -1;
+    position: absolute;
 }

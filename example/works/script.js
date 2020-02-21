@@ -10,3 +10,13 @@ var swiper = new Swiper('.swiper-container', {
     mousewheel: true,
     keyboard: true,
 });
+
+function display_swiper(id) {
+  var el = document.getElementById(id);
+  el.classList.remove('back');
+}
+
+function close_swiper(id) {
+  var el = document.getElementById(id);
+  el.classList.add('back');
+}

@@ -20,10 +20,9 @@
 		// gtag('js', new Date());
 		// gtag('config', 'UA-83200136-2');
 	</script>
-
 </head>
 
-<body>
+<body class=''>
 	<div class='main'>
 		<div class='card c_family_points'><a href='https://event.family.com.tw/points_for_love/index.html' target='_blank'></a></div>
 		<div class='card c_fareastern'><a href='https://showcase.friendo.com.tw/fareastern2019/' target='_blank'></a></div>
@@ -35,15 +34,23 @@
 		<div class='card c_taishin'><a href='https://campaign.friendo.com.tw/taishinatm2018/index.html' target='_blank'></a></div>
 		<div class='card c_xtrail-left'><a href='https://nissanbc.azurewebsites.net/carmember/index?state=HPAeNatyrDVrikqTl9ydmQ==&type=left' target='_blank'></a></div>
 		<div class='card c_xtrail-right'><a href='https://nissanbc.azurewebsites.net/carmember/index?state=HPAeNatyrDVrikqTl9ydmQ==&type=right' target='_blank'></a></div>
-		<div class='card card2 c_dashboard_1'><a href='' target='_blank'></a></div>
+		<div class='card card2 c_dashboard_1'><div class='content_btn' onclick='display_swiper("dashboard")'></div></div>
 		<div class='card c_fuma'><a href='https://carrefour.friendo.com.tw/trygon/fuma_intro.html' target='_blank'></a></div>
 		<div class='card c_sentra19my'><a href='http://event.nissan.com.tw/sentra19my/' target='_blank'></a></div>
 		<div class='card c_gashapon'><a href='https://showcase.friendo.com.tw/marketing/gashapon/gashapon.html' target='_blank'></a></div>
+		<div class='card c_demo-box'><a href='https://krmfla.github.io/example/jsfiddle/' target='_blank'></a></div>
+		<div class='card card2 c_tank'><a href='https://node-tank-duel.herokuapp.com/' target='_blank'></a></div>
+		<div class='card c_litv'><a href='https://tw.lgappstv.com/main/tvapp/detail?appId=446686' target='_blank'></a></div>
+		<div class='card c_toys'><a href='http://krmfla.byethost12.com/toys/index.html' target='_blank'></a></div>
+		<div class='card c_markdown'><a href='https://github.com/Markdown-Document/Markdown-Document' target='_blank'></a></div>
+		<div class='card c_run'><a href='http://krmfla.byethost12.com/runforgold/' target='_blank'></a></div>
+		
 		<!-- <div class='card'></div> -->
 	</div>
-	<div class='lightbox'>
-		<div class='box-mask'></div>
+	<div class='lightbox back' id='dashboard'>
+		<div class='box-mask' onclick='close_swiper("dashboard")'></div>
 		<div class='box-wrapper'>
+			<div class='close_btn' onclick='close_swiper("dashboard")'><span>×</span></div>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 				  <div class="swiper-slide"><img src='images/dashboard_1.png'></div>
@@ -53,6 +60,7 @@
 				  <div class="swiper-slide"><img src='images/dashboard_5.png'></div>
 				  <div class="swiper-slide"><img src='images/dashboard_6.png'></div>
 				  <div class="swiper-slide"><img src='images/dashboard_7.png'></div>
+				  <div class="swiper-slide"><img src='images/dashboard_8.png'></div>
 				</div>
 				<!-- Add Arrows -->
 				<div class="swiper-button-next"></div>
