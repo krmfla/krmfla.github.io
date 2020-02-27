@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=750, user-scalable=no" name="viewport">
+    <title>calendar</title>
+    <style>
+        /* Reset */
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            /* width: 100%;
+            height: 100vh; */
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            display: none;
+        }
+
+        .board {
+            border: 1px solid #AAA;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            display: none;
+        }
+    </style>
+    <!-- <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> -->
+</head>
+
+<body>
+    <div class="main">
+        <button id='authorize_button'>login</button>
+        <div id='content' style='display:none'></div>
+        <button id='signout_button'>logout</button>
+        <div id='board' class='board'>
+            <p>活動: GEM Live concert</p>
+            <p>時間: 2020-02-29 19:00 ~ 21:00</p>
+            <p>地點: 台北小巨蛋</p>
+        </div>
+        <button id='create_button'>create event</button>
+    </div>
+
+    <script>
+        // Client ID and API key from the Developer Console
+        var CLIENT_ID = '786973825403-hd3qjli9njubk4tbta668iq3s4f2kqgg';
+        var API_KEY = 'AIzaSyC5RInfxP547aGseYDsddDwui5VoqHAHt8';
+
+        // Array of API discovery doc URLs for APIs used by the quickstart
+        var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
+
+        // Authorization scopes required by the API; multiple scopes can be
+        // included, separated by spaces.
+        var SCOPES = "https://www.googleapis.com/auth/calendar.events";
+
+        var authorizeButton = document.getElementById('authorize_button');
+        var signoutButton = document.getElementById('signout_button');
+        var createButton = document.getElementById('create_button');
+        var board = document.getElementById('board');
+        board
+
+        /**
+         *  On load, called to load the auth2 library and API client library.
+         */
+        function handleClientLoad() {
+            gapi.load('client:auth2', initClient);
+        }
+
+        /**
+         *  Initializes the API client library and sets up sign-in state
+         *  listeners.
+         */
+        function initClient() {
+            gapi.client.init({
+                apiKey: API_KEY,
+                clientId: CLIENT_ID,
+                discoveryDocs: DISCOVERY_DOCS,
+                scope: SCOPES
+            }).then(function () {
+                // Listen for sign-in state changes.
+                gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+
+                // Handle the initial sign-in state.
+                updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+                authorizeButton.onclick = handleAuthClick;
+                signoutButton.onclick = handleSignoutClick;
+                createButton.onclick = handleCreate;
+            }, function (error) {
+                appendPre(JSON.stringify(error, null, 2));
+            });
+        }
+
+        /**
+         *  Called when the signed in status changes, to update the UI
+         *  appropriately. After a sign-in, the API is called.
+         */
+        function updateSigninStatus(isSignedIn) {
+            if (isSignedIn) {
+                authorizeButton.style.display = 'none';
+                signoutButton.style.display = 'inline-block';
+                create_button.style.display = 'inline-block';
+                board.style.display = 'inline-block';
+                
+                listUpcomingEvents();
+            } else {
+                authorizeButton.style.display = 'inline-block';
+                signoutButton.style.display = 'none';
+                create_button.style.display = 'none';
+                board.style.display = 'none';
+            }
+        }
+
+        /**
+         *  Sign in the user upon button click.
+         */
+        function handleAuthClick(event) {
+            gapi.auth2.getAuthInstance().signIn();
+        }
+
+        /**
+         *  Sign out the user upon button click.
+         */
+        function handleSignoutClick(event) {
+            gapi.auth2.getAuthInstance().signOut();
+        }
+
+        function handleCreate() {
+            var event = {
+                'summary': 'GEM Live concert',
+                'location': '台北小巨蛋',
+                // 'description': 'A chance to hear more about Google\'s developer products.',
+                'start': {
+                    'dateTime': '2020-02-29T19:00:00+08:00',
+                    'timeZone': 'Asia/Taipei'
+                },
+                'end': {
+                    'dateTime': '2020-02-29T21:00:00+08:00',
+                    'timeZone': 'Asia/Taipei'
+                },
+                // 'recurrence': [
+                //     'RRULE:FREQ=DAILY;COUNT=2'
+                // ],
+                // 'attendees': [
+                //     { 'email': 'lpage@example.com' },
+                //     { 'email': 'sbrin@example.com' }
+                // ],
+                'reminders': {
+                    'useDefault': false,
+                    'overrides': [
+                        { 'method': 'email', 'minutes': 24 * 60 },
+                        { 'method': 'popup', 'minutes': 10 }
+                    ]
+                }
+            };
+
+            var request = gapi.client.calendar.events.insert({
+                'calendarId': 'primary',
+                'resource': event
+            });
+
+            request.execute(function (event) {
+                // appendPre('Event created: ' + event.htmlLink);
+                alert('活動已建立');
+                console.log(event.htmlLink);
+            });
+        }
+
+        /**
+         * Append a pre element to the body containing the given message
+         * as its text node. Used to display the results of the API call.
+         *
+         * @param {string} message Text to be placed in pre element.
+         */
+        function appendPre(message) {
+            var pre = document.getElementById('content');
+            var textContent = document.createTextNode(message + '\n');
+            pre.appendChild(textContent);
+        }
+
+        /**
+         * Print the summary and start datetime/date of the next ten events in
+         * the authorized user's calendar. If no events are found an
+         * appropriate message is printed.
+         */
+        function listUpcomingEvents() {
+            gapi.client.calendar.events.list({
+                'calendarId': 'primary',
+                'timeMin': (new Date()).toISOString(),
+                'showDeleted': false,
+                'singleEvents': true,
+                'maxResults': 10,
+                'orderBy': 'startTime'
+            }).then(function (response) {
+                var events = response.result.items;
+                appendPre('Upcoming events:');
+
+                if (events.length > 0) {
+                    for (i = 0; i < events.length; i++) {
+                        var event = events[i];
+                        var when = event.start.dateTime;
+                        if (!when) {
+                            when = event.start.date;
+                        }
+                        appendPre(event.summary + ' (' + when + ')')
+                    }
+                } else {
+                    appendPre('No upcoming events found.');
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript" src='https://apis.google.com/js/api:client.js'
+        onload="this.onload=function(){};handleClientLoad()"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()" async defer></script>
+</body>
+
+</html>
