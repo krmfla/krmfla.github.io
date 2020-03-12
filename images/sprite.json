@@ -1,0 +1,36 @@
+{"frames": {
+
+"Explosion_Sequence_A 1.png":
+{
+    "frame": {"x":0,"y":0,"w":180,"h":336},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":180,"h":336},
+    "sourceSize": {"w":180,"h":336}
+},
+"Explosion_Sequence_A 2.png":
+{
+    "frame": {"x":181,"y":0,"w":180,"h":336},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":180,"h":336},
+    "sourceSize": {"w":180,"h":336}
+},
+"Explosion_Sequence_A 3.png":
+{
+    "frame": {"x":361,"y":336,"w":180,"h":336},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":180,"h":336},
+    "sourceSize": {"w":180,"h":336}
+},
+"meta": {
+    "app": "http://www.texturepacker.com",
+    "version": "1.0",
+    "image": "mc.png",
+    "format": "RGBA8888",
+    "size": {"w":590,"h":336},
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:17e4a2d92ff3e27832c3f4938cec7c85$"
+}
+}
