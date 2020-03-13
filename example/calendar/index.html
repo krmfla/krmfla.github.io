@@ -43,14 +43,22 @@
         <div id='content' style='display:none'></div>
         <button id='signout_button'>logout</button>
         <div id='board' class='board'>
-            <p>活動: GEM Live concert</p>
-            <p>時間: 2020-02-29 19:00 ~ 21:00</p>
-            <p>地點: 台北小巨蛋</p>
+            <p>活動: <span id='event'></span></p>
+            <p>時間: <span id='time'></span></p>
+            <p>地點: <sapn id='location'></span></p>
         </div>
         <button id='create_button'>create event</button>
     </div>
 
     <script>
+        var _event = 'GEM Live Concet';
+        var _time =  '2020-06-01 19:00 ~ 21:00';
+        var _time_start = '2020-02-29T19:00:00+08:00';
+        var _time_end   = '2020-02-29T21:00:00+08:00';
+        var _location = '台北小巨蛋';
+        var event_el = document.getElementById('event');
+        var time_el = document.getElementById('time');
+        var location_el = document.getElementById('location');
         // Client ID and API key from the Developer Console
         var CLIENT_ID = '912786052661-solhrqq1eq3bshgl367amql01enbmufk';
         var API_KEY = 'AIzaSyAOOpxI4hrbMTtIluVC1par9us6s8lVOYM';
@@ -66,7 +74,6 @@
         var signoutButton = document.getElementById('signout_button');
         var createButton = document.getElementById('create_button');
         var board = document.getElementById('board');
-        board
 
         /**
          *  On load, called to load the auth2 library and API client library.
@@ -139,15 +146,15 @@
 
         function handleCreate() {
             var event = {
-                'summary': 'GEM Live concert',
-                'location': '台北小巨蛋',
+                'summary': _event,
+                'location': _location,
                 // 'description': 'A chance to hear more about Google\'s developer products.',
                 'start': {
-                    'dateTime': '2020-02-29T19:00:00+08:00',
+                    'dateTime': _time_start,
                     'timeZone': 'Asia/Taipei'
                 },
                 'end': {
-                    'dateTime': '2020-02-29T21:00:00+08:00',
+                    'dateTime': _time_end,
                     'timeZone': 'Asia/Taipei'
                 },
                 // 'recurrence': [
@@ -173,8 +180,12 @@
 
             request.execute(function (event) {
                 // appendPre('Event created: ' + event.htmlLink);
-                alert('活動已建立');
-                console.log(event.htmlLink);
+                if (event.htmlLink) {
+                    alert('活動已建立');
+                } else {
+                    alert('活動建立失敗');
+                }
+                console.log(event);
             });
         }
 
