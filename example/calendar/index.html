@@ -74,6 +74,10 @@
         var signoutButton = document.getElementById('signout_button');
         var createButton = document.getElementById('create_button');
         var board = document.getElementById('board');
+        
+        event_el.innerText = _event;
+        time_el.innerText = _time;
+        location_el.innerText = _location;
 
         /**
          *  On load, called to load the auth2 library and API client library.
