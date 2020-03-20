@@ -1,9 +1,15 @@
 [
   {
+    "name": "英文口語檢測",
+    "tag": "mix",
+    "src": "https://codepen.io/krmfla/embed/abzrMQJ/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "favorite": true
+  },
+  {
     "name": "爬格子",
     "tag": "mix",
     "src": "https://codepen.io/krmfla/embed/BEPzap/?height=265&theme-id=0&default-tab=result&embed-version=2",
-    "favorite": false
+    "favorite": true
   },
   {
     "name": "紙飛機效果",
@@ -26,7 +32,7 @@
   {
     "name": "三消遊戲",
     "tag": "react",
-    "src": "https://codepen.io/krmfla/embed/GRKBwqB/?height=265&theme-id=0&default-tab=result&embed-version=2",
+    "src": "https://codepen.io/krmfla/embed/QWbGadP/?height=265&theme-id=0&default-tab=result&embed-version=2",
     "favorite": true
   },
   {

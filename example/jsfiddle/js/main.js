@@ -33,9 +33,10 @@ function App() {
 	// === Private Function Kits ===
 	function creatElement() {
 		var _content = "";
-		data.map(function (item, index) {
-			_content += "<li class='style_" + item.tag + "' data-index='" + index + "' data-fav='" + item.favorite + "'>" + item.name + "</li>";
-		});
+		for (var i = 0; i < data.length; i++) {
+			item = data[i];
+			_content += "<li class='style_" + item.tag + "' data-index='" + i + "' data-fav='" + item.favorite + "' data-tag='" + item.tag + "'>" + item.name + "</li>";
+		}
 		listEl.innerHTML = _content;
 	}
 
@@ -102,7 +103,8 @@ function App() {
 		if (!value) { return };
 		for (var i = 0, max = listEl.childNodes.length; i < max; i++) {
 			var textContent = (listEl.childNodes[i].textContent).toLowerCase();
-			if (textContent.indexOf(value) >= 0) {
+			var tag = listEl.childNodes[i].dataset.tag.toLowerCase();
+			if (textContent.indexOf(value) >= 0 || tag.indexOf(value) >= 0) {
 				listEl.childNodes[i].classList.remove("hide");
 			} else {
 				listEl.childNodes[i].classList.add("hide");
