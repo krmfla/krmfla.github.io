@@ -20,9 +20,11 @@
                 token: token
             }).then(function (response) {
                 console.log(response);
+                grecaptcha.reset();
             })
             .catch(function (error) {
-                console.log(error);
+                console.error(error);
+                grecaptcha.reset();
             });
         }
     </script>
