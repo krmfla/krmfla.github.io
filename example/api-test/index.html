@@ -15,7 +15,16 @@
     </form>
     <script>
         function onSubmit(token) {
-         document.getElementById("demo-form").submit();
+         console.log(token);
+         // document.getElementById("demo-form").submit();
+         axios.post('https://4157c000.ngrok.io', {
+            token: token
+         }).then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
        }
     </script>
 </body>
