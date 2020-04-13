@@ -4,66 +4,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>template</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
-    <style>
-        /* Reset */
-        body, h1, h2, p {
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* Basic Element */
-        .main {
-            width:100%;
-            max-width:568px;
-            margin:0 auto;
-        }
-
-        h1 {
-            text-align:center;
-        }
-
-        h1.hide {
-            color:transparent;
-        }
-
-        p {
-            color:#999;
-            text-align:center;
-        }
-         
-        @media (max-width: 720px) {
-            mediaSection {
-                width:100%;
-            }
-        }
-
-    </style>
-    
-    <script>
-    // $(document).ready(function(){
-        
-    // });
-    
-    // document.addEventListener("DOMContentLoaded", function() {
-
-    // });
-    
-    </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
-    <h1>login</h1>
+    <h1>recaptcha</h1>
+    <form id='demo-form' action="?" method="POST">
+      <button class="g-recaptcha" data-sitekey="6LeQD-kUAAAAAO5D389lZ_0twJGYzF90LU26CC8l" data-callback='onSubmit'>Submit</button>
+    </form>
     <script>
-        liff.init(onSuccess, onError);
-        function onSuccess() {
-            alert("success");
-        }
-        function onError() {
-            alert("error");
-        }
+        function onSubmit(token) {
+         document.getElementById("demo-form").submit();
+       }
     </script>
 </body>
 </html>
