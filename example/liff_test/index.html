@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Liff test 15:52</h1>
+    <h1>Liff test 15:55</h1>
     <button id='btn1'>INIT/LOGIN</button>
     <button id='btn2'>SHARE</button>
     <script>
@@ -28,18 +28,17 @@
           liff.login();
         }
       }
-      btn2.onclick = async function() {
-        var result = await liff.shareTargetPicker([
+      btn2.onclick = function() {
+        liff.shareTargetPicker([
           {
             type: "text",
             text: "OLA-OLA-OLA-OLA"
           }
         ]);
-//         .then(() => { alert("ShareTargetPicker was launched"); })
-//         .catch(function(res) {
-//           alert(res);
-//         });
-        alert(result);
+        .then(res => { alert(res); })
+        .catch(function(err) {
+          alert(err);
+        });
       }
     </script>
 </body>
