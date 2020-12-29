@@ -8,29 +8,30 @@
 </head>
 
 <body>
-    <h1>Liff test 16:35</h1>
+    <h1>Liff test 16:38</h1>
     <button id='btn1'>INIT/LOGIN</button>
-    <button id='btn2'>SHARE</button>
+    
+    <button id='btn_2'>SHARE</button>
     
     <script>
       window.onerror = function(err, xhr, message) {
         alert(err + ', ' + xhr + ', ' + message);
       }
       var btn1 = document.getElementById('btn1');
-      var btn2 = document.getElementById('btn2');
+      var btn_2 = document.getElementById('btn_2');
       
-      btn2.onclick = function() {
+      btn_2.onclick = function() {
         alert('CLICK');
-        liff.shareTargetPicker([
-          {
-            type: "text",
-            text: "OLA-OLA-OLA-OLA"
-          }
-        ])
-        .then(res => { alert(res); })
-        .catch(function(err) {
-          alert(err);
-        });
+//         liff.shareTargetPicker([
+//           {
+//             type: "text",
+//             text: "OLA-OLA-OLA-OLA"
+//           }
+//         ])
+//         .then(res => { alert(res); })
+//         .catch(function(err) {
+//           alert(err);
+//         });
       }
         
       btn1.onclick = async function() {
