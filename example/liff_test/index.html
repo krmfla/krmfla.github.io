@@ -28,19 +28,19 @@
           });
       });
         
-      btn_2.onclick = function() {
-        alert('CLICK');
-        liff.shareTargetPicker([
-          {
-            type: "text",
-            text: "OLA-OLA-OLA-OLA"
-          }
-        ])
-        .then(res => { alert(res); })
-        .catch(function(err) {
-          alert(err);
-        });
-      }
+//       btn_2.onclick = function() {
+//         alert('CLICK');
+//         liff.shareTargetPicker([
+//           {
+//             type: "text",
+//             text: "OLA-OLA-OLA-OLA"
+//           }
+//         ])
+//         .then(res => { alert(res); })
+//         .catch(function(err) {
+//           alert(err);
+//         });
+//       }
         
       btn1.onclick = async function() {
         await liff.init({liffId: "1612283647-VQeR60d6"});
