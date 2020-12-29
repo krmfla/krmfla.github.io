@@ -8,9 +8,10 @@
 </head>
 
 <body>
-    <h1>Liff test 16:25</h1>
+    <h1>Liff test 16:35</h1>
     <button id='btn1'>INIT/LOGIN</button>
     <button id='btn2'>SHARE</button>
+    
     <script>
       window.onerror = function(err, xhr, message) {
         alert(err + ', ' + xhr + ', ' + message);
@@ -18,16 +19,6 @@
       var btn1 = document.getElementById('btn1');
       var btn2 = document.getElementById('btn2');
       
-      
-      btn1.onclick = async function() {
-        await liff.init({liffId: "1612283647-VQeR60d6"});
-        if(liff.isLoggedIn()){
-          //已經登入
-          document.body.innerHTML += "<p>已登入</p>";
-        } else { 
-          liff.login();
-        }
-      }
       btn2.onclick = function() {
         alert('CLICK');
         liff.shareTargetPicker([
@@ -40,6 +31,16 @@
         .catch(function(err) {
           alert(err);
         });
+      }
+        
+      btn1.onclick = async function() {
+        await liff.init({liffId: "1612283647-VQeR60d6"});
+        if(liff.isLoggedIn()){
+          //已經登入
+          document.body.innerHTML += "<p>已登入</p>";
+        } else { 
+          liff.login();
+        }
       }
     </script>
 </body>
