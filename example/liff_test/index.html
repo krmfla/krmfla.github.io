@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Liff test 16:55</h1>
+    <h1>Liff test 16:57</h1>
     <button id='btn1'>INIT/LOGIN</button>
     <button id='btn2'>SHARE</button>
     
@@ -26,9 +26,9 @@
             text: "OLA-OLA-OLA-OLA"
           }
         ])
-        .then(res => { alert(res); })
+        .then(res => { alert(JSON.stringify(res)) })
         .catch(function(err) {
-          alert(err);
+          alert(JSON.stringify(err));
         });
       }
         
