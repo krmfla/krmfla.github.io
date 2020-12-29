@@ -8,8 +8,32 @@
 
 <body>
     <h1>Liff test</h1>
+    <button id='btn'>SHARE</button>
     <script>
-      window.alert(window.location.href);
+      window.onerror = function(err, xhr, message) {
+        alert(err + ', ' + xhr + ', ' + message);
+      }
+      var btn = document.getElementById('btn');
+      await liff.init({liffId：“ YOUR-LIFF-ID”});
+      if(liff.isLoggedIn()){
+        //已經登入
+        document.body.innerHTML += "<p>已登入</p>";
+      }} else { 
+        liff.login（）
+      }
+      btn.onclick = function() {
+        liff.shareTargetPicker([
+          {
+            type: "text",
+            text: "OLA-OLA-OLA-OLA"
+          }
+        ])
+          .then(
+            alert("ShareTargetPicker was launched");
+          ).catch(function(res) {
+            alert("Failed to launch ShareTargetPicker");
+          })
+      }
     </script>
 </body>
 </html>
