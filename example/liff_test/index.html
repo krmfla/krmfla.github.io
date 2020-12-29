@@ -8,9 +8,10 @@
 </head>
 
 <body>
-    <h1>Liff test 16:45</h1>
+    <h1>Liff test 16:51</h1>
     <button id='btn1'>INIT/LOGIN</button>
     <button id='btn2'>SHARE</button>
+    <button id='btn3'>TEST</button>
     
     <script>
       window.onerror = function(err, xhr, message) {
@@ -18,6 +19,9 @@
       }
       var btn1 = document.getElementById('btn1');
       var btn2 = document.getElementById('btn2');
+      var btn3 = document.getElementById('btn3');
+        
+      btn3.onclick = function() { document.body.innerHTML += "<p>click</p>"; }
       
       btn2.addEventListener('click', function() {
           alert('CLICK');
