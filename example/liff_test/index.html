@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Liff test 18:30</h1>
+    <h1>Liff test 18:32</h1>
     <div id='profile'></div>
     <button id='btn1'>INIT/LOGIN</button>
     <button id='btn2'>SHARE</button>
@@ -49,8 +49,8 @@
         
       btn3.onclick = function() {
         liff.getProfile()
-            .then(profile => {
-              profile.innerText = JSON.stringify(profile);
+            .then(data => {
+              profile.innerText = JSON.stringify(data);
             })
             .catch((err) => {
               profile.innerText = JSON.stringify(err);
