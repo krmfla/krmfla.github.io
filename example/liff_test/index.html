@@ -4,15 +4,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Liff test</title>
+    <style>
+        .result {
+            width: 100%;
+            word-break: break-all;
+        }
+    </style>
     <script src="https://static.line-scdn.net/liff/edge/versions/2.3.0/sdk.js"></script>
 </head>
 
 <body>
-    <h1>Liff test 18:32</h1>
-    <div id='profile'></div>
+    <h1>Liff test 10:55</h1>
+    <div id='result' class='result'></div>
     <button id='btn1'>INIT/LOGIN</button>
     <button id='btn2'>SHARE</button>
     <button id='btn3'>GET PROFILE</button>
+    <button id='btn4'>GET ACCESS TOKEN</button>
     
     <script>
       window.onerror = function(err, xhr, message) {
@@ -21,7 +28,8 @@
       var btn1 = document.getElementById('btn1');
       var btn2 = document.getElementById('btn2');
       var btn3 = document.getElementById('btn3');
-      var profile = document.getElementById('profile');
+      var btn4 = document.getElementById('btn4');
+      var result = document.getElementById('result');
         
         
       btn2.onclick = function() {
@@ -50,10 +58,19 @@
       btn3.onclick = function() {
         liff.getProfile()
             .then(data => {
-              profile.innerText = JSON.stringify(data);
+              result.innerText = JSON.stringify(data);
             })
             .catch((err) => {
-              profile.innerText = JSON.stringify(err);
+              result.innerText = JSON.stringify(err);
+            });
+      }
+      btn4.onclick = function() {
+        liff.getAccessToken()
+            .then(data => {
+              result.innerText = JSON.stringify(data);
+            })
+            .catch((err) => {
+              result.innerText = JSON.stringify(err);
             });
       }
     </script>
