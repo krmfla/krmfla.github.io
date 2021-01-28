@@ -3,11 +3,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Liff test</title>
+    <title>Liff test 11:05</title>
     <style>
         .result {
             width: 100%;
             word-break: break-all;
+        }
+        button {
+            margin: 5px 10px;
         }
     </style>
     <script src="https://static.line-scdn.net/liff/edge/versions/2.3.0/sdk.js"></script>
@@ -65,13 +68,8 @@
             });
       }
       btn4.onclick = function() {
-        liff.getAccessToken()
-            .then(data => {
-              result.innerText = JSON.stringify(data);
-            })
-            .catch((err) => {
-              result.innerText = JSON.stringify(err);
-            });
+        var token = liff.getAccessToken();
+        result.innerText = JSON.stringify(token);
       }
     </script>
 </body>
