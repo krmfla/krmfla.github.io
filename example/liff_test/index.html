@@ -67,9 +67,8 @@
               result.innerText = JSON.stringify(err);
             });
       }
-      btn4.onclick = async function() {
-        var token;
-        await token = liff.getAccessToken();
+      btn4.onclick = function() {
+        var token = liff.getAccessToken();
         result.innerText = JSON.stringify(token);
       }
     </script>
