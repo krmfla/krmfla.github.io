@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <h1>Liff test 11:07</h1>
+    <h1>Liff test 11:11</h1>
     <div id='result' class='result'></div>
     <button id='btn1'>INIT/LOGIN</button>
     <button id='btn2'>SHARE</button>
@@ -25,14 +25,15 @@
     <button id='btn4'>GET ACCESS TOKEN</button>
     
     <script>
-      window.onerror = function(err, xhr, message) {
-        alert(err + ', ' + xhr + ', ' + message);
-      }
       var btn1 = document.getElementById('btn1');
       var btn2 = document.getElementById('btn2');
       var btn3 = document.getElementById('btn3');
       var btn4 = document.getElementById('btn4');
       var result = document.getElementById('result');
+        
+      window.onerror = function(err, xhr, message) {
+        result.innerText = (err + ', ' + xhr + ', ' + message);
+      }
         
         
       btn2.onclick = function() {
