@@ -8,6 +8,8 @@
         .result {
             width: 100%;
             word-break: break-all;
+            padding: 10px;
+            box-sizing: border-box;
         }
         button {
             margin: 5px 10px;
@@ -23,12 +25,14 @@
     <button id='btn2'>SHARE</button>
     <button id='btn3'>GET PROFILE</button>
     <button id='btn4'>GET ACCESS TOKEN</button>
+    <button id='btn5'>LOGOUT</button>
     
     <script>
       var btn1 = document.getElementById('btn1');
       var btn2 = document.getElementById('btn2');
       var btn3 = document.getElementById('btn3');
       var btn4 = document.getElementById('btn4');
+      var btn5 = document.getElementById('btn5');
       var result = document.getElementById('result');
         
       window.onerror = function(err, xhr, message) {
@@ -54,7 +58,8 @@
         if(liff.isLoggedIn()){
           //已經登入
           alert('已登入');
-        } else { 
+        } else {
+          alert('尚未登入');
           liff.login();
         }
       }
@@ -71,6 +76,10 @@
       btn4.onclick = function() {
         var token = liff.getAccessToken();
         result.innerText = JSON.stringify(token);
+      }
+      btn5.onclick = function() {
+          liff.logout();
+          alert('已登出');
       }
     </script>
 </body>
