@@ -44,7 +44,7 @@
       btn1.onclick = async function() {
         await liff.init({liffId: "1612283647-VQeR60d6"});
         if(liff.isLoggedIn()){
-          alert('已登入');
+          alert('已在登入狀態');
         } else {
           alert('尚未登入');
         }
@@ -75,18 +75,12 @@
         result.innerText = JSON.stringify(token);
       }
       btn5.onclick = function() {
+          liff.login();
+          alert('已登入');
+      }
+      btn6.onclick = function() {
           liff.logout();
           alert('已登出');
-      }
-        
-      window.onload = function() {
-        liff.init({liffId: "1612283647-VQeR60d6"})
-          .then(()=>{
-            alert('LIFF INIT done');
-          })
-          catch(err=>{
-              result.innerText = JSON.stringify(err);
-          })
       }
     </script>
 </body>
