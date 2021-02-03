@@ -19,13 +19,14 @@
 </head>
 
 <body>
-    <h1>Liff test 11:11</h1>
+    <h1>Liff test 10:05</h1>
     <div id='result' class='result'></div>
-    <button id='btn1'>INIT/LOGIN</button>
+    <button id='btn1'>INIT</button>
     <button id='btn2'>SHARE</button>
     <button id='btn3'>GET PROFILE</button>
     <button id='btn4'>GET ACCESS TOKEN</button>
-    <button id='btn5'>LOGOUT</button>
+    <button id='btn5'>LOGIN</button>
+    <button id='btn6'>LOGOUT</button>
     
     <script>
       var btn1 = document.getElementById('btn1');
@@ -33,13 +34,21 @@
       var btn3 = document.getElementById('btn3');
       var btn4 = document.getElementById('btn4');
       var btn5 = document.getElementById('btn5');
+      var btn6 = document.getElementById('btn6');
       var result = document.getElementById('result');
         
       window.onerror = function(err, xhr, message) {
         result.innerText = (err + ', ' + xhr + ', ' + message);
       }
-        
-        
+
+      btn1.onclick = async function() {
+        await liff.init({liffId: "1612283647-VQeR60d6"});
+        if(liff.isLoggedIn()){
+          alert('已登入');
+        } else {
+          alert('尚未登入');
+        }
+      }
       btn2.onclick = function() {
         liff.shareTargetPicker([
           {
@@ -52,18 +61,6 @@
           alert(JSON.stringify(err));
         });
       }
-        
-      btn1.onclick = async function() {
-        await liff.init({liffId: "1612283647-VQeR60d6"});
-        if(liff.isLoggedIn()){
-          //已經登入
-          alert('已登入');
-        } else {
-          alert('尚未登入');
-          liff.login();
-        }
-      }
-        
       btn3.onclick = function() {
         liff.getProfile()
             .then(data => {
@@ -80,6 +77,16 @@
       btn5.onclick = function() {
           liff.logout();
           alert('已登出');
+      }
+        
+      window.onload = function() {
+        liff.init({liffId: "1612283647-VQeR60d6"})
+          .then(()=>{
+            alert('LIFF INIT done');
+          })
+          catch(err=>{
+              result.innerText = JSON.stringify(err);
+          })
       }
     </script>
 </body>
