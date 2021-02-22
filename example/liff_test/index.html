@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <h1>Liff test 10:07</h1>
+    <h1>Liff test 02:02</h1>
     <div id='result' class='result'></div>
     <button id='btn1'>INIT</button>
     <button id='btn2'>SHARE</button>
@@ -27,6 +27,7 @@
     <button id='btn4'>GET ACCESS TOKEN</button>
     <button id='btn5'>LOGIN</button>
     <button id='btn6'>LOGOUT</button>
+    <button id='btn7'>FLEX SHARE</button>
     
     <script>
       var btn1 = document.getElementById('btn1');
@@ -35,6 +36,7 @@
       var btn4 = document.getElementById('btn4');
       var btn5 = document.getElementById('btn5');
       var btn6 = document.getElementById('btn6');
+      var btn7 = document.getElementById('btn7');
       var result = document.getElementById('result');
         
       window.onerror = function(err, xhr, message) {
@@ -81,6 +83,27 @@
       btn6.onclick = function() {
           liff.logout();
           alert('已登出');
+      }
+      btn7.onclick = function() {
+          liff.shareTargetPicker([{
+            type: "flex",
+            altText: "好康分享~來NISSAN預約試乘，購車加送保修禮券3,000元喔！",
+            contents: {
+                type: "bubble",
+                size: "giga",
+                hero: {
+                    type: "image",
+                    url: "http://krmfla.github.io/example/liff_test/flex_test.png",
+                    size: "full",
+                    aspectRatio: "1:1",
+                    aspectMode: "cover",
+                    action: {
+                        type: "uri",
+                        uri: "https://line.me/R/ti/p/%40nissan.tw"
+                    }
+                }
+            }
+        }]);
       }
     </script>
 </body>
