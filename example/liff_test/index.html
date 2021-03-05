@@ -19,15 +19,15 @@
 </head>
 
 <body>
-    <h1>Liff test 02:52</h1>
+    <h1>Liff test 04:20</h1>
     <div id='result' class='result'></div>
-    <button id='btn1'>INIT</button>
-    <button id='btn2'>SHARE</button>
-    <button id='btn3'>GET PROFILE</button>
-    <button id='btn4'>GET ACCESS TOKEN</button>
-    <button id='btn5'>LOGIN</button>
-    <button id='btn6'>LOGOUT</button>
-    <button id='btn7'>FLEX SHARE</button>
+    <button id='btn5'>登入</button>
+    <button id='btn6'>登出</button>
+    <button id='btn1'>初始化</button>
+    <button id='btn3'>取得個人資料</button>
+    <button id='btn4'>取得授權碼</button>
+    <button id='btn2'>訊息分享</button>
+    <button id='btn7'>圖片訊息分享</button>
     
     <script>
       var btn1 = document.getElementById('btn1');
@@ -55,7 +55,7 @@
         liff.shareTargetPicker([
           {
             type: "text",
-            text: "OLA-OLA-OLA-OLA"
+            text: "OLA-OLA-OLA-OLA\r\n💫💥🤛🤛🤛👊👊👊💥💫\r\nhttps://web.archive.org/web/20150407071659/http://jojogame.bngames.net/asb/"
           }
         ])
         .then(res => { alert(JSON.stringify(res)) })
