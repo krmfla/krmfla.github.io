@@ -27,7 +27,8 @@
     <button id='btn3'>取得個人資料</button>
     <button id='btn4'>取得授權碼</button>
     <button id='btn2'>訊息分享</button>
-    <button id='btn7'>圖片訊息分享</button>
+    <button id='btn7'>圖文訊息分享</button>
+    <button id='btn8'>按鈕式訊息分享</button>
     
     <script>
       var btn1 = document.getElementById('btn1');
@@ -37,6 +38,7 @@
       var btn5 = document.getElementById('btn5');
       var btn6 = document.getElementById('btn6');
       var btn7 = document.getElementById('btn7');
+      var btn8 = document.getElementById('btn8');
       var result = document.getElementById('result');
         
       window.onerror = function(err, xhr, message) {
@@ -55,7 +57,7 @@
         liff.shareTargetPicker([
           {
             type: "text",
-            text: "OLA-OLA-OLA-OLA\r\n💫💥🤛🤛🤛👊👊👊💥💫\r\nhttps://web.archive.org/web/20150407071659/http://jojogame.bngames.net/asb/"
+            text: "一緒にOLA-OLA-OLA-OLA\r\n💫💥🤛🤛🤛👊👊👊💥💫\r\nhttps://web.archive.org/web/20150407071659/http://jojogame.bngames.net/asb/"
           }
         ])
         .then(res => { 
@@ -107,6 +109,38 @@
             }
           }]);
       }
+        btn8.onclick = function() }{
+            liff.shareTargetPicker([{
+              "type": "template",
+              "altText": "能量大漲！新春運勢開紅盤，登錄發票抽10萬紅包",
+              "template": {
+                  "type": "buttons",
+                  "thumbnailImageUrl": "https://campaign.friendo.com.tw/2021CBCNY/images/share.jpg",
+                  "imageAspectRatio": "rectangle",
+                  "imageSize": "cover",
+                  "imageBackgroundColor": "#000000",
+                  "title": "牛年大漲",
+                  "text": "快來測試你的好手氣",
+                  "defaultAction": {
+                      "type": "uri",
+                      "label": "測字去",
+                      "uri": "https://campaign.friendo.com.tw/2021CBCNY/"
+                  },
+                  "actions": [
+                      {
+                        "type": "uri",
+                        "label": "測字去",
+                        "uri": "https://liff.line.me/1654902258-GYvepqEX"
+                      },
+                                {
+                        "type": "uri",
+                        "label": "看得獎公告",
+                        "uri": "https://campaign.friendo.com.tw/2021CBCNY/awards.html"
+                      }
+                  ]
+              }
+            }]);
+        }
     </script>
 </body>
 </html>
