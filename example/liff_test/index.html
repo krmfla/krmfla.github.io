@@ -19,7 +19,8 @@
 </head>
 
 <body>
-    <h1>LIFF test 07:12</h1>
+    <h1>LIFF test 06:50</h1>
+    <p>請先點擊初始化/登入</p>
     <div id='result' class='result'></div>
     <button id='btn1'>初始化</button>
     <button id='btn5'>登入</button>
@@ -29,7 +30,7 @@
     <button id='btn2'>訊息分享</button>
     <button id='btn7'>圖文訊息分享</button>
     <button id='btn8'>按鈕式訊息分享</button>
-    
+    <button id='btn9'>動畫+按鈕訊息分享</button>
     <script>
       var btn1 = document.getElementById('btn1');
       var btn2 = document.getElementById('btn2');
@@ -140,6 +141,75 @@
                   ]
               }
             }]);
+        }
+        btn9.onclick = function() {
+            liff.shareTargetPicker([
+                {
+                  "type": "flex",
+                  "altText": "您有一張套餐兌換券尚未領取喔~",
+                  "size": "kilo",
+                  "contents": {
+                    "type": "bubble",
+                    "header": {
+                      "type": "box",
+                      "layout": "vertical",
+                      "backgroundColor": "#FFFFFF",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "🦞🧡~龍蝦套餐兌換券~🧡🦞",
+                          "gravity": "center",
+                          "align": "center",
+                          "size": "md",
+                          "weight": "regular"
+                        }
+                      ]
+                    },
+                    "body": {
+                      "type": "box",
+                      "layout": "vertical",
+                      "backgroundColor": "#f7b6c0",
+                      "contents": [
+                        {
+                          "type": "image",
+                          "url": "https://krmfla.github.io/images/ezgif.png",
+                          "size": "lg",
+                          "aspectMode": "cover",
+                          "aspectRatio": "1:1.2",
+                          "gravity": "center",
+                          "animated": true
+                        }
+                      ],
+                      "paddingAll": "0px"
+                    },
+                    "footer": {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "button",
+                          "action": {
+                            "type": "uri",
+                            "label": "試試你的好手氣",
+                            "uri": "https://showcase.friendo.com.tw/chamonixlovesea/"
+                          },
+                          "style": "primary"
+                        },
+                        {
+                          "type": "button",
+                          "action": {
+                            "type": "uri",
+                            "label": "前往粉絲團",
+                            "uri": "https://www.facebook.com/chamonix.com.tw/"
+                          },
+                          "style": "link",
+                          "color": "#ffac40"
+                        }
+                      ]
+                    }
+                  }
+                }
+            ])
         }
     </script>
 </body>
