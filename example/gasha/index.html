@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article" lang="zh-TW">
+<!--page default Information-->
+<!--html head-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge,chrome=1">
+    <title>index</title>
+    <meta name="description" content="pageDesc">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+    <meta itemprop="name" content="index">
+    <meta itemprop="description" content="pageDesc">
+    <meta itemprop="image" content="指定顯示圖片">
+    <meta property="og:title" content="index">
+    <meta property="og:description" content="pageDesc">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="指定顯示圖片">
+    <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<!--html body-->
+
+<body>
+    <div class="l-wrap" id="app">
+        <!-- render nav view-->
+        <div class="l-main">
+            <section class="index">
+                <div class="lottie_block" id="lottery-prepare" v-show="stage==&quot;prepare&quot;" @click="call_draw_api"></div>
+                <div class="lottie_block" id="lottery-start" v-show="stage==&quot;start&quot; || stage==&quot;result&quot;" :class="{fadeOut: stage==&quot;result&quot;}"></div>
+                <div class="result" v-show="stage==&quot;result&quot;">
+                    <div class="award" :class="{start: stage==&quot;result&quot;}">{{ award_name }}</div>
+                    <div class="congratualtion">恭喜中獎</div>
+                    <div class="lucky_user" v-for="(name, index) in lucky_list" :style="{animationDelay: (0.4 * index) + &quot;s&quot;}" :class="{start: stage==&quot;result&quot;}">{{ name }}</div>
+                    <button @click="reset">NEXT</button>
+                </div>
+            </section>
+            <!--render main view-->
+        </div>
+    </div>
+    <script type="text/javascript" src="js/vendor.js"></script>
+    <script type="text/javascript" src="js/lib.js"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1616049893869" data-mode="true" data-site="https://sp-develop.azurewebsites.net/api/"></script>
+    <script type="text/javascript" src="js/api.js"></script>
+    <script type="text/javascript" src="js/component/comingsoon.js"></script>
+    <script src="js/index.js?v=1616049893869"></script>
+    <script type="text/javascript"></script>
+</body>
+
+</html>
