@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <h1>LIFF test 07:01</h1>
+    <h1>LIFF test 11:38</h1>
     <p>分享前請先登入及初始化</p>
     <div id='result' class='result'></div>
     <button id='btn5'>登入</button>
@@ -33,6 +33,7 @@
     <button id='btn7'>圖文訊息分享</button>
     <button id='btn8'>按鈕式訊息分享</button>
     <button id='btn9'>動畫+按鈕訊息分享</button>
+    <button id='btn10'>getContext</button>
     <script>
       var btn1 = document.getElementById('btn1');
       var btn2 = document.getElementById('btn2');
@@ -43,6 +44,7 @@
       var btn7 = document.getElementById('btn7');
       var btn8 = document.getElementById('btn8');
       var btn9 = document.getElementById('btn9');
+      var btn10 = document.getElementById('btn10');
       var result = document.getElementById('result');
         
       window.onerror = function(err, xhr, message) {
@@ -213,6 +215,10 @@
                   }
                 }
             ])
+        }
+        btn10.onclick = function() {
+            const context = liff.getContext();
+            result.innerText = JSON.stringify(context);
         }
     </script>
 </body>
