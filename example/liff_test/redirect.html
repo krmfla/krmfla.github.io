@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <h1>LIFF Redirect 18:33</h1>
+    <h1>LIFF Redirect 18:37</h1>
     <p>Guess What?</p>
     <div id='result' class='result'></div>
     <button id='btn1'>登入</button>
@@ -41,11 +41,13 @@
             if (liff.isLoggedIn()) {
                 result.innerText += '已登入。';
             } else {
+                result.innerText += '尚未登入。';
 //                 liff.login({redirectUri: window.location.href});
                 liff.openWindow({
                   url: `https://line.me/R/ti/p/@atk7014e`,
                   external: false
                 });
+                result.innerText += '跳轉。';
             }
             
           })
