@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <h1>LIFF Redirect 16:50</h1>
+    <h1>LIFF Redirect 18:21</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -50,14 +50,16 @@
                     result.innerText += '已初始化。';
                     if (liff.isLoggedIn()) {
                         result.innerText += '已登入。';
-                        sendMessage();
-                        liff.openWindow({
-                          url: 'https://line.me/R/ti/p/@atk7014e',
-                          external: false
+                        sendMessage().then(res=> {
+                            liff.openWindow({
+                              url: 'https://line.me/R/ti/p/@atk7014e',
+                              external: false
+                            });
+                            setTimeout(function() {
+                                liff.closeWindow();
+                            }, 1000);
                         });
-                        setTimeout(function() {
-                            liff.closeWindow();
-                        }, 1000);
+                        
                     } else {
                         result.innerText += '尚未登入。';
                         liff.login({redirectUri: window.location.href});
@@ -81,7 +83,7 @@
             var url = 'https://04138fa59d47.ngrok.io/sayHello';
             var userId = liff.getContext().userId;
             var char = findGetParameter('character');
-            fetch(url, {
+            return fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
