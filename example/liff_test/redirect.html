@@ -20,48 +20,72 @@
 </head>
 
 <body>
-    <h1>LIFF Redirect 15:00</h1>
+    <h1>LIFF Redirect 15:20</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
-<!--     <button id='btn1'>登入</button> -->
+    <button id='btn1' style='display:none'>手動登入</button>
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script>
-//       var btn1 = document.getElementById('btn1');
-      window.onerror = function(err, xhr, message) {
-        result.innerText = (err + ', ' + xhr + ', ' + message);
-      }
+        var btn1 = document.getElementById('btn1');
+        btn1.onclick = function() {
+        
+        }
+      
+        setTimeout(function() {
+            btn1.style.display = 'block';
+        }, 3000)
+      
+        window.onerror = function(err, xhr, message) {
+            result.innerText = (err + ', ' + xhr + ', ' + message);
+        }
 
-      window.onload = function() {
-        liff.init({'liffId': '1612283647-ErKMBLpB'})
-          .then(()=> {
-            result.innerText += '已初始化。';
-            if (liff.isLoggedIn()) {
-                result.innerText += '已登入。';
-            } else {
-                result.innerText += '尚未登入。';
-                liff.login({redirectUri: window.location.href});
-//                 liff.openWindow({
-//                   url: `https://line.me/R/ti/p/@atk7014e`,
-// //                   url: 'www.google.com',
-//                   external: false
+        window.onload = function() {
+            result.innerText += '等候初始化...';
+            init();
+        }
+        
+        function init() {
+            liff.init({'liffId': '1612283647-ErKMBLpB'})
+                .then(()=> {
+                    result.innerText += '已初始化。';
+                    if (liff.isLoggedIn()) {
+                        result.innerText += '已登入。';
+                        sendMessage();
+                    } else {
+                        result.innerText += '尚未登入。';
+                        liff.login({redirectUri: window.location.href});
+                    });
+                }
+            })
+        }
+        function findGetParameter(parameterName) {
+            var result = null,
+                tmp = [];
+            location.search
+                .substr(1)
+                .split("&")
+                .forEach(function (item) {
+                    tmp = item.split("=");
+                    if (tmp[0] === parameterName)
+                        result = decodeURIComponent(tmp[1]);
                 });
-            }
-            
-          })
-      }
-      function findGetParameter(parameterName) {
-        var result = null,
-            tmp = [];
-        location.search
-            .substr(1)
-            .split("&")
-            .forEach(function (item) {
-                tmp = item.split("=");
-                if (tmp[0] === parameterName)
-                    result = decodeURIComponent(tmp[1]);
-            });
-        return result;
-      }
+            return result;
+        }
+        function sendMessage() {
+            var url = 'https://04138fa59d47.ngrok.io/sayHello';
+            var userId = liff.getContext().userId;
+            var char = findGetParameter('character');
+            fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  char,
+                  userId: userId,
+                  token: liff.getAccessToken()
+                })
+              }).then(res => res.json())
+              .catch(err => alert(err))
+        }
     </script>
 </body>
 </html>
