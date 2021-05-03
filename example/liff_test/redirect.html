@@ -20,15 +20,13 @@
 </head>
 
 <body>
-    <h1>LIFF Redirect 14:28</h1>
-    <p>Guess What?</p>
+    <h1>LIFF Redirect 15:00</h1>
+    <p>轉址處理...</p>
     <div id='result' class='result'></div>
 <!--     <button id='btn1'>登入</button> -->
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script>
-      var btn1 = document.getElementById('btn1');
-
-        
+//       var btn1 = document.getElementById('btn1');
       window.onerror = function(err, xhr, message) {
         result.innerText = (err + ', ' + xhr + ', ' + message);
       }
@@ -50,6 +48,19 @@
             }
             
           })
+      }
+      function findGetParameter(parameterName) {
+        var result = null,
+            tmp = [];
+        location.search
+            .substr(1)
+            .split("&")
+            .forEach(function (item) {
+                tmp = item.split("=");
+                if (tmp[0] === parameterName)
+                    result = decodeURIComponent(tmp[1]);
+            });
+        return result;
       }
     </script>
 </body>
