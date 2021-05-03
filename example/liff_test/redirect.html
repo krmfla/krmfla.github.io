@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <h1>LIFF Redirect 15:21</h1>
+    <h1>LIFF Redirect 15:24</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -54,8 +54,8 @@
                     } else {
                         result.innerText += '尚未登入。';
                         liff.login({redirectUri: window.location.href});
-                    });
-                }
+                    }
+                });
             })
         }
         function findGetParameter(parameterName) {
