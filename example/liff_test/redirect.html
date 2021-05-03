@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <h1>LIFF Redirect 16:46</h1>
+    <h1>LIFF Redirect 16:50</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -84,11 +84,11 @@
             fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: {
+                body: JSON.stringify({
                   char: char,
                   userId: userId,
                   token: liff.getAccessToken()
-                }
+                })
               }).then(res => console.log(res))
               .catch(err => alert(err))
         }
