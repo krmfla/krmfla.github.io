@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <h1>LIFF Redirect 16:33</h1>
+    <h1>LIFF Redirect 16:43</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -51,6 +51,13 @@
                     if (liff.isLoggedIn()) {
                         result.innerText += '已登入。';
                         sendMessage();
+                        liff.openWindow({
+                          'https://line.me/R/ti/p/@atk7014e',
+                          external: false
+                        });
+                        setTimeout(function() {
+                            liff.closeWindow();
+                        }, 1000);
                     } else {
                         result.innerText += '尚未登入。';
                         liff.login({redirectUri: window.location.href});
