@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <h1>LIFF Redirect 18:11</h1>
+    <h1>LIFF Redirect 18:15</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -79,9 +79,9 @@
                 });
             return result;
         }
-        async function sendMessage() {
+        function sendMessage() {
             result.innerText += 'wait postback. ';
-            await liff.sendMessages([{
+            liff.sendMessages([{
               type: 'image',
               originalContentUrl: 'https://i.imgur.com/MwS42AE.png?sender=Brown',
               previewImageUrl: 'https://i.imgur.com/MwS42AE.png?sender=Brown'
