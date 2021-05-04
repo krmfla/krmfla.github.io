@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <h1>LIFF Redirect 14:00</h1>
+    <h1>LIFF Redirect 18:09</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -80,19 +80,26 @@
             return result;
         }
         function sendMessage() {
-            var url = 'https://f9074aa8c6b0.ngrok.io/sayHello';
-            var userId = liff.getContext().userId;
-            var char = findGetParameter('character');
-            return fetch(url, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  char: char,
-                  userId: userId,
-                  token: liff.getAccessToken()
-                })
-              }).then(res => console.log(res))
-              .catch(err => alert(err))
+            await liff.sendMessages([{
+              type: 'image',
+              originalContentUrl: 'https://i.imgur.com/MwS42AE.png?sender=Brown',
+              previewImageUrl: 'https://i.imgur.com/MwS42AE.png?sender=Brown'
+            }]);
+            result.innerText += 'Postback trigger';
+            
+//             var url = 'https://f9074aa8c6b0.ngrok.io/sayHello';
+//             var userId = liff.getContext().userId;
+//             var char = findGetParameter('character');
+//             return fetch(url, {
+//                 method: 'POST',
+//                 headers: { 'Content-Type': 'application/json' },
+//                 body: JSON.stringify({
+//                   char: char,
+//                   userId: userId,
+//                   token: liff.getAccessToken()
+//                 })
+//               }).then(res => console.log(res))
+//               .catch(err => alert(err))
         }
     </script>
 </body>
