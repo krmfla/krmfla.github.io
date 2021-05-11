@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <h1>[調整中]LIFF Redirect 13:52</h1>
+    <h1>[調整中]LIFF Redirect 14:03</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -50,13 +50,15 @@
                     result.innerText += '已初始化。';
                     if (liff.isLoggedIn()) {
                         result.innerText += '已登入。';
-                        liff.openWindow({
-                          url: 'https://line.me/R/ti/p/@atk7014e',
-                          external: false
-                        });
                         setTimeout(function() {
                             sendMessage();
-                        }, 1000);
+                        }, 0);
+                        setTimeout(function() {
+                            liff.openWindow({
+                              url: 'https://line.me/R/ti/p/@atk7014e',
+                              external: false
+                            });
+                        }, 1500);
                         setTimeout(function() {
                             liff.closeWindow();
                         }, 3000);
@@ -94,8 +96,8 @@
             result.innerText += 'wait postback. ';
             liff.sendMessages([{
               type: 'image',
-              originalContentUrl: 'https://i.imgur.com/MwS42AE.png?sender=Brown',
-              previewImageUrl: 'https://i.imgur.com/MwS42AE.png?sender=Brown'
+              originalContentUrl: 'https://krmfla.github.io/images/Car-icon.png',
+              previewImageUrl: 'https://krmfla.github.io/images/Car-icon.png'
             }]);
             result.innerText += 'Postback trigger. ';
 
