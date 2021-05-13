@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <h1>[調整中]LIFF Redirect 18:03</h1>
+    <h1>[調整中]LIFF Redirect 15:24</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -62,9 +62,9 @@
                             });
                         }, 0);
                         
-//                         setTimeout(function() {
-//                             liff.closeWindow();
-//                         }, 3000);
+                        setTimeout(function() {
+                            liff.closeWindow();
+                        }, 3000);
 
 //                         sendMessage().then(res=> {
 //                             liff.openWindow({
@@ -97,26 +97,26 @@
         }
         function sendMessage() {
             result.innerText += 'wait postback. ';
-            liff.sendMessages([{
-              type: 'image',
-              originalContentUrl: 'https://krmfla.github.io/images/16x9.png',
-              previewImageUrl: 'https://krmfla.github.io/images/16x9.png'
-            }]);
-            result.innerText += 'Postback trigger. ';
+//             liff.sendMessages([{
+//               type: 'image',
+//               originalContentUrl: 'https://krmfla.github.io/images/16x9.png',
+//               previewImageUrl: 'https://krmfla.github.io/images/16x9.png'
+//             }]);
+//             result.innerText += 'Postback trigger. ';
 
-//             var url = 'https://ff4196a0396a.ngrok.io/sayHello';
-//             var userId = liff.getContext().userId;
-//             var char = findGetParameter('character');
-//             return fetch(url, {
-//                 method: 'POST',
-//                 headers: { 'Content-Type': 'application/json' },
-//                 body: JSON.stringify({
-//                   char: char,
-//                   userId: userId,
-//                   token: liff.getAccessToken()
-//                 })
-//               }).then(res => console.log(res))
-//               .catch(err => alert(err))
+            var url = 'https://7be2c4e6fb76.ngrok.io/sayHello';
+            var userId = liff.getContext().userId;
+            var char = findGetParameter('character');
+            return fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  char: char,
+                  userId: userId,
+                  token: liff.getAccessToken()
+                })
+              }).then(res => console.log(res))
+              .catch(err => alert(err))
         }
     </script>
 </body>
