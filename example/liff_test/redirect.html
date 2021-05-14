@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <h1>[調整中]LIFF Redirect 11:18</h1>
+    <h1>[調整中]LIFF Redirect 16:23</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -50,6 +50,14 @@
                     result.innerText += '已初始化。';
                     if (liff.isLoggedIn()) {
                         result.innerText += '已登入。';
+                        
+                        liff.getFriendship().then(data => {
+                          if (data.friendFlag) {
+                            result.innerText += '已加入好友。';
+                          } else {
+                            result.innerText += '尚未加入好友。';
+                          }
+                        });
                         
                         setTimeout(function() {
                             sendMessage();
