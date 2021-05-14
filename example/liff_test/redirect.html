@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <h1>[調整中]LIFF Redirect 16:23</h1>
+    <h1>[調整中]LIFF Redirect 16:25</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -104,13 +104,7 @@
             return result;
         }
         function sendMessage() {
-            result.innerText += 'wait postback. ';
-//             liff.sendMessages([{
-//               type: 'image',
-//               originalContentUrl: 'https://krmfla.github.io/images/16x9.png',
-//               previewImageUrl: 'https://krmfla.github.io/images/16x9.png'
-//             }]);
-//             result.innerText += 'Postback trigger. ';
+//             result.innerText += '通知 Chatbot 發送訊息。';
 
             var url = 'https://cf0fa0cbbbe8.ngrok.io/sayHello';
             var userId = liff.getContext().userId;
