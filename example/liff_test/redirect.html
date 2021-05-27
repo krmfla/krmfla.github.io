@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <h1>[調整中]LIFF Redirect 19:15</h1>
+    <h1>[調整中]LIFF Redirect 13:58</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -105,8 +105,8 @@
         }
         function sendMessage() {
 //             result.innerText += '通知 Chatbot 發送訊息。';
-
-            var url = 'https://richart-node-chatbot-dev.azurewebsites.net/sayHello';
+            var url = 'https://90b1475060db.ngrok.io/sayHello';
+//             var url = 'https://richart-node-chatbot-dev.azurewebsites.net/sayHello';
             var userId = liff.getContext().userId;
             var char = findGetParameter('character');
             return fetch(url, {
