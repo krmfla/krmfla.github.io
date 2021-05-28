@@ -22,10 +22,12 @@
 <body>
     <h1>轉址處理</h1>
     <script>
-      location.href ='https://liff.line.me/1612283647-VQeR60d6?uid=123&status=2';
+      setTeimout(function() {
+        location.href ='https://liff.line.me/1612283647-VQeR60d6?uid=123&status=2';
+      }, 1000);
       setTeimout(function() {
         window.close();
-      }, 0);
+      }, 2000);
     </script>
 </body>
 </html>
