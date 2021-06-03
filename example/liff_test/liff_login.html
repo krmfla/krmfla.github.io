@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <h1>LIFF Login</h1>
+    <h1>LIFF Login 15:49</h1>
     <button id='btn1'>手動登入</button>
     <button id='btn2'>手動登出</button>
     <button id='btn3'>登入後前往填寫頁</button>
@@ -34,7 +34,7 @@
         result.innerText = (err + ', ' + xhr + ', ' + message);
       }
       
-      function async init() {
+      async function init() {
         await liff.init({liffId: "1612283647-rgYE7Wq7"});
         if(liff.isLoggedIn()){
           alert('已在登入狀態');
@@ -43,15 +43,17 @@
         }
       }
 
-      btn1.onclick = async function() {
+      btn1.onclick = function() {
         liff.login();
       }
-      btn2.onclick = async function() {
+      btn2.onclick = function() {
         liff.logout();
       }
       btn3.onclick = function() {
         location.href = 'https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1612283647&redirect_uri=https://krmfla.github.io/example/liff_test/index.html';
       }
+        
+      init();
     </script>
 </body>
 </html>
