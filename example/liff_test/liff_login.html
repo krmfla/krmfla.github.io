@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Liff test</title>
+    <style>
+        .result {
+            width: 100%;
+            word-break: break-all;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            min-width: 125px;
+            margin: 5px 10px 10px;
+            padding: 5px;
+        }
+    </style>
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.3.0/sdk.js"></script>
+</head>
+
+<body>
+    <h1>LIFF Login</h1>
+    <button id='btn1'>手動登入</button>
+    <button id='btn2'>手動登出</button>
+    <button id='btn3'>登入後前往填寫頁</button>
+    <script>
+      var btn1 = document.getElementById('btn1');
+      var btn2 = document.getElementById('btn2');
+      var btn3 = document.getElementById('btn3');
+        
+      window.onerror = function(err, xhr, message) {
+        result.innerText = (err + ', ' + xhr + ', ' + message);
+      }
+      
+      function async init() {
+        await liff.init({liffId: "1612283647-rgYE7Wq7"});
+        if(liff.isLoggedIn()){
+          alert('已在登入狀態');
+        } else {
+          alert('尚未登入');
+        }
+      }
+
+      btn1.onclick = async function() {
+        liff.login();
+      }
+      btn2.onclick = async function() {
+        liff.logout();
+      }
+      btn3.onclick = function() {
+        location.href = 'https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1612283647&redirect_uri=https://krmfla.github.io/example/liff_test/index.html';
+      }
+    </script>
+</body>
+</html>
