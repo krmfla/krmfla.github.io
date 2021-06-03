@@ -20,19 +20,25 @@
 </head>
 
 <body>
-    <h1>page A 15:45</h1>
+    <h1>page A 17:28</h1>
     <button id='btn1'>開啟 LIFF</button>
     <button id='btn2'>轉址後再開啟 LIFF</button>
+    <button id='btn2'>開啟一般網頁</button>
     <hr/>
     <button id='btn3'>開啟LIFF 登入頁</button>
     <script>
       var btn1 = document.getElementById('btn1');
       var btn2 = document.getElementById('btn2');
       var btn3 = document.getElementById('btn3');
+      var btn4 = document.getElementById('btn3');
 
       btn1.onclick = function() { location.href = 'https://liff.line.me/1612283647-VQeR60d6?uid=123&status=2'; }
       
       btn2.onclick = function() { location.href = 'https://krmfla.github.io/example/liff_test/pageB.html'; }
+        
+      btn4.onclick = function() { location.href = 'https://krmfla.github.io/example/liff_test/index.html'; }
+        
+        
         
       btn3.onclick = function() { location.href = 'https://liff.line.me/1612283647-rgYE7Wq7'; }
     </script>
