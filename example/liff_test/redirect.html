@@ -105,8 +105,8 @@
         }
         function sendMessage() {
 //             result.innerText += '通知 Chatbot 發送訊息。';
-            var url = 'https://c4a078bf263b.ngrok.io/sayHello';
-//             var url = 'https://richart-node-chatbot-dev.azurewebsites.net/sayHello';
+//             var url = 'https://c4a078bf263b.ngrok.io/sayHello';
+            var url = 'https://richart-node-chatbot-dev.azurewebsites.net/sayHello';
             var userId = liff.getContext().userId;
             var char = findGetParameter('character');
             return fetch(url, {
