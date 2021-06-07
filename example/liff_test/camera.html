@@ -44,6 +44,12 @@
                     result.innerText += '已初始化。';
                     if (liff.isLoggedIn()) {
                         result.innerText += '已登入。';
+                        if (liff.scanCode) {
+                            result.innerText += '啟用scan功能。';
+                              liff.scanCode().then(res => {
+                                result.innerText += JSON.stringify(res);
+                              });
+                        }
 
                     } else {
                         result.innerText += '尚未登入。';
