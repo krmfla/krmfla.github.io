@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Liff test</title>
+    <style>
+        .result {
+            width: 100%;
+            word-break: break-all;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            min-width: 125px;
+            margin: 5px 10px 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Camera</h1>
+    <div id='result' class='result'></div>
+    <button id='btn1' style='display:none'>手動登入</button>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script>
+        var btn1 = document.getElementById('btn1');
+        btn1.onclick = function() {
+            init();
+        }
+            
+        window.onerror = function(err, xhr, message) {
+            result.innerText = (err + ', ' + xhr + ', ' + message);
+        }
+
+        window.onload = function() {
+            init();
+        }
+        
+        function init() {
+            liff.init({'liffId': '1612283647-OW3mvLXv'})
+                .then(()=> {
+                    result.innerText += '已初始化。';
+                    if (liff.isLoggedIn()) {
+                        result.innerText += '已登入。';
+
+                    } else {
+                        result.innerText += '尚未登入。';
+                        liff.login({redirectUri: window.location.href});
+                    }
+                });
+        }
+    </script>
+</body>
+</html>
