@@ -26,11 +26,13 @@
     <button id='btn4'>開啟一般網頁</button>
     <hr/>
     <button id='btn3'>開啟LIFF 登入頁</button>
+    <button id='btn5'>顯示URL</button>
     <script>
       var btn1 = document.getElementById('btn1');
       var btn2 = document.getElementById('btn2');
       var btn3 = document.getElementById('btn3');
       var btn4 = document.getElementById('btn4');
+      var btn5 = document.getElementById('btn5');
 
       btn1.onclick = function() { location.href = 'https://liff.line.me/1612283647-VQeR60d6?uid=123&status=2'; }
       
@@ -39,6 +41,8 @@
       btn4.onclick = function() { location.href = 'https://krmfla.github.io/example/liff_test/index.html'; }
 
       btn3.onclick = function() { location.href = 'https://liff.line.me/1612283647-rgYE7Wq7'; }
+        
+      btn5.onclick = function() { alert(location.href)}
     </script>
 </body>
 </html>
