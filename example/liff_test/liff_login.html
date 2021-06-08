@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <h1>LIFF Login 16:11</h1>
+    <h1>LIFF Login 16:12</h1>
     <button id='btn1'>手動登入</button>
     <button id='btn2'>手動登出</button>
     <button id='btn3'>登入後前往填寫頁</button>
@@ -50,7 +50,7 @@
         liff.logout();
       }
       btn3.onclick = function() {
-        location.href = 'https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1612283647&redirect_uri=https://krmfla.github.io/example/liff_test/pageA.html';
+        location.href = 'https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1612283647&redirect_uri=https://krmfla.github.io/example/liff_test/pageA.html&state=123&scope=openid%20profile&bot_prompt=normal';
       }
         
       init();
