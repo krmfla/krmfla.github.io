@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <h1>[調整中]LIFF Redirect 18:30</h1>
+    <h1>[調整中]LIFF Redirect 18:35</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -103,7 +103,7 @@
                 body: JSON.stringify({
                   char: char,
                   userId: userId,
-                  add_oa: addOA
+                  add_oa: addOA,
                   token: liff.getAccessToken()
                 })
               }).then(res => {
