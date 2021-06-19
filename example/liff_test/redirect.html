@@ -5,6 +5,9 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Liff test</title>
     <style>
+        p {
+            margin: 0;
+        }
         .result {
             width: 100%;
             word-break: break-all;
@@ -20,7 +23,7 @@
 </head>
 
 <body>
-    <h1>[調整中]LIFF Redirect 17:33</h1>
+    <h1>[調整中]LIFF Redirect 18:13</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -29,6 +32,7 @@
     <script>
         var btn1 = document.getElementById('btn1');
         var loading = document.getElementById('loading');
+        var addOA;
         
         btn1.onclick = function() {
             init();
@@ -56,9 +60,11 @@
                         
                         liff.getFriendship().then(data => {
                           if (data.friendFlag) {
-                            result.innerText += '已加入好友。';
+                            addOA = true;
+                            result.innerText += '已加入好友。等候回應...';
                           } else {
-                            result.innerText += '尚未加入好友。';
+                            addOA = false;
+                            result.innerText += '尚未加入好友。等候回應...';
                           }
                         });
                         
@@ -85,7 +91,6 @@
         }
         
         function sendMessage() {
-            result.innerText += '等候回應...';
             var url = 'https://481cd99bd608.ngrok.io/botSayHello';
 //             var url = 'https://richart-node-chatbot-dev.azurewebsites.net/sayHello';
             
@@ -98,6 +103,7 @@
                 body: JSON.stringify({
                   char: char,
                   userId: userId,
+                  add_oa: addOA
                   token: liff.getAccessToken()
                 })
               }).then(res => {
