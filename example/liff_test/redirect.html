@@ -20,20 +20,23 @@
 </head>
 
 <body>
-    <h1>[調整中]LIFF Redirect 18:54</h1>
+    <h1>[調整中]LIFF Redirect 16:46</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
+    <img id='loading' src='https://krmfla.github.io/images/loading.gif' width='150px' display='none' />
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script>
         var btn1 = document.getElementById('btn1');
+        var loading = document.getElementById('loading');
+        
         btn1.onclick = function() {
             init();
         }
       
-        setTimeout(function() {
-            btn1.style.display = 'block';
-        }, 3000)
+//         setTimeout(function() {
+//             btn1.style.display = 'block';
+//         }, 3000)
       
         window.onerror = function(err, xhr, message) {
             result.innerText = (err + ', ' + xhr + ', ' + message);
@@ -59,31 +62,8 @@
                           }
                         });
                         
-                        setTimeout(function() {
-                            sendMessage();
-                        }, 0);
-                        
-                        setTimeout(function() {
-                            liff.openWindow({
-                              url: 'https://line.me/R/ti/p/@atk7014e',
-                              external: false
-                            });
-                        }, 1500);
-                        
-                        setTimeout(function() {
-                            liff.closeWindow();
-                        }, 3000);
-
-//                         sendMessage().then(res=> {
-//                             liff.openWindow({
-//                               url: 'https://line.me/R/ti/p/@atk7014e',
-//                               external: false
-//                             });
-//                             setTimeout(function() {
-//                                 liff.closeWindow();
-//                             }, 1000);
-//                         });
-                        
+                        sendMessage();
+                        loading.style.display = 'block';
                     } else {
                         result.innerText += '尚未登入。';
                         liff.login({redirectUri: window.location.href});
@@ -103,12 +83,15 @@
                 });
             return result;
         }
+        
         function sendMessage() {
-//             result.innerText += '通知 Chatbot 發送訊息。';
-//             var url = 'https://60035f83b07c.ngrok.io/sayHello';
-            var url = 'https://richart-node-chatbot-dev.azurewebsites.net/sayHello';
+            result.innerText += '等候回應...';
+            var url = 'https://481cd99bd608.ngrok.io/botSayHello';
+//             var url = 'https://richart-node-chatbot-dev.azurewebsites.net/sayHello';
+            
             var userId = liff.getContext().userId;
             var char = findGetParameter('character');
+            
             return fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -117,8 +100,24 @@
                   userId: userId,
                   token: liff.getAccessToken()
                 })
-              }).then(res => console.log(res))
-              .catch(err => alert(err))
+              }).then(res => {
+                if (res.status === 200) {
+                    openOA();
+                }
+              })
+              .catch(err => alert(err));
+        }
+        
+        function openOA() {
+            setTimeout(function() {
+                liff.openWindow({
+                  url: 'https://line.me/R/ti/p/@atk7014e',
+                  external: false
+                });
+            }, 0);
+            setTimeout(function() {
+                liff.closeWindow();
+            }, 1500);
         }
     </script>
 </body>
