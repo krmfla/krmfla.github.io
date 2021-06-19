@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <h1>[調整中]LIFF Redirect 18:13</h1>
+    <h1>[調整中]LIFF Redirect 18:</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -66,9 +66,9 @@
                             addOA = false;
                             result.innerText += '尚未加入好友。等候回應...';
                           }
+                          sendMessage();
                         });
-                        
-                        sendMessage();
+
                         loading.style.display = 'block';
                     } else {
                         result.innerText += '尚未登入。';
