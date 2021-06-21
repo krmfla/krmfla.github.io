@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <h1>LIFF Redirect 15:51</h1>
+    <h1>LIFF Redirect 15:55</h1>
     <p>轉址處理...</p>
     <div id='result' class='result'></div>
     <button id='btn1' style='display:none'>手動登入</button>
@@ -61,7 +61,7 @@
                         liff.getFriendship().then(data => {
                           if (data.friendFlag) {
                             addOA = true;
-                            result.innerText += '已加入好友。等候回應...';
+                            result.innerText += '已加入好友。等候回應...(伺服器重啟約需1分鐘)';
                           } else {
                             addOA = false;
                             result.innerText += '尚未加入好友。等候回應...';
