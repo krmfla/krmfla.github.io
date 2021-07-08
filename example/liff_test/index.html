@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <h1>LIFF test 19:48</h1>
+    <h1>LIFF test 19:26</h1>
     <p>分享前請先登入及初始化</p>
     <div id='result' class='result'></div>
     <button id='btn5'>登入</button>
@@ -245,7 +245,12 @@
             }]);
         }
         btn14.onclick = function() {
-          liff.shareTargetPicker([{
+          liff.shareTargetPicker([
+          {
+           type: "text",
+           text: "欸嘿(⁎⁍̴̛ᴗ⁍̴̛⁎)"
+          },
+          {
             type: "flex",
             altText: "好康分享~來NISSAN預約試乘，購車加送保修禮券3,000元喔！",
             contents: {
