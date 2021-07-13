@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <h1>page A</h1>
+    <h1>page A 342</h1>
     <div id='result'></div>
     <button id='btn1'>LIFF INIT > Web Login</button>
 <!--     <button id='btn2'>轉址後再開啟 LIFF</button>
@@ -46,7 +46,8 @@
                 location.href = 'https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1612283647&redirect_uri=https://krmfla.github.io/example/liff_test/pageB.html&state=123&scope=openid%20profile&bot_prompt=normal';
             } else {
                 result.innerText += '尚未登入。';
-                liff.login({redirectUri: window.location.href});
+                liff.login();
+//                 liff.login({redirectUri: window.location.href});
             }
           });
       }
