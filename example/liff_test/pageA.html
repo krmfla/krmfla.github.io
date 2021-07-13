@@ -20,29 +20,44 @@
 </head>
 
 <body>
-    <h1>page A 15:28</h1>
-    <button id='btn1'>開啟 LIFF</button>
-    <button id='btn2'>轉址後再開啟 LIFF</button>
+    <h1>page A</h1>
+    <div id='result'></div>
+    <button id='btn1'>LIFF INIT > Web Login</button>
+<!--     <button id='btn2'>轉址後再開啟 LIFF</button>
     <button id='btn4'>開啟一般網頁</button>
     <hr/>
     <button id='btn3'>開啟LIFF 登入頁</button>
-    <button id='btn5'>顯示URL</button>
+    <button id='btn5'>顯示URL</button> -->
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script>
       var btn1 = document.getElementById('btn1');
-      var btn2 = document.getElementById('btn2');
-      var btn3 = document.getElementById('btn3');
-      var btn4 = document.getElementById('btn4');
-      var btn5 = document.getElementById('btn5');
+      var result = document.getElementById('result');
+//       var btn2 = document.getElementById('btn2');
+//       var btn3 = document.getElementById('btn3');
+//       var btn4 = document.getElementById('btn4');
+//       var btn5 = document.getElementById('btn5');
 
-      btn1.onclick = function() { location.href = 'https://liff.line.me/1612283647-VQeR60d6?uid=123&status=2'; }
+      btn1.onclick = function() { 
+        liff.init({'liffId': '1612283647-vQOP4N54'})
+          .then(()=> {
+            result.innerText += '初始化完成。'
+            if (liff.isLoggedIn()) {
+                result.innerText += '已登入。'
+                location.href = 'https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1612283647&redirect_uri=https://krmfla.github.io/example/liff_test/pageB.html&state=123&scope=openid%20profile&bot_prompt=normal';
+            } else {
+                result.innerText += '尚未登入。';
+                liff.login({redirectUri: window.location.href});
+            }
+          });
+      }
       
-      btn2.onclick = function() { location.href = 'https://krmfla.github.io/example/liff_test/pageB.html'; }
+//       btn2.onclick = function() { location.href = 'https://krmfla.github.io/example/liff_test/pageB.html'; }
         
-      btn4.onclick = function() { location.href = 'https://krmfla.github.io/example/liff_test/index.html'; }
+//       btn4.onclick = function() { location.href = 'https://krmfla.github.io/example/liff_test/index.html'; }
 
-      btn3.onclick = function() { location.href = 'https://liff.line.me/1612283647-rgYE7Wq7'; }
+//       btn3.onclick = function() { location.href = 'https://liff.line.me/1612283647-rgYE7Wq7'; }
         
-      btn5.onclick = function() { alert(location.href)}
+//       btn5.onclick = function() { alert(location.href)}
     </script>
 </body>
 </html>
