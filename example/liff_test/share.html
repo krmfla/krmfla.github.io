@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Share test</title>
+    <style>
+        .result {
+            width: 100%;
+            word-break: break-all;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            min-width: 125px;
+            margin: 5px 10px 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Share Test</h1>
+    <div id='result'></div>
+    <button id='btn1'>LIFF INIT > LIFF login > Share</button>
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.3.0/sdk.js"></script>
+    <script>
+      btn1.onclick = function() {
+          init();
+      }
+
+      function share() {
+          liff.shareTargetPicker([
+              {
+                  type: "text",
+                  text: "欸嘿(⁎⁍̴̛ᴗ⁍̴̛⁎)"
+              },
+              {
+                  type: "flex",
+                  altText: "好康分享~來NISSAN預約試乘，購車加送保修禮券3,000元喔！",
+                  contents: {
+                      type: "bubble",
+                      size: "micro",
+                      hero: {
+                          type: "image",
+                          url: "https://krmfla.github.io/images/ezgif.png",
+                          animated: true,
+                          size: "full",
+                          aspectRatio: "1:1",
+                          aspectMode: "cover",
+                          action: {
+                              type: "uri",
+                              uri: "https://line.me/R/ti/p/@nissan.tw"
+                          }
+                      }
+              }
+          }]);
+      }
+
+      function init() {
+          liff.init({'liffId': '1612283647-kDOA8Vj8'})
+              .then(()=> {
+                  result.innerText += '初始化完成。'
+                  if (liff.isLoggedIn()) {
+                      result.innerText += '已登入。'
+                      if (liff.isApiAvailable('shareTargetPicker')) {
+                          result.innerText += 'API 可用。'
+                          share();
+                      } else {
+                          result.innerText += 'API 不可用。'
+                      }
+
+                  } else {
+                      result.innerText += '尚未登入。'
+                      sessionStorage.setItem('share_picker', 'true');
+                      liff.login();
+                  }
+          });
+      }
+
+      document.addEventListener("DOMContentLoaded", function(event) { 
+          var share_picker = sessionStorage.getItem('share_picker');
+          if (share_picker) {
+              sessionStorage.removeItem('share_picker');
+              init();
+          }
+      });
+    </script>
+</body>
+</html>
