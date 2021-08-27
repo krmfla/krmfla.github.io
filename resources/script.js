@@ -34,7 +34,8 @@ function init() {
 // 					location.href = url;
 // 				}
 // 			});
-			window.open(url);
+// 			window.open(url);
+			location.href = url;
 			console.log(url);
 		});
 
