@@ -5,24 +5,30 @@ var linkData = {
 	"goKidTest": "http://krmfla.byethost12.com/toys/index.html"
 };
 
+var linkDomain = {
+	"goJsfiddle": "https://krmfla.github.io/example/jsfiddle/",
+	"goWorldFamily": "https://www.worldfamily.com.tw/",
+	"goCollection": "https://q4u.worldfamily.com.tw/card2/all/",
+	"goKidTest": "http://krmfla.byethost12.com/toys/"
+}
+
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
 	var elements = document.querySelectorAll('.links');
-	// console.log(elements);
 	for (var i = 0, max = elements.length; i < max; i++) {
 		var category = elements[i].dataset.url;
-		// console.log(category);
 		elements[i].linkUrl = linkData[category];
 		elements[i].addEventListener("click", function () {
-			// console.log(this.linkUrl);
-			window.open(this.linkUrl);
+			gtag('set', 'linker', {'domains': [linkDomain[category]]});
 			gtag('event', 'click', {
-				'event_category': "index",
-				'event_label': this.dataset.url,
+				'event_category': "作品集",
+				'event_label': category,
 				'transport_type': 'beacon'
+				'event_callback': function() {
+					window.open(this.linkUrl);
+				}
 			});
-			// console.log(this.dataset.url);
 		});
 
 	}
