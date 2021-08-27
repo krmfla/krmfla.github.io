@@ -27,7 +27,7 @@ function init() {
 			gtag('event', 'click', {
 				'event_category': "作品集",
 				'event_label': category,
-				'transport_type': 'beacon'
+				'transport_type': 'beacon',
 				'event_callback': function() {
 					window.open(url);
 				}
