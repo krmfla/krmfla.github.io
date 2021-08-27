@@ -23,17 +23,18 @@ function init() {
 			var url = this.linkUrl;
 			var _category = this.dataset.url;
 			console.log('click');
-			gtag('set', 'linker', {'domains': ['krmfla.github.io', 'krmfla.github.io/example/jsfiddle/']});
+// 			gtag('set', 'linker', {'domains': ['krmfla.github.io', 'krmfla.github.io/example/jsfiddle/']});
 			console.log(linkDomain[_category]);
-			gtag('event', 'click', {
-				'event_category': "作品集",
-				'event_label': _category,
-				'transport_type': 'beacon',
-				'event_callback': function() {
-// 					window.open(url);
-					location.href = url;
-				}
-			});
+// 			gtag('event', 'click', {
+// 				'event_category': "作品集",
+// 				'event_label': _category,
+// 				'transport_type': 'beacon',
+// 				'event_callback': function() {
+// // 					window.open(url);
+// 					location.href = url;
+// 				}
+// 			});
+			window.open(url);
 			console.log(url);
 		});
 
