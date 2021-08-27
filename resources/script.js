@@ -20,15 +20,19 @@ function init() {
 		var category = elements[i].dataset.url;
 		elements[i].linkUrl = linkData[category];
 		elements[i].addEventListener("click", function () {
+			var url = his.linkUrl
+			console.log('click');
 			gtag('set', 'linker', {'domains': [linkDomain[category]]});
+			console.log(linkDomain[category]);
 			gtag('event', 'click', {
 				'event_category': "作品集",
 				'event_label': category,
 				'transport_type': 'beacon'
 				'event_callback': function() {
-					window.open(this.linkUrl);
+					window.open(url);
 				}
 			});
+			console.log(url);
 		});
 
 	}
