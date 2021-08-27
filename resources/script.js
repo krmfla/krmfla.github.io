@@ -20,7 +20,7 @@ function init() {
 		var category = elements[i].dataset.url;
 		elements[i].linkUrl = linkData[category];
 		elements[i].addEventListener("click", function () {
-			var url = his.linkUrl
+			var url = this.linkUrl;
 			console.log('click');
 			gtag('set', 'linker', {'domains': [linkDomain[category]]});
 			console.log(linkDomain[category]);
