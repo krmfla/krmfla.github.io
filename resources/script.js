@@ -24,7 +24,7 @@ function init() {
 			var _category = this.dataset.url;
 			console.log('click');
 			gtag('set', 'linker', {'domains': [linkDomain[_category]]});
-			console.log(linkDomain[category]);
+			console.log(linkDomain[_category]);
 			gtag('event', 'click', {
 				'event_category': "作品集",
 				'event_label': _category,
