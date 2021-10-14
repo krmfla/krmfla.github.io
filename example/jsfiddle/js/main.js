@@ -54,8 +54,9 @@ function App() {
 			hideMainBG = true;
 		}
 		funcEvent();
-		listSelected(event.toElement);
-		var index = event.toElement.dataset.index;
+		console.log(event);
+		listSelected(event.target);
+		var index = event.target.dataset.index;
 		if (index) {
 			renderSandbox(index);
 		} else {
@@ -76,6 +77,7 @@ function App() {
 	}
 
 	function listSelected(element) {
+		console.log(element);
 		if (selectEl !== null) {
 			selectEl.classList.remove("active");
 		}
