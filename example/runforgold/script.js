@@ -308,8 +308,8 @@ function imgComplete() {
 
 function clickEvent(event) {
     //how to get fast???
-    if (event.toElement.dataset)
-        var getEvent = event.toElement.dataset.action;
+    if (event.target.dataset)
+        var getEvent = event.target.dataset.action;
     switch (getEvent) {
         case "start":
             if (gameApp.inProcess === "ready") {
@@ -341,7 +341,7 @@ var switchEl = document.getElementById("switchBox");
 switchEl.addEventListener("click", switchMap);
 
 function switchMap() {
-    console.log(event.toElement.id);
-    if (event.toElement.id === "switchBox") return;
-    document.getElementById("main").className = "main " + event.toElement.id;
+    console.log(event.target.id);
+    if (event.target.id === "switchBox") return;
+    document.getElementById("main").className = "main " + event.target.id;
 }
