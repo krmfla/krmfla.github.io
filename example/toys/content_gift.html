@@ -1,0 +1,447 @@
+<!doctype html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>贈品專區 | 幼兒氣質評量</title>
+<!--<link href="css/reset.css" rel="stylesheet" type="text/css">-->
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/inner_style.css" rel="stylesheet" type="text/css">
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="js/respond.min.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/javascript.js"></script>
+
+<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+</script>
+
+
+</head>
+<body onLoad="MM_preloadImages('images/nav4_h.jpg','images/nav3_h.jpg','images/nav2_h.jpg','images/nav1_h.jpg')">
+	<div class="gridContainer clearfix">
+	<div class="main">
+    	
+       
+        
+        
+   	  
+        
+        <img src="images/m_gift.jpg" class="show_mobile">
+        <div class="main_content inner_content gift_bg">
+        
+        <div class="gift_main">
+        	<div class="gift_form">
+            
+            <img src="images/form_title.png" alt=""/ class="draw"> 
+            <div class="gift_form2">
+            <input type="text" class="gift_formstyle" placeholder="姓名">
+            <input type="text" class="gift_formstyle" placeholder="手機">
+            <input type="text" class="gift_formstyle" placeholder="mail">
+            
+            <div class="select_block">
+            <select name="─市區鄉鎮─" class="gift_formstyle gift_block">
+            <option value="">─市區鄉鎮─</option>
+            <option value="(100)中正區">(100)中正區</option>
+            <option value="(103)大同區">(100)大同區</option>
+            <option value="(104)中山區">(104)中山區</option>
+            <option value="(105)松山區">(105)松山區</option>
+            </select>
+            
+            <select name="地區" class="gift_formstyle gift_city">
+            <option value="">台北市</option>
+            <option value="台北市">台北市</option>
+            <option value="台中市">台中市</option>
+            <option value="高雄市">高雄市</option>
+            <option value="花蓮市">花蓮市</option>
+            </select>
+            </div>
+                    
+            <input type="text" class="gift_formstyle" placeholder="地址">
+            <div class="gift_formtext"><span>送出表格表示我已閱讀並接受
+            <a class="fancybox fancybox.iframe" href="privacy-policy3.html"> 服務條款 </a>及<a class="fancybox fancybox.iframe" href="privacy.html"> 隱私權保護政策 </a></span></div>
+            <a class="fancybox fancybox.iframe" href="sendbox.html"><img src="images/send.png" class="send_bt"></a>
+            </div>
+            </div>
+            
+            <img src="images/gifta_on.png" class="show_mobile gifta" id="giftimage1">
+            <img src="images/giftb_off.png" class="show_mobile giftb" id="giftimage2">
+        	
+        	<div class="gift_info">
+            
+            	<div class="gift_infoblock">
+                	<div class="info_left">
+                    <img src="images/gift_title01.png">
+                    <img src="images/gift01.jpg" style="float:right;width:45%;" class="show_mobile">
+                    <div class="m_infotext">
+                    
+                    <div class="info_text">
+                    保暖、柔軟、好穿脫。經典麋鹿系列與經典熊熊系列，與全家人一起度過歡樂的居家生活!
+                    </div>
+                    <img src="images/price01.png">
+                    <div class="info_text info_pricedetail">
+                    (1組，含Daddy、Mom、kid各1套)
+                     
+                    </div>
+                    </div>
+                    <div class="info_text info_date"><span>wow wow 贊助</span>
+                    	<div class="date">3/31開獎</div>
+                    </div>
+                    </div>
+                    <img src="images/gift01.jpg" style="float:left;" class="show_pc">
+                </div>
+                
+                
+                <div class="gift_infoblock right_one">
+                	<div class="info_left">
+                    <img src="images/gift_title02.png">
+                    <img src="images/gift02.jpg" style="float:right;width:45%;" class="show_mobile">
+                    <div class="m_infotext">
+                    <div class="info_text">
+                    積木車除了有美語單字拼圖外，也可以訓練小朋友的跨步與手臂力道控制。
+                    </div>
+                    <img src="images/price02.png">
+                    <div class="info_text info_pricedetail">
+                    (1組)
+                    </div>
+                    </div>
+                    <div class="info_text info_date"><span>寰宇家庭 提供</span>
+                    	<div class="date">3/30開獎</div>
+                    </div>
+                    </div>
+                    <img src="images/gift02.jpg" style="float:left;" class="show_pc">
+                </div>
+                
+                <div class="gift_infoblock">
+                	<div class="info_left">
+                    <img src="images/gift_title03.png">
+                    <img src="images/gift03.jpg" style="float:right;width:45%;" class="show_mobile">
+                    <div class="m_infotext">
+                    <div class="info_text">
+                    可耐熱至90度，耐撞、耐摔不易破損，揹帶方便拆下或調整至適當長度，適合大小朋友使用。
+                    </div>
+                    <img src="images/price03.png">
+                    <div class="info_text info_pricedetail">
+                    (5組)
+                    </div>
+                    </div>
+                    <div class="info_text info_date"><span>奇哥 贊助</span>
+                    	<div class="date">3/27開獎</div>
+                    </div>
+                    </div>
+                    <img src="images/gift03.jpg" style="float:left;" class="show_pc">
+                </div>
+                
+                <div class="gift_infoblock right_one">
+                	<div class="info_left">
+                    <img src="images/gift_title04.png">
+                    <img src="images/gift04.jpg" style="float:right;width:45%;" class="show_mobile">
+                    <div class="m_infotext">
+                    <div class="info_text">
+                    螃蟹、烏龜、小魚、鯨魚，訓練寶寶抓握能力與手眼協調，幫助他們認識海洋生物。
+                    </div>
+                    <img src="images/price04.png">
+                    <div class="info_text info_pricedetail">
+                    (3組)
+                    </div>
+                    </div>
+                    <div class="info_text info_date"><span>優生股份有限公司 贊助</span>
+                    	<div class="date">3/26開獎</div>
+                    </div>
+                    </div>
+                    <img src="images/gift04.jpg" style="float:left;" class="show_pc">
+                </div>
+                
+                <div class="gift_infoblock">
+                	<div class="info_left">
+                    <img src="images/gift_title05.png">
+                    <img src="images/gift05.jpg" style="float:right;width:45%;" class="show_mobile">
+                    <div class="m_infotext">
+                    <div class="info_text">
+                    流線造型、炫彩可愛。一推即開的杯蓋，吸管自動彈起，耐撞耐摔、揹帶可調長度。
+                    </div>
+                    <img src="images/price05.png">
+                    <div class="info_text info_pricedetail">
+                    (5組)
+                    </div>
+                    </div>
+                    <div class="info_text info_date"><span>優生股份有限公司 贊助</span>
+                    	<div class="date">3/25開獎</div>
+                    </div>
+                    </div>
+                    <img src="images/gift05.jpg" style="float:left;" class="show_pc">
+                </div>
+                
+                <div class="gift_infoblock right_one">
+                	<div class="info_left">
+                    <img src="images/gift_title06.png">
+                    <img src="images/gift06.png" style="float:right;width:45%;" class="show_mobile">
+                    <div class="m_infotext">
+                    <div class="info_text">
+                    以奈米機密配方打造的防蚊貼片，造型可愛不含DEET化學成分，好貼好安心。
+                    </div>
+                    <img src="images/price06.png">
+                    <div class="info_text info_pricedetail">
+                    (20組)
+                    </div>
+                    </div>
+                    <div class="info_text info_date"><span>別蚊我 贊助</span>
+                    	<div class="date">3/24開獎</div>
+                    </div>
+                    </div>
+                    <img src="images/gift06.png" style="float:left;" class="show_pc">
+                </div>
+                
+             
+            	<div class="gift_bottom show_pc">
+                <img src="images/atention.png">
+                	<div class="gift_ul">
+                    <ul>
+                    	<li>本活動僅限台、澎、金、馬地區居民參加。</li>
+                        <li>贈品圖片僅供參考，以實際收到為準。部分贈品採隨機出貨，恕無法挑款。</li>
+                        <li>若贈品短缺，寰宇家庭有權更換等值商品，且得獎者不得要求替換贈品或折換現金。</li>
+                        <li>依抽獎活動稅法規定，中獎合計價值在1,000元(含) 以上， 20,000元(含)以下者，贈與物品價值將納入個人綜合所得稅申報，主辦單位將通知中獎者，請中獎者配合繳交身分證影印本作為申報依據，確認無誤之後才會將贈品寄出。若中獎公布後10日內無法電話連絡到中獎者，將視同放棄，不另行通知。</li>
+                        <li>贈品將於4/10寄出。寄出前寰宇家庭工作人員將與中獎者核對聯絡資料。若有冒用、盜用任何第三人資資料，或有不實、不正確之情事，將被取消得獎資格。</li>
+                        <li>工作人員不會以任何方式，要求得獎者付費或轉帳。</li>
+                        <li>資料核對流程將遵循《寰宇家庭隱私權保護政策》。</li>
+                        <li>參加者於參加本活動之同時，即同意接受本活動之所有規範。寰宇家庭保有隨時取消、終止、修改或暫停本活動之權益，如有任何異動將公布於粉絲團，恕不另行通知。</li>
+                    </ul>
+                    </div>
+                <img src="images/main_unit.png" class="unit">
+                <div class="logos">
+                <img src="images/logo.png">
+                </div>
+                <img src="images/sub_unit.png" class="unit">
+                <div class="logos">
+                <img src="images/logo01.png"><img src="images/logo02.png"><img src="images/logo03.png"><img src="images/logo04.png"><img src="images/logo05.png">
+                </div>
+                    
+                </div>   
+                
+                <div class="gift_bottom2 show_mobile">
+                
+                	<div class="gift_ul2 m_block">
+                    <ul>
+                    	<li>本活動僅限台、澎、金、馬地區居民參加。</li>
+                        <li>贈品圖片僅供參考，以實際收到為準。部分贈品採隨機出貨，恕無法挑款。</li>
+                        <li>若贈品短缺，寰宇家庭有權更換等值商品，且得獎者不得要求替換贈品或折換現金。</li>
+                        <li>依抽獎活動稅法規定，中獎合計價值在1,000元(含) 以上， 20,000元(含)以下者，贈與物品價值將納入個人綜合所得稅申報，主辦單位將通知中獎者，請中獎者配合繳交身分證影印本作為申報依據，確認無誤之後才會將贈品寄出。若中獎公布後10日內無法電話連絡到中獎者，將視同放棄，不另行通知。</li>
+                        <li>贈品將於4/10寄出。寄出前寰宇家庭工作人員將與中獎者核對聯絡資料。若有冒用、盜用任何第三人資資料，或有不實、不正確之情事，將被取消得獎資格。</li>
+                        <li>工作人員不會以任何方式，要求得獎者付費或轉帳。</li>
+                        <li>資料核對流程將遵循《寰宇家庭隱私權保護政策》。</li>
+                        <li>參加者於參加本活動之同時，即同意接受本活動之所有規範。寰宇家庭保有隨時取消、終止、修改或暫停本活動之權益，如有任何異動將公布於粉絲團，恕不另行通知。</li>
+                    </ul>
+                    </div>
+                <img src="images/main_unit.png" class="unit2">
+                <div class="m_logos m_block">
+                <img src="images/logo.png">
+                </div>
+                <img src="images/sub_unit.png" class="unit2">
+                <div class="m_logos m_block">
+                <img src="images/logo01.png"><img src="images/logo02.png"><img src="images/logo03.png"><img src="images/logo04.png"><img src="images/logo05.png">
+                </div>
+                    
+                </div>  
+      	    </div>
+            
+            
+        
+        </div>
+        
+       	  
+          
+          
+          
+          
+      </div>
+      
+        
+        
+    </div>
+</div>
+</body>
+</html>

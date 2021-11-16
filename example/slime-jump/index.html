@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0  user-scalable=no" name="viewport">
+    <title>jump div</title>
+    <style>
+		body {
+			background:#E0ECF3;
+            text-align:center;
+            font-family:'sans-serif';
+		}
+		
+        .box {
+		  width:200px;
+		  height:200px;
+		  background:white;
+		  position:relative;
+		  background-size:100%;
+		  margin:0 auto;
+          background-image:url(grass.png);
+          background-size:50%;
+          margin-bottom:15px;
+        }
+
+		.unit {
+		  width:50px;
+		  height:50px;
+		  position:absolute;
+		  left:75px;
+		  bottom:50px;
+		  transition:all .3s ease-out;
+		  -webkit-transition:all .3s ease-out;
+		  /*background-image:url('slime2.png');*/
+		  background-size:50px 50px;
+          z-index:2;
+          background-repeat: no-repeat;
+		}
+
+		.unit.press {
+		  width:70px;
+		  height:30px;
+		  left:65px;
+		  background-size:70px 30px;
+		}
+
+		.unit.active {
+		  width:40px;
+		  height:60px;
+		  left:80px;
+		  background-size:40px 60px;
+		}
+        
+        .switchBtn {
+          padding:10px 20px;
+          border:1px solid gray;
+          display:inline-block;
+          border-radius:10px;
+          background:#4E8F33;
+          color:white;
+          cursor:pointer;
+        }
+        
+        .slime {
+          background-image:url('slime.png');
+          background-position:center 3px;
+        }
+        .slime2 {
+          background-image:url('slime2.png');
+        }
+        
+        .shadow {
+            width:50px;
+            height:12px;
+            background-image: url(shadow.png);
+            background-size:50px 12px;
+            opacity:.5;
+            position:absolute;
+            left:75px;
+            bottom:45px;
+            z-index:1;
+            transition:all .3s ease-out;
+		    -webkit-transition:all .3s ease-out;
+        }
+        
+        .shadow.press {
+          width:70px;
+		  height:8px;
+		  left:65px;
+		  background-size:70px 8px;
+          opacity:.6;
+        }
+        
+        .shadow.active {
+          width:36px;
+		  height:12px;
+		  left:82px;
+		  background-size:36px 12px;
+          opacity:.4;
+        }
+
+
+    </style>
+	
+</head>
+
+<body>
+	
+<div class="box">
+  <div id="unit" class="unit"></div>
+  <div id="shadow" class="shadow"></div>
+</div>
+    
+<div id="switchBtn" class="switchBtn">切換史萊姆</div>
+    
+
+</body>
+
+</html>
+<script>
+	var spot = {
+	  "speed": .3,
+	  "high": 0,
+	  "status": "stop", //stop, up, down
+	  "clickable": true,
+      "slime": 1
+	}
+
+	var el = document.getElementById("unit");
+    var elShadow = document.getElementById("shadow");
+    var btn = document.getElementById("switchBtn");
+    
+	el.addEventListener("click", hitEvent);
+    btn.addEventListener("click", changeEvent);
+
+	function hitEvent() {
+		if (!spot.clickable) { return };
+        spot.clickable = false;
+		switch(spot.status) {
+		case "stop":
+			el.classList.add("press");
+            elShadow.classList.add("press");
+		  setTimeout(function() {
+			el.classList.remove("press");
+			el.classList.add("active");
+            elShadow.classList.remove("press");
+			elShadow.classList.add("active");
+		  },300);
+		  setTimeout(function() {
+			  el.style.cssText = "transition:all " + spot.speed + "s ease-out;";
+			el.style.bottom = "130px";
+		  },300);
+		  setTimeout(function(){
+			el.style.cssText = "transition:all " + spot.speed + "s ease-in;";
+			el.style.bottom = "50px";
+			setTimeout(function() {
+				el.classList.remove("active");
+				el.classList.add("press");
+               elShadow.classList.remove("active");
+				elShadow.classList.add("press");
+			    el.style.cssText = "";
+				setTimeout(function() {
+				  el.classList.remove("press");
+                  elShadow.classList.remove("press");
+                  spot.clickable = true;
+				},300);
+			}, spot.speed*1000);
+		  }, spot.speed*1000 + 300);
+			break;
+	  }
+	};
+    
+    function changeEvent() {
+        if (spot.slime === 1) {
+            el.classList.remove("slime");
+            el.classList.add("slime2");
+            spot.slime = 2;
+        } else {
+            el.classList.remove("slime2");
+            el.classList.add("slime");
+            spot.slime = 1;
+        }
+    }
+    
+    //initialize
+    changeEvent();
+</script>

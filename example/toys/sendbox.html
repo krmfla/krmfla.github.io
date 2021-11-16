@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+</head>
+<script src="js/jquery-1.10.1.min.js"></script>
+
+<style>
+body {
+font-family:"微軟正黑體", Arial;
+}
+.main {
+	width:100%;
+	max-width:445px;
+	height:auto;
+	overflow:hidden;
+	margin:0 auto;
+}
+.s_text {
+	margin-top:40px;
+	margin-bottom:40px;
+}
+.bt1 {
+	width:49.5%;
+	float:left;
+	cursor:pointer;
+}
+.bt2 {
+	width:49.5%;
+	float:left;
+	cursor:pointer;
+}
+.bt3 {
+	width:49.5%;
+	margin:0 auto;
+	display:block;
+	cursor:pointer;
+}
+.gift_formstyle {
+	width:202px;
+
+	height:25px;
+	font-size:12px;
+	border-radius:5px;
+	margin:0 auto 15px;
+	border:1px solid #D0D0D0;
+	padding-left:5px;
+	text-align:center;
+	display:block;
+}
+.gf1 {
+	width:35px;
+	float:left;
+	margin-right:10px;
+	
+}
+.gf2 {
+	width:80px;
+	float:left;
+	margin-right:10px;
+	
+}
+
+.gf3 {
+	width:35px;
+	float:right;
+}
+.gf4 {
+	margin-bottom:30px;
+}
+.inner_input {
+	width:202px;
+	height:auto;
+	margin:0 auto;
+	display:block;
+	overflow:hidden;
+}
+.fb_like {
+	width:auto;
+	height:80px;
+	text-align:center;
+	background-color:#00A3FF;
+	color:white;
+}
+.bk2 {
+	display:none;
+}
+.bk3 {
+	display:none;
+}
+.bk4 {
+	display:none;
+}
+
+</style>
+
+<script>
+$(document).ready(function(e) {
+	$(".bk2").css('display','none');
+	$(".bk3").css('display','none');
+	$(".bk4").css('display','none');
+	$('.bt2').click(function(){
+		$(".bk1").css('display','none');
+		$(".bk2").css('display','block');
+	});
+	$('.bt1').click(function(){
+		$(".bk1").css('display','none');
+		$(".bk4").css('display','block');
+	});
+	$('.bt3').click(function(){
+		$(".bk2").css('display','none');
+		$(".bk3").css('display','block');
+	});
+});
+
+
+</script>
+
+
+<body>
+<div class="main">
+	<div class="bk1">
+	    <img src="images/s_banner.jpg" style="margin-bottom:20p; width:100%">
+    	<div class="s_text">
+        家有0~3寶寶，再送超有趣的【迪士尼幼兒美語體驗組】，讓寶寶開心唱跳學美語！
+        </div>
+        <img src="images/s_bt1.jpg" class="bt1">
+        <img src="images/s_bt2.jpg" class="bt2">
+    </div>
+    <div class="bk2">
+    	<div class="s_text">
+        請完整填寫以下欄位，我們將於10天內將【迪士尼幼兒美語體驗組】送達您府上。
+        </div>
+        <div class="inner_input">
+        <input type="text" class="gift_formstyle gf1" placeholder="區碼">
+        <input type="text" class="gift_formstyle gf2" placeholder="市話">
+        <input type="text" class="gift_formstyle gf3" placeholder="分機">
+        </div>
+        
+        <input type="text" class="gift_formstyle" placeholder="寶寶姓名">
+        <input type="text" class="gift_formstyle gf4" placeholder="寶寶生日">
+        <img src="images/s_bt3.jpg" class="bt3">
+    </div>
+    <div class="bk3">
+    <img src="images/s_banner.jpg" style="margin-bottom:20p; width:100%">
+    <div class="s_text">
+        活動參加成功!我們將於3/24起抽出獎項，請鎖定粉絲團持續關注!
+        </div>
+    <div class="fb_like">
+    Facebook Like API
+    </div>
+    
+    </div>
+    <div class="bk4">
+    <div class="s_text">
+        活動參加成功!我們將於3/24起抽出獎項，請鎖定粉絲團持續關注!
+        </div>
+    <div class="fb_like">
+    Facebook Like API
+    </div>
+    
+    </div>
+</div>
+
+</body>
+</html>

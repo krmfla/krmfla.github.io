@@ -1,0 +1,332 @@
+/* Reset */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+/* Hide Android WebView Highlight Border */
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+    font-family: "sans-serif";
+    background: black;
+    padding-top:10px;
+}
+.statusBox {
+    width: 99.5%;
+    max-width: 500px;
+    margin: 0 auto 10px;
+    border: 1px solid gray;
+    opacity: 1;
+    overflow: hidden;
+    font-size: 0;
+}
+.statusCell {
+    display: inline-block;
+    margin: 10px 5px;
+}
+.power {
+    width: 20px;
+    height: 20px;
+    /*background: white;*/
+}
+.powerLv {
+    width: 20px;
+    height: 20px;
+    color: white;
+    font-size: 20px;
+    /*display: inline-block;*/
+    margin-right: 30px;
+    overflow:hidden;
+    line-height:20px;
+    
+}
+
+.heart {
+    width: 20px;
+    height: 20px;
+    /*background: #FF3680;*/
+}
+.heartBar {
+    width: 0px;
+    height: 20px;
+    background: #FF3680;
+    border: 1px solid gray;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+}
+.gameSection {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 10px;
+    background: black;
+    overflow: hidden;
+    opacity: 1;
+}
+.main {
+    width: 100%;
+    overflow: hidden;
+    /*margin-bottom:20px;*/
+    font-size: 0;
+    position: relative;
+    opacity: 1;
+}
+ul.map {
+    margin: 0;
+    padding: 0;
+    /*background: #00DB5F;*/
+    
+    background-size:16.66%;
+}
+ul.map li {
+    margin: 0;
+    padding: 0;
+    width: 16.66%;
+    display: inline-block;
+    opacity: 1;
+    /*background: #00DB5F;*/
+    /*background-size:100%;*/
+}
+
+.bg0 {
+    /*background: #00DB5F;*/
+    /*background-image:url("images/grass.png");*/
+    background-size:100%;
+}
+.bg1 {
+    /*background: #0A9144;*/
+    background-size:100%;
+}
+.bg2 {
+    /*background: #F3F318;*/
+    background-image:url("images/coin.png");
+    background-size:100%;
+}
+.bg4 {
+    /*background: #FF3680;*/
+    background-image:url("images/heart.png");
+    background-size:100%;
+}
+.bg5 {
+    /*background: #0ce;*/
+    background-image:url("images/sword.png");
+    background-size:100%;
+}
+.bg10 {
+    /*background-image: url("images/number.png");
+    background-size: 1000%;
+    background-position: 10% 0;*/
+    background-image:url("images/slime.png");
+    background-size:100%;
+}
+.bg11 {
+    background-image: url("images/number.png");
+    background-size: 1000%;
+    background-position: 11.11% 0;
+}
+.bg12 {
+    background-image: url("images/number.png");
+    background-size: 1000%;
+    background-position: 22.22% 0;
+}
+.bg13 {
+    background-image: url("images/number.png");
+    background-size: 1000%;
+    background-position: 33.33% 0;
+}
+.bg14 {
+    background-image: url("images/number.png");
+    background-size: 1000%;
+    background-position: 44.44% 0;
+}
+.bg15 {
+    background-image: url("images/number.png");
+    background-size: 1000%;
+    background-position: 55.55% 0;
+}
+.bg16 {
+    background-image: url("images/number.png");
+    background-size: 1000%;
+    background-position: 66.66% 0;
+}
+.bg17 {
+    background-image: url("images/number.png");
+    background-size: 1000%;
+    background-position: 77.77% 0;
+}
+.bg18 {
+    background-image: url("images/number.png");
+    background-size: 1000%;
+    background-position: 88.88% 0;
+}
+.bg19 {
+    background-image: url("images/number.png");
+    background-size: 1000%;
+    background-position: 99.99% 0;
+}
+
+.main.grass .map {
+    background-image:url("images/grass.png");
+}
+.main.grass .bg1 {
+    background-image:url("images/grass_tree.png");
+}
+
+.main.hole .map {
+    background-image:url("images/hole.png");
+}
+.main.hole .bg1 {
+    background-image:url("images/hole_rock.png");
+}
+
+.main.desert .map {
+    background-image:url("images/desert.png");
+}
+.main.desert .bg1 {
+    background-image:url("images/desert_pryamid.png.png");
+}
+
+.main.castle .map {
+    background-image:url("images/castle.png");
+}
+.main.castle .bg1 {
+    background-image:url("images/castle_pillars.png");
+}
+
+
+
+
+
+ul.map li img {
+    width: 100%;
+    opacity: .05;
+}
+.character {
+    width: 16.66%;
+    position: absolute;
+    bottom: 0;
+    left: 49.98%;
+    /*background: white;*/
+    transition: all .25s;
+    -webkit-transition: all .25s;
+    background-image:url('images/character.gif');
+    background-size: 100%;
+    z-index:5;
+}
+.character img {
+    width: 100%;
+    opacity: .05;
+}
+.character.hit {
+    /*background: red;*/
+    background-image:url('images/hit.png');
+    animation: chrDrop 1.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation: chrDrop 1.5s;
+    -webkit-animation-fill-mode: forwards;
+}
+@keyframes chrDrop {
+    0% {
+        bottom: 0;
+    }
+    60% {
+        bottom: 15%;
+    }
+    85% {
+        bottom: -20%;
+    }
+    100% {
+        bottom: -20%;
+    }
+}
+-webkit-@keyframes chrDrop {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 15%;
+    }
+    85% {
+        bottom: -20%;
+    }
+    100% {
+        bottom: -20%;
+    }
+}
+.score {
+    /*padding:10px 10px 10px 0;*/
+    
+    color: white;
+    font-size: 20px;
+    /*background-color:rgba(0, 0, 0, 1);*/
+    /*background:white;*/
+    
+    display: inline-block;
+    position: absolute;
+    bottom: 85%;
+    left: 85%;
+    padding-left: 30px;
+}
+.smallGold {
+    width: 20px;
+    height: 20px;
+    /*background: yellow;*/
+    background-image:url("images/coin.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 85%;
+    left: 85%;
+    z-index: 2;
+    opacity: 1;
+}
+.clip {
+    width: 16.66%;
+    height: 20%;
+    /*background: yellow;*/
+    background-image:url("images/coin.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 1;
+    position: absolute;
+    z-index: 2;
+    transition: all .6s ease-out;
+    -webkit-transition: all .6s ease-out;
+}
+.mapBtn {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+.controller {
+    width: 70%;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    z-index: 11;
+}
+.controller .btn {
+    width: 95%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.switchBtn {
+    padding:10px 20px;
+    margin-right:15px;
+    font-size:16px;
+    color:white;
+    display:inline-block;
+    cursor:pinter;
+}
+
+
+
+
+.hide {
+    display: none;
+}

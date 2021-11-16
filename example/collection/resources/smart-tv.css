@@ -1,0 +1,116 @@
+body, h1, h2, p, ul, li {
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+body {
+	background:#C7C7C7;
+}
+
+.main {
+	width:100%;
+	max-width:970px;
+	margin:0 auto;
+	overflow: hidden;
+	background:white;
+	box-shadow: 0px 2px 7px #666;
+	font-family:"Trebuchet MS",Tahoma,Arial,Verdana,monospace;
+}
+
+.section {
+	display:none;
+}
+
+nav {
+	height:40px;
+	background:#696A6B;
+	border-bottom: 6px solid #509DCC;
+	padding:5px 5px 0;
+}
+
+
+nav li {
+	width:15%;
+	height:40px;
+	background:#A1A1A1;
+	text-align: center;
+	float:left;
+	border-radius: 5px 5px 0 0;
+	text-shadow: 1px 0px 2px #878787;
+	margin:0 1px;
+	cursor:pointer;
+	overflow:hidden;
+}
+
+.switchBtn {
+	width:8%;
+	height:40px;
+	background:-webkit-linear-gradient(top,#C23CDC,#B241C9);
+	background:-moz-linear-gradient(top,#C23CDC,#B241C9);
+	background:linear-gradient(top,#C23CDC,#B241C9);
+	float:left;
+	border-radius: 5px 5px 0 0;
+	text-shadow: 1px 0px 2px #878787;
+	margin:0 1px;
+	cursor:pointer;
+	overflow: hidden;
+}
+.switchBox {
+	width:50%;
+	height:80px;
+	background:white;
+	margin:0 auto;
+}
+
+nav li.active {
+	background:-webkit-linear-gradient(top,#55ABDD,#509DCC);
+	background:-moz-linear-gradient(top,#55ABDD,#509DCC);
+	background:linear-gradient(top,#55ABDD,#509DCC);
+}
+
+nav li p {
+	font-size:22px;
+	color:#414141;
+	text-shadow: 1px 1px 2px #888888;
+	line-height: 40px;
+}
+
+nav li.active p {
+	color:white;
+}
+
+
+.imageBox {
+	width:98%;
+	margin:5px auto 10px;
+	box-shadow:0 2px 4px gray;
+	background-color:#002c47;
+	background-image: url(http://www.transparenttextures.com/patterns/3px-tile.png);
+}
+
+.imageBox.switch {
+	/*width:31.3%;*/
+	height: 200px;
+	cursor:pointer;
+	float:left;
+	margin:1%;
+	display:block;
+	overflow: hidden;
+}
+
+.imageFit {
+	width:100%;
+	margin:0;
+	padding:0;
+	display:block;
+}
+
+.scrollTop {
+	width:48px;
+	height:48px;
+	background-image:url("../images/up.png");
+	position: fixed;
+	bottom:1%;
+	right:10%;
+}

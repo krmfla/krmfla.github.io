@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0  user-scalable=no" name="viewport">
+    <title>番茄工作法</title>
+	<link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+	<div class="navigation">
+	  <div class="navBox">
+		<p>POMODORO TECHNIQUE</p>
+		<div id="pageBtn" class="pageBtn"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+	  </div>
+	</div>
+	<div id="pageBox" class="pageBox">
+	  <div id="navPage" class="navPage">
+		<p>開始時間(24hr)：</p>
+		<input id="setHours" class="timeSetting" type="number" min="0" max="23" maxlength="2"/>
+		<span class="colon">:</span>
+		<input id="setMinutes" class="timeSetting" type="number" min="0" max="59" maxlength="2"/>
+		<button id="nowBtn" class="nowBtn">now</button>
+		<p>項目1：</p>
+		<input id="todo1"/>
+		<p>項目2：</p>
+		<input id="todo2"/>
+		<p>項目3：</p>
+		<input id="todo3"/>
+		<p>項目4：</p>
+		<input id="todo4"/>
+		<button id="generateBtn">generate</button>
+	  </div>
+	  <div class="nowTime">
+		<span id="timeHr">21</span>
+		<span id="colon" class="colon">:</span>
+		<span id="timeMin">55</span>
+	  </div>
+	  <div id="box" class="box">
+	  <div id="timeBar" class="timeBar"></div>
+		<div class="section work">
+		  <div class="timeZone"></div>
+		  <div class="content">
+			<p class="todo">todo</p>
+		  </div>
+		</div>
+		<div class="section break">
+		  <div class="timeZone"></div>
+		  <div class="content">
+			<p class="rest">break</p>
+		  </div>
+		</div>
+
+		<div class="section work">
+		  <div class="timeZone"></div>
+		  <div class="content">
+			<p class="todo">todo</p>
+		  </div>
+		</div>
+		<div class="section break">
+		  <div class="timeZone"></div>
+		  <div class="content">
+			<p class="rest">break</p>
+		  </div>
+		</div>
+
+		<div class="section work">
+		  <div class="timeZone"></div>
+		  <div class="content">
+			<p class="todo">todo</p>
+		  </div>
+		</div>
+		<div class="section break">
+		  <div class="timeZone"></div>
+		  <div class="content">
+			<p class="rest">break</p>
+		  </div>
+		</div>
+
+		<div class="section work">
+		  <div class="timeZone"></div>
+		  <div class="content">
+			<p class="todo">todo</p>
+		  </div>
+		</div>
+		<div class="section break2">
+		  <div class="timeZone"></div>
+		  <div class="content">
+			<p class="rest">break</p>
+		  </div>
+		</div>
+	  <div>
+	  <div class="controller">
+		<div class="btn"></div>
+	  </div>
+	</div>
+</body>
+
+</html>
+<script type="text/javascript" src="script.js"></script>
