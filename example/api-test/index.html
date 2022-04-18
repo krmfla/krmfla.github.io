@@ -52,6 +52,7 @@
     <form id='demo-form' action="?" method="POST">
       <button class="g-recaptcha" data-sitekey="6LeQD-kUAAAAAO5D389lZ_0twJGYzF90LU26CC8l" data-callback='onSubmit'>Submit</button>
     </form>
+    <br />
     <button onclick='send_tag()'> LINE TEST</button>
     <script>
         function onSubmit(token) {
@@ -68,6 +69,7 @@
             });
         }
         function send_tag() {
+          console.log('send tag');
           _lt('send', 'cv', {
             type: 'agree'
           }, ['26137d5c-ec78-4de3-bd72-92f9e9b8e7f1']);
