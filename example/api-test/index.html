@@ -6,6 +6,45 @@
     <title>template</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- [START] LINE Tag Base Code modify by adams 20220301 =======-->
+    <!-- Do Not Modify -->
+    <script>
+      (function(g,d,o) {
+        g._ltq=g._ltq||[];
+        g._lt=g._lt||function(){g._ltq.push(arguments)};
+        var h=location.protocol==='https:'?'https://d.line-scdn.net':'http://d.line-cdn.net';
+        var s=d.createElement('script');
+        s.async=1;
+        s.src=o||h+'/n/line_tag/public/release/vl/lt.js';
+        var t=d.getElementsByTagName('script')[0];
+        t.parentNode.insertBefore(s,t);
+      })(window, document);
+    
+      _lt('init', {
+        customerType: 'lap',
+        tagId: '26137d5c-ec78-4de3-bd72-92f9e9b8e7f1'
+      });
+    
+      _lt('send', 'pv', ['26137d5c-ec78-4de3-bd72-92f9e9b8e7f1']);
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://tr.line.me/tag.gif?c_t=lap&t_id=26137d5c-ec78-4de3-bd72-92f9e9b8e7f1&e=pv&noscript=1" />
+    </noscript>
+    <!-- [END] End LINE Tag Base Code ================================= -->
+    
+    <!-- [START] LINE Point Ads LP Tracking Code Start modify by adams 20220301 ===== -->
+    <script type="text/javascript">
+      var freecoins_lpq=[ 
+        {
+          "app": "FREECOINS_24243", 
+          "expires": 2592000, 
+          "domain": ".taishinbank.com.tw"
+        }
+      ];
+    </script>
+    <script src="https://point-ads.line-apps.com/lfc5.js" async></script>
+    <!-- [END] LINE Point Ads LP Tracking Code End ================================== -->
 </head>
 
 <body>
@@ -13,6 +52,7 @@
     <form id='demo-form' action="?" method="POST">
       <button class="g-recaptcha" data-sitekey="6LeQD-kUAAAAAO5D389lZ_0twJGYzF90LU26CC8l" data-callback='onSubmit'>Submit</button>
     </form>
+    <button onclick='send_tag()'> LINE TEST</button>
     <script>
         function onSubmit(token) {
             console.log(token);
@@ -26,6 +66,11 @@
                 console.error(error);
                 grecaptcha.reset();
             });
+        }
+        function send_tag() {
+          _lt('send', 'cv', {
+            type: 'agree'
+          }, ['26137d5c-ec78-4de3-bd72-92f9e9b8e7f1']);
         }
     </script>
 </body>
