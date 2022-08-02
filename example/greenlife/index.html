@@ -17,17 +17,19 @@
             padding: 5px;
         }
     </style>
-    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.3.0/sdk.js"></script>
 </head>
 
 <body>
     <h1>Green Life 流程測試 v0.1</h1>
     <div id='result' class='result'></div>
     <button id='btn1'>LINE 登入</button>
+    <button id='btn2'>登出</button>
     <script>
         var userId = '---';
         var result = document.getElementById('result');
         var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
 
             
         window.onerror = function(err, xhr, message) {
@@ -37,24 +39,35 @@
         btn1.onclick = async function() {
             await init();
         }
+
+        btn2.onclick = async function() {
+            await liff.init({liffId: '1657353794-VBEaDzzw'});
+            result.innerHTML = '已登出';
+            localStorage.setItem('LIFF_STORE:1657353794-VBEaDzzw:accessToken', '');
+            localStorage.removeItem('LIFF_STORE:1657353794-VBEaDzzw:accessToken');
+        }
+
         async function init() {
             var vm = this;
             await liff.init({liffId: '1657353794-VBEaDzzw'});
             if (liff.isLoggedIn()) {
+                result.innerHTML = '已登入';
                 liff.getProfile()
                     .then(data => {
                         console.log(data);
                         userId = data.userId;
                         result.innerHTML = `已登入, user id: ${userId}`;
                         liff.getFriendship().then((data) => {
+                            console.log(data);
                             if (data.friendFlag) {
-                                console.log(data);
+                                result.innerHTML += '<br/>已加入好友';
+                            } else {
+                                result.innerHTML += '<br/>尚未加入好友';
                             }
                         });
                     })
                     .catch((err) => {
-                        console.log(err);
-                        // alert('請先完成 LINE 登入');
+                        alert(err);
                         liff.login();
                     });
             } else {
