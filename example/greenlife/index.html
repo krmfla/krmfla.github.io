@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Liff test</title>
+    <style>
+        .result {
+            width: 100%;
+            word-break: break-all;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            min-width: 125px;
+            margin: 5px 10px 10px;
+            padding: 5px;
+        }
+    </style>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</head>
+
+<body>
+    <h1>Green Life 流程測試 v0.1</h1>
+    <div id='result' class='result'></div>
+    <button id='btn1'>LINE 登入</button>
+    <script>
+        var userId = '---';
+        var result = document.getElementById('result');
+        var btn1 = document.getElementById('btn1');
+
+            
+        window.onerror = function(err, xhr, message) {
+            result.innerText = (err + ', ' + xhr + ', ' + message);
+        }
+
+        btn1.onclick = async function() {
+            await init();
+        }
+        async function init() {
+            var vm = this;
+            await liff.init({liffId: '1657353794-VBEaDzzw'});
+            if (liff.isLoggedIn()) {
+                liff.getProfile()
+                    .then(data => {
+                        console.log(data);
+                        userId = data.userId;
+                        result.innerHTML = `已登入, user id: ${userId}`;
+                        liff.getFriendship().then((data) => {
+                            if (data.friendFlag) {
+                                console.log(data);
+                            }
+                        });
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                        // alert('請先完成 LINE 登入');
+                        liff.login();
+                    });
+            } else {
+                liff.login();
+            }
+        }
+    </script>
+</body>
+</html>
