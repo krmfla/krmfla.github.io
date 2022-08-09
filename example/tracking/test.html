@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>新版追蹤碼測試</title>
+    <style>
+        .result {
+            width: 100%;
+            word-break: break-all;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            min-width: 125px;
+            margin: 5px 10px 10px;
+            padding: 5px;
+        }
+        a {
+            margin: 10px 0;
+            display: block;
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Ads: 411735956 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-411735956"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-411735956');
+    </script>
+    <!-- Event snippet for 外國人開戶_輸入OTP驗證碼頁_NEXT BT conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_ENOPEN(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-411735956/U9IzCJvh9NEDEJSvqsQB',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '942393739834619');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=942393739834619&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel Code -->
+    <script type="application/javascript">
+        function DSP_track() {
+            (function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({'projectId':'10000','properties':{'pixelId':'10187814'}});
+            var s=d.createElement(t);s.src=r;s.async=true;
+            s.onload=s.onreadystatechange=function(){var y,rs=this.readyState,c=w[u];
+                if(rs&&rs!="complete"&&rs!="loaded"){return}try{y=YAHOO.ywa.I13N.fireBeacon;w[u]=[];w[u].push=function(p){y([p])};y(c)}catch(e){}};
+                var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr)
+            })(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>新版追蹤碼測試 v0.1</h1>
+    <a href="https://www.google.com.tw/" onclick="gtag_report_ENOPEN();fbq('track', 'SubmitApplication');DSP_track();">觸發追蹤事件</a>
+    <br/>
+    <a href="https://www.google.com.tw/" target='_blank' onclick="gtag_report_ENOPEN();fbq('track', 'SubmitApplication');DSP_track();">觸發追蹤事件(另開分頁)</a>
+    <script>
+        window.onerror = function(err, xhr, message) {
+            result.innerText = (err + ', ' + xhr + ', ' + message);
+        }
+    </script>
+</body>
+</html>
