@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=750, user-scalable=no" name="viewport">
+    <title>redirect calendar</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>redirect calendar</h1>
+    <div class="main">
+        <div>訂閱</div>
+        <button id="btn1">webcal(Eva)</button>
+        <button id="btn2">google calendar URL</button>
+        <hr/>
+        <div>下載</div>
+        <button id="btn3">google(URL ics)</button>
+        <button id="btn4">google(github ics)</button>
+    </div>
+
+    <script>
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+        var btn3 = document.getElementById('btn3');
+
+        btn1.onclick = function() {
+            location.href = 'webcal://p24-caldav.icloud.com/published/2/MTQxMjc5MzQ3MjE0MTI3OWm6cJElx7ehRg58x4Z3DjJKUTrWq8ckEbR8878Uc_1u';
+        }
+        btn2.onclick = function() {
+            location.href = 'https://calendar.google.com/calendar/u/0?cid=c2dpY2s2YnZpcDd2bjFzcDdrbmJwOWJhcmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ';
+        }
+        btn3.onclick = function() {
+            location.href = 'https://calendar.google.com/calendar/ical/sgick6bvip7vn1sp7knbp9barg%40group.calendar.google.com/public/basic.ics';
+        }
+        btn4.onclick = function() {
+            location.href = 'https://krmfla.github.io/example/calendar/sgick6bvip7vn1sp7knbp9barg@group.calendar.google.com.ics';
+        }
+        
+    </script>
+</body>
+
+</html>
