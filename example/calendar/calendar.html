@@ -7,12 +7,12 @@
     <title>redirect calendar</title>
     <style>
         div {
-            font-size: 32px;
+            font-size: 24px;
         }
         button {
             padding: 10px 20px;
             margin: 15px;
-            font-size: 24px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -22,7 +22,8 @@
     <div class="main">
         <div>訂閱</div>
         <button id="btn1">webcal(Eva)</button>
-        <button id="btn2">google calendar URL</button>
+        <button id="btn2">google calendar(open URL)</button>
+        <button id="btn22">google calendar(open ical)</button>
         <hr/>
         <div>下載</div>
         <button id="btn3">google(URL ics)</button>
@@ -32,12 +33,17 @@
     <script>
         var btn1 = document.getElementById('btn1');
         var btn2 = document.getElementById('btn2');
+        var btn22 = document.getElementById('btn22');
         var btn3 = document.getElementById('btn3');
+        var btn4 = document.getElementById('btn4');
 
         btn1.onclick = function() {
             location.href = 'webcal://p24-caldav.icloud.com/published/2/MTQxMjc5MzQ3MjE0MTI3OWm6cJElx7ehRg58x4Z3DjJKUTrWq8ckEbR8878Uc_1u';
         }
         btn2.onclick = function() {
+            location.href = 'https://calendar.google.com/calendar/u/0?cid=c2dpY2s2YnZpcDd2bjFzcDdrbmJwOWJhcmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ';
+        }
+        btn22.onclick = function() {
             location.href = 'https://calendar.google.com/calendar/u/0?cid=c2dpY2s2YnZpcDd2bjFzcDdrbmJwOWJhcmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ';
         }
         btn3.onclick = function() {
