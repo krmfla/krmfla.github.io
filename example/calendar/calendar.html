@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
-    <title>redirect calendar</title>
+    <title>redirect calendar v0.2</title>
     <style>
         div {
             font-size: 24px;
@@ -24,13 +24,15 @@
         <button id="btn1">webcal(Eva)</button>
         <button id="btn2">google calendar(public calendar)</button>
         <button id="btn22">google calendar(open url)</button>
+        <button id="btn23">新增此日曆(前往)</button>
+        <button id="btn24">新增此日曆(開分頁)</button>
         <hr/>
         <div>下載</div>
         <button id="btn3">google(URL ics)</button>
         <button id="btn4">google(github ics)</button>
         <!-- <div>iframe</div>
         <hr/>
-        <iframe src="https://calendar.google.com/calendar/embed?src=sgick6bvip7vn1sp7knbp9barg%40group.calendar.google.com&ctz=Asia%2FTaipei" style="border: 0" width="375" height="600" frameborder="0" scrolling="no"></iframe> -->
+<!--         <iframe src="https://calendar.google.com/calendar/embed?src=sgick6bvip7vn1sp7knbp9barg%40group.calendar.google.com&ctz=Asia%2FTaipei" style="border: 0" width="375" height="600" frameborder="0" scrolling="no"></iframe> --> -->
     </div>
 
     <script>
@@ -48,6 +50,12 @@
         }
         btn22.onclick = function() {
             location.href = 'https://calendar.google.com/calendar/embed?src=sgick6bvip7vn1sp7knbp9barg%40group.calendar.google.com&ctz=Asia%2FTaipei';
+        }
+        btn23.onclick = function() {
+            location.href = 'https://calendar.google.com/calendar/render?cid=sgick6bvip7vn1sp7knbp9barg@group.calendar.google.com';
+        }
+        btn24.onclick = function() {
+            window.open('https://calendar.google.com/calendar/render?cid=sgick6bvip7vn1sp7knbp9barg@group.calendar.google.com');
         }
         btn3.onclick = function() {
             location.href = 'https://calendar.google.com/calendar/ical/sgick6bvip7vn1sp7knbp9barg%40group.calendar.google.com/public/basic.ics';
