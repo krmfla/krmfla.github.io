@@ -1,0 +1,67 @@
+h1 {
+  text-align:center;
+}
+
+.box {
+  width:250px;
+  margin:0 auto;
+  border:1px solid #AAA;
+}
+
+.item {
+  width:250px;
+  height:40px;
+  border:1px solid #DDD;
+  font-size:20px;
+  line-height:40px;
+  text-align:center;
+  color:#333;
+  cursor:pointer;
+  position:relative;
+  transition:all .3s;
+  user-select: none;
+}
+
+.item.onDrag {
+  /*transform: scale(1.05, 1.1);*/
+  opacity:1;
+  background-color:#F5F5F5;
+  box-shadow:0 0 5px rgba(0,0,0,.1);
+}
+
+.item::before {
+  content:"";
+  position:absolute;
+  width:15px;
+  height:15px;
+  top:50%;
+  right:10px;
+  transform:translateY(-50%);
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAADQklEQVR4Xu2bQXIjQQzD7J/56f5ZcnXNEdUtqorYu4YSgXT2sPt++ae6gXf19R7/UoByCRRAAcobKD/fF0AByhsoP98XQAHKGyg/3xdAAcobKD/fF0AByhsoP98XQAHKGyg/3xdAAcobKD/fF0AByhsoP98XQAHKGyg/3xdAAcobKD/fF0AByhsoP98XQAHKGyg/3xdAAcobKD/fF0AByhsoP98XQAHKGyg//9QL8FfeY/p8zBEPPi5WgKwCmCMeVIAs8Uc65ogHFUABfhvwV0DWB/yDjAd9AbLE/RWwqv/4MvgHGQ/6AsSh/y6AOeJBBVAA/xK4xwH8g4wHH7d/93RRucmHXn1KAJrvXLgBBQgDSMcrQJpAOF8BwgDS8QqQJhDOV4AwgHS8AqQJhPMVIAwgHa8AaQLhfAUIA0jHK0CaQDhfAcIA0vEKkCYQzleAMIB0vAKkCYTzTwnwCd/RHv+lBZwSwH8WTgmcmcMc8eBjbwU4A5J+BXPEgwpAWV2ZwxzxoAJcAUk/ijniQQWgrK7MYY54UAGugKQfxRzxoAJQVlfmMEc8qABXQNKPYo54UAEoqytzmCMeVIArIOlHMUc8+Nj0Qzd37kgDX/qVUwLQfOfCDShAGEA6XgHSBML5ChAGkI5XgDSBcL4ChAGk4xUgTSCcrwBhAOl4BUgTCOcrQBhAOl4B0gTC+QoQBpCOV4A0gXC+AoQBpOMVIE0gnH9KgG/4jvb4Dy3glAD+zyBK4Mwc5ogHH3srwBmQ9CuYIx5UAMrqyhzmiAcV4ApI+lHMEQ8qAGV1ZQ5zxIMKcAUk/SjmiAcVgLK6Moc54kEFuAKSfhRzxIMKQFldmcMc8aACXAFJP4o54kG6qXO7GlCAXTzGt1GA8cp3BSrALh7j2yjAeOW7AhVgF4/xbRRgvPJdgQqwi8f4NgowXvmuQAXYxWN8GwUYr3xXoALs4jG+jQKMV74rUAF28RjfRgHGK98VqAC7eIxvowDjle8KVIBdPMa3UYDxyncFKsAuHuPbKMB45bsCFWAXj/FtFGC88l2BCrCLx/g2CjBe+a5ABdjFY3wbBRivfFegAuziMb6NAoxXvitQAXbxGN9GAcYr3xX4D1NkIoFb64KVAAAAAElFTkSuQmCC);
+  background-size:120% 120%;
+  background-position:center center;
+}
+
+.item:last-child {
+  height:20px;
+}
+
+.item:last-child::before {
+  border:none;
+  height:0;
+}
+
+.itemClip {
+  position: absolute;
+  background-color:white;
+  opacity:1;
+  top:0;
+  left:0;
+  transform:translate(-50%, -50%);
+  transition:none;
+  background-color:white;
+}
+
+.hide {
+  display:none;
+}
