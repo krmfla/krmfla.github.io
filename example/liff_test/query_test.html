@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Liff test</title>
+    <style>
+        .result {
+            width: 100%;
+            word-break: break-all;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            line-height: 1.25;
+            margin-bottom: 10px;
+        }
+        button {
+            min-width: 125px;
+            margin: 5px 10px 10px;
+            padding: 5px;
+        }
+    </style>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</head>
+
+<body>
+    <div id="result" class="result"></div>
+    <button id="login">login</button>
+    <button id="logout">logout</button>
+    <script>
+      var result = document.getElementById('result');
+      var login = document.getElementById('login');
+      var logout = document.getElementById('logout');
+      result.innerHTML = 'URL Path:<br/>' + window.location.href + '<br/>';
+
+      login.onclick = function() {
+        liff.login();
+      }
+
+      logout.onclick = function() {
+        liff.logout();
+      }
+
+      function init() {
+          liff.init({'liffId': '1612283647-8e5eYdyY'})
+              .then(()=> {
+                  result.innerText += '初始化完成。'
+          });
+      }
+
+      init();
+    </script>
+</body>
+</html>
