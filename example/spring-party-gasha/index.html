@@ -1,69 +1,67 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/Article" lang="zh-TW">
-<!--page default Information-->
-<!--html head-->
-
-<head>
+  <!--page default Information-->
+  <!--html head-->
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="edge,chrome=1">
-    <title>index</title>
+    <title>抽獎機</title>
     <meta name="description" content="pageDesc">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
-    <meta itemprop="name" content="index">
+    <meta itemprop="name" content="抽獎機">
     <meta itemprop="description" content="pageDesc">
     <meta itemprop="image" content="指定顯示圖片">
-    <meta property="og:title" content="index">
+    <meta property="og:title" content="抽獎機">
     <meta property="og:description" content="pageDesc">
     <meta property="og:type" content="article">
     <meta property="og:image" content="指定顯示圖片">
     <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
     <link rel="stylesheet" href="css/main.css">
-</head>
-<!--html body-->
-
-<body>
+  </head>
+  <!--html body-->
+  <body>
     <div class="l-wrap" id="app">
-        <!-- render nav view-->
-        <div class="l-main">
-            <section class="index">
-                <div class="select_Bar" v-show="stage==&quot;prepare&quot;">
-                    <select v-model="event_type" @change="award_id=null">
-                        <option label="人人有獎" value="regular">人人有獎</option>
-                        <option label="加碼抽" value="addition">加碼抽</option>
-                    </select>
-                    <select v-model="award_id" v-show="event_type==&quot;regular&quot;">
-                        <option v-for="item in select_options" :value="item.id" :label="item.title"></option>
-                    </select>
-                </div>
-                <div class="lottie_block" id="lottery-prepare" v-show="stage==&quot;prepare&quot;">
-                    <div class="shadow_button" @click="start_draw"></div>
-                </div>
-                <div class="lottie_block" id="lottery-start" v-show="stage==&quot;start&quot; || stage==&quot;result&quot;" :class="{fadeOut: stage==&quot;result&quot;}"></div>
-                <div class="result" v-show="stage==&quot;result&quot;">
-                    <div class="result_bg">
-                        <div class="award" :class="{start: stage==&quot;result&quot;}">{{ award_name }}</div>
-                        <div class="congratualtion">恭喜中獎：</div>
-                        <div class="lucky_user" v-for="(winner, index) in lucky_list" :style="{animationDelay: (0.4 * index) + &quot;s&quot;}" :class="{start: stage==&quot;result&quot;}">
-                            <div class="department">---<span class="department_clip">{{ winner.department }}-</span></div>
-                            <div class="name">{{ winner.name }}</div>
-                            <div class="nickname">({{ winner.nickname }})</div>
-                        </div>
-                        <button class="next_btn" @click="reset">NEXT</button>
-                    </div>
-                </div>
-                <div class="mask"></div>
-                <div class="skip_btn" v-show="stage==&quot;start&quot;" @click="skip_anime">>>>SKIP</div>
-            </section>
-            <!--render main view-->
-        </div>
+      <!-- render nav view-->
+      <div class="l-main">
+        <section class="index">
+          <div class="back_btn" v-show="stage==&quot;prepare&quot; &amp;&amp; lucky_list.length &gt; 0" @click="display_prev">BACK</div>
+          <div class="select_Bar" v-show="stage==&quot;prepare&quot;">
+            <select v-model="event_type" @change="handle_type_change" id="select_bar1">
+              <option label="人人有獎" value="regular">人人有獎</option>
+              <option label="加碼抽" value="addition">加碼抽</option>
+            </select><br>
+            <select v-model="award_id" v-show="event_type==&quot;regular&quot;" @change="handle_focus" id="select_bar2">
+              <option v-for="item in select_options" :value="item.id" :label="item.title"></option>
+            </select>
+          </div>
+          <div class="lottie_block" id="lottery-prepare" v-show="stage==&quot;prepare&quot;">
+            <div class="shadow_button" @click="start_draw"></div>
+          </div>
+          <div class="lottie_block" id="lottery-start" v-show="stage==&quot;start&quot; || stage==&quot;result&quot;" :class="{fadeOut: stage==&quot;result&quot;}"></div>
+          <div class="result" v-show="stage==&quot;result&quot;">
+            <div class="result_bg">
+              <div class="award" :class="{start: stage==&quot;result&quot;}">{{ award_name }}</div>
+              <div class="congratualtion">恭喜中獎：</div>
+              <div class="lucky_user" v-for="(winner, index) in lucky_list" :style="{animationDelay: (0.4 * index) + &quot;s&quot;}" :class="{start: stage==&quot;result&quot;}">
+                <div class="department">---<span class="department_clip">{{ winner.department }}-</span></div>
+                <div class="name">{{ winner.name }}</div>
+              </div>
+              <button class="next_btn" @click="reset">NEXT</button>
+            </div>
+          </div>
+          <div class="mask"></div>
+          <div class="skip_btn" v-show="stage==&quot;start&quot;" @click="skip_anime">>>>SKIP</div>
+        </section>
+        <!--render main view-->
+      </div>
+      <div class="loading_mask" :class="{active: is_ready}"></div>
     </div>
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1616644614897" data-mode="true" data-site="https://sp-develop.azurewebsites.net/api/"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1709019902406" data-mode="true" data-site="https://cmpnapi-go-testing.azurewebsites.net/api/"></script>
     <script type="text/javascript" src="js/api.js"></script>
     <script type="text/javascript" src="js/component/comingsoon.js"></script>
-    <script src="js/index.js?v=1616644614897"></script>
+    <script src="js/index.js?v=1709019902406"></script>
     <script type="text/javascript"></script>
-</body>
-
+  </body>
 </html>

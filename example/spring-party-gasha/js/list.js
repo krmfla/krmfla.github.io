@@ -1,0 +1,2 @@
+"use strict";var list_view=new Vue({el:"#app",data:{api_host:"http://52.220.49.115:8090",list_data:{}},methods:{get_list:function(){var a=this;axios.defaults.headers.common.Authorization="Basic c3ByaW5ndHJlZXNsb3R0ZXJ5MjAyMTAzMjY=",axios.post("".concat(this.api_host,"/getDrawResult")).then(function(t){t=t.data;t.message?alert(t.message):a.list_data=t.data}).catch(function(t){alert(t)})}},mounted:function(){var t=window.localStorage.getItem("api_host");t&&(this.api_host=t),this.get_list(),this.is_ready=!0}});
+//# sourceMappingURL=list.js.map
