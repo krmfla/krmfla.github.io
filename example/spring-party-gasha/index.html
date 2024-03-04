@@ -24,6 +24,10 @@
       <!-- render nav view-->
       <div class="l-main">
         <section class="index">
+          <div class="logo_btn" @click="show_setting=!show_setting"></div>
+          <div class="setting" v-show="show_setting">
+            <select v-model="voice_select" v-html="options"></select>
+          </div>
           <div class="back_btn" v-show="stage==&quot;prepare&quot; &amp;&amp; lucky_list.length &gt; 0" @click="display_prev">BACK</div>
           <div class="select_Bar" v-show="stage==&quot;prepare&quot;">
             <select v-model="event_type" @change="handle_type_change" id="select_bar1">
@@ -58,10 +62,10 @@
     </div>
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
-    <script type="text/javascript" id="appjs" src="js/app.js?v=1709019902406" data-mode="true" data-site="https://cmpnapi-go-testing.azurewebsites.net/api/"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1709510526716" data-mode="true" data-site="https://cmpnapi-go-testing.azurewebsites.net/api/"></script>
     <script type="text/javascript" src="js/api.js"></script>
     <script type="text/javascript" src="js/component/comingsoon.js"></script>
-    <script src="js/index.js?v=1709019902406"></script>
+    <script src="js/index.js?v=1709510526716"></script>
     <script type="text/javascript"></script>
   </body>
 </html>

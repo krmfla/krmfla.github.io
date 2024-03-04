@@ -384,6 +384,26 @@ a {
 .index {
   height: 100vh;
 }
+.index .logo_btn {
+  width: 320px;
+  height: 100px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  cursor: pointer;
+}
+.index .setting {
+  width: 600px;
+  height: 300px;
+  position: absolute;
+  top: 140px;
+  left: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+.index .setting select {
+  font-size: 16px;
+}
 .index .lottie_block {
   width: 50vw;
   height: 50vw;
