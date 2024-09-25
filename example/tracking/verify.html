@@ -92,7 +92,7 @@
     <h1>追蹤碼測試 v0.1</h1>
     <a href="https://www.spring-trees.com/" onclick="track()" target="_blank">TRACKING CODE TEST</a>
     <script>
-        function tracking() {
+        function track() {
             VponPixel("track", "submit_application");
             var onead_pixel = onead_pixel || [];
             window.onead_pixel.push({
@@ -101,15 +101,14 @@
             });
             taq("trackCustom", "e6Nn8YfmENvt", "Customer00001");
             cFTriggerEventCFcustom_CFapplycard_A();
-
-            function cFTriggerEventCFcustom_CFapplycard_A() {
-                clickforce_rtid("10114001");
-                cft("send", "event", {
-                    action: "CFcustom_CFapplycard_A",
-                    category: "custom",
-                    label: ""
-                });
-            }
+        }
+        function cFTriggerEventCFcustom_CFapplycard_A() {
+            clickforce_rtid("10114001");
+            cft("send", "event", {
+                action: "CFcustom_CFapplycard_A",
+                category: "custom",
+                label: ""
+            });
         }
     </script>
 </body>
