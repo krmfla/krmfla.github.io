@@ -70,11 +70,15 @@
   <script type="text/javascript">
     taq('track', 'e6Nn8YfmENvt', 'ViewContent');
   </script>
+</head>
+
+<body>
   <script src="https://cdn.holmesmind.com/js/rtid.js"></script>
   <script src="https://cdn.holmesmind.com/dmp/cft/triggerTracker.js"></script>
   <script async src="https://cdn.holmesmind.com/dmp/cft/tracker.js"></script>
   <script>
-    clickforce_rtid("10114001"); /* Website track (tracker.js) - B.I.DMP By ClickForce */
+    clickforce_rtid("10114001"); 
+    /* Website track (tracker.js) - B.I.DMP By ClickForce */
     window.cft = window.cft || function() {
       (cft.q = cft.q || []).push([].slice.call(arguments))
     };
@@ -85,15 +89,27 @@
     };
     clickForceDelayLoading();
   </script>
-
-</head>
-
-<body>
     <h1>追蹤碼測試 v0.1</h1>
     <a href="https://www.spring-trees.com/" onclick="track()" target="_blank">TRACKING CODE TEST</a>
     <script>
-        function track() {
+        function tracking() {
+            VponPixel("track", "submit_application");
+            var onead_pixel = onead_pixel || [];
+            window.onead_pixel.push({
+                type: "tracker",
+                value: { name: "Lead", content_name: "立即申辦鈕2410" }
+            });
+            taq("trackCustom", "e6Nn8YfmENvt", "Customer00001");
+            cFTriggerEventCFcustom_CFapplycard_A();
 
+            function cFTriggerEventCFcustom_CFapplycard_A() {
+                clickforce_rtid("10114001");
+                cft("send", "event", {
+                    action: "CFcustom_CFapplycard_A",
+                    category: "custom",
+                    label: ""
+                });
+            }
         }
     </script>
 </body>
