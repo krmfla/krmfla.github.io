@@ -30,7 +30,7 @@
     <button id='btn3'>取得個人資料</button>
     <button id='btn4'>取得授權碼</button>
     <button id='btn2'>訊息分享</button>
-    <button id='btn7'>圖文訊息分享</button>
+    <button id='btn72'>圖文訊息分享</button>
     <button id='btn8'>按鈕式訊息分享</button>
     <button id='btn9'>動畫+按鈕訊息分享</button>
     <button id='btn10'>getContext</button>
@@ -46,6 +46,7 @@
       var btn5 = document.getElementById('btn5');
       var btn6 = document.getElementById('btn6');
       var btn7 = document.getElementById('btn7');
+      var btn72 = document.getElementById('btn72');
       var btn8 = document.getElementById('btn8');
       var btn9 = document.getElementById('btn9');
       var btn10 = document.getElementById('btn10');
@@ -118,6 +119,27 @@
                     action: {
                         type: "uri",
                         uri: "https://line.me/R/ti/p/@nissan.tw"
+                    }
+                }
+            }
+          }]);
+      }
+        btn72.onclick = function() {
+          liff.shareTargetPicker([{
+            type: "flex",
+            altText: "我剛剛在《破財談心室》被AI吐槽到哭笑不得😂你也來試試，看你近期消費會被怎麼被吐槽！",
+            contents: {
+                type: "bubble",
+                size: "kilo",
+                hero: {
+                    type: "image",
+                    url: "https://krmfla.github.io/example/liff_test/huanan.png",
+                    size: "full",
+                    aspectRatio: "1:1",
+                    aspectMode: "cover",
+                    action: {
+                        type: "uri",
+                        uri: "https://line.me/R/ti/p/@huananbank"
                     }
                 }
             }
