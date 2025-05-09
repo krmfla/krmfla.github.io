@@ -38,6 +38,7 @@
     <button id='btn12'>send Image</button>
     <button id='btn13'>send Message</button>
     <button id='btn14'>send APNG</button>
+    <button id='btn15'>圖文分享</button>
     <script>
       var btn1 = document.getElementById('btn1');
       var btn2 = document.getElementById('btn2');
@@ -54,6 +55,7 @@
       var btn12 = document.getElementById('btn12');
       var btn13 = document.getElementById('btn13');
       var btn14 = document.getElementById('btn14');
+      var btn15 = document.getElementById('btn15');
       var result = document.getElementById('result');
         
       window.onerror = function(err, xhr, message) {
@@ -290,6 +292,33 @@
                     action: {
                         type: "uri",
                         uri: "https://line.me/R/ti/p/@nissan.tw"
+                    }
+                }
+            }
+          }]);
+      }
+      btn15.onclick = function() {
+          liff.shareTargetPicker([
+          {
+           type: "text",
+           text: "我剛剛在《破財談心室》被AI吐槽到哭笑不得😂你也來試試，看你近期消費會被怎麼被吐槽！"
+          },
+          {
+            type: "flex",
+            altText: "我剛剛在《破財談心室》被AI吐槽到哭笑不得😂你也來試試，看你近期消費會被怎麼被吐槽！",
+            contents: {
+                type: "bubble",
+                size: "mega",
+                hero: {
+                    type: "image",
+                    url: "https://krmfla.github.io/example/liff_test/LINE%E6%B4%BB%E5%8B%95%E5%88%86%E4%BA%AB%E5%9C%96.jpg",
+                    animated: true,
+                    size: "full",
+                    aspectRatio: "1:1",
+                    aspectMode: "cover",
+                    action: {
+                        type: "uri",
+                        uri: "https://liff.line.me/1645278921-kWRPP32q/?accountId=huananbank"
                     }
                 }
             }
