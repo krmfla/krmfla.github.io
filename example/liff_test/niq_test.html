@@ -46,6 +46,7 @@
           if (!liff.isLoggedIn()) {
             liff.login();
           } else {
+            // getProfile
             liff.getProfile().then((profile) => {
               console.log(profile);
               app.displayName = profile.displayName;
@@ -53,12 +54,20 @@
               app.statusMessage = profile.statusMessage;
               app.userId = profile.userId;
             })
+            // getFriendship
             liff.getFriendship().then((data) => {
               console.log(data);
               if (data.friendFlag) {
                 app.friendFlag = data.friendFlag;
               }
             });
+            // sendMessages
+            liff.sendMessages([
+              {
+                type: "text",
+                text: "資格查詢",
+              },
+            ]);
           };
         });
       },
