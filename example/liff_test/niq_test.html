@@ -3,18 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>NIQ TEST</title>
-  
-
 </head>
 <body>
-<div id="app"></div>
-  <script src='https://static.line-scdn.net/liff/edge/2/sdk.js'></script>
+<div id="app">
+  <p>displayName: {{ displayName }}</p>
+  <p>pictureUrl: {{ pictureUrl }}</p>
+  <p>statusMessage: {{ statusMessage }}</p>
+  <p>userId: {{ userId }}</p>
+  <p>friendFlag: {{ friendFlag }}</p>
+</div>
+<script src='https://static.line-scdn.net/liff/edge/2/sdk.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.8/vue.min.js'></script>
 <script>
   var app = new Vue({
     el: '#app',
     data: {
-      
+      displayName: '',
+      pictureUrl: '',
+      statusMessage: '',
+      userId: '',
+      friendFlag: '',
     },
     methods: {
       liff_init() {
@@ -26,7 +34,17 @@
           } else {
             liff.getProfile().then((profile) => {
               console.log(profile);
+              app.displayName = profile.displayName;
+              app.pictureUrl = profile.pictureUrl;
+              app.statusMessage = profile.statusMessage;
+              app.userId = profile.userId;
             })
+            liff.getFriendship().then((data) => {
+              console.log(data);
+              if (data.friendFlag) {
+                app.friendFlag = data.friendFlag;
+              }
+            });
           };
         });
       },
