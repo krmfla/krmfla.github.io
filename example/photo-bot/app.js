@@ -116,7 +116,7 @@ function randomCars() {
 
 // log function，將文字寫入本地 log 檔並累積
 function writeLog(message) {
-  const logPath = path.join(__dirname, '20250822.log');
+  const logPath = path.join(__dirname, '20250825.log');
   const timestamp = new Date();
   fs.appendFileSync(logPath, `[${timestamp}] ${message}\n`, 'utf8');
 }
@@ -142,7 +142,7 @@ app.get('/api/test', async (req, res) => {
         setTimeout(()=> {
           axios.get('http://localhost:3000/api/upload-photo');
         }, 5000);
-    }, 20000);
+    }, 19450);
     res.send('START');
 });
 
@@ -155,6 +155,7 @@ app.get('/api/transfer', async (req, res) => {
       cars: randomCars(),
       ...req.body
     };
+    data.email = Math.random() < 0.35 ? data.email : '';
     console.log(JSON.stringify(data));
     // 第三方 API URL
     const thirdPartyUrl = 'https://toyota-petai.api.webarfilter.com/uploadUserData';
