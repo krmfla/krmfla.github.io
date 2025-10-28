@@ -2,7 +2,7 @@ var linkData = {
 	"goJsfiddle": "https://krmfla.github.io/example/jsfiddle/",
 	"goWorldFamily": "https://www.worldfamily.com.tw/",
 	"goCollection": "https://q4u.worldfamily.com.tw/card2/all/all.html",
-	"goKidTest": "http://krmfla.byethost12.com/toys/index.html"
+	"goKidTest": "https://krmfla.github.io/example/toys/"
 };
 
 var linkDomain = {

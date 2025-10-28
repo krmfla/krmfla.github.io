@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>追蹤碼測試</title>
+    <style>
+        .result {
+            width: 100%;
+            word-break: break-all;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            min-width: 125px;
+            margin: 5px 10px 10px;
+            padding: 5px;
+        }
+        a {
+            margin: 10px 0;
+            display: block;
+        }
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1610746433106069');
+        fbq('init', '784210343675295');
+        fbq('track', 'PageView');
+        </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1610746433106069&ev=PageView&noscript=1"
+    /></noscript>    
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=784210343675295&ev=PageView&noscript=1"
+    /></noscript>
+    
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+  
+    <h1>追蹤碼測試 v0.1</h1>
+    <a href="https://www.spring-trees.com/" onclick="track()" target="_blank">TRACKING CODE TEST</a>
+    <script>
+        function track() {
+            fbq('track', 'UniApplicationSP');
+            fbq('track', 'ApplicationBTN');
+        }
+    </script>
+</body>
+</html>
