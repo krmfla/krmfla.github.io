@@ -48,7 +48,8 @@ body.dev {
     left: 0;
 }
 
-/* .card2 {
+/* 
+.card2 {
     padding-top: 32.568%;
     margin-right: 2%;
     margin-bottom: 2%;
@@ -62,7 +63,64 @@ body.dev {
     box-sizing: border-box;
     transition: all .6s;
     cursor: pointer;
-} */
+} 
+*/
+
+.c_default {
+    background-image: url('images/gplay.png');
+    background-repeat: repeat;
+    pointer-events: none;
+}
+
+.c_tangyuan {
+    background-image: url('images/tangyuan.png');
+}
+
+.c_redenvelope {
+    background-image: url('images/redenvelope.png');
+}
+
+.c_kosenpai {
+    background-image: url('images/kosenpai.png');
+}
+
+.c_grapeking53 {
+    background-image: url('images/grapeking53.png');
+}
+
+.c_ginger2022 {
+    background-image: url('images/ginger2022.png');
+}
+
+.c_prevention {
+    background-image: url('images/fraud-prevention.png');
+}
+
+.c_FinancialVentingRoom {
+    background-image: url('images/FinancialVentingRoom.png');
+}
+
+.c_essencedrinkCNY2023 {
+    background-image: url('images/essencedrinkCNY2023.png');
+}
+
+.c_ComebestCNY2022 {
+    background-image: url('images/ComebestCNY2022.png');
+}
+
+.c_CHAMONIX2025 {
+    background-image: url('images/CHAMONIX2025.png');
+}
+
+.c_carrefourEMOJI {
+    background-image: url('images/carrefourEMOJI.png');
+}
+
+.c_grapeking52 {
+    background-image: url('images/grapeking52.png');
+}
+
+
 
 .c_lovesea {
     background-image: url('images/chamonix_lovesea.png');
@@ -175,6 +233,12 @@ body.dev {
 .card:hover, .card2:hover {
     transform: scale(1.05, 1.05);
     box-shadow: 0 0 8px #cfca67;
+}
+
+.c_default:hover {
+    transform: scale(1, 1);
+    box-shadow: 0 0 0 none;
+
 }
 
 .lightbox {
