@@ -1,6 +1,6 @@
 body {
     background-color: #faf8c8;
-    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+    background-image: url("images/gplay.png");
 }
 
 body.dev {
@@ -63,6 +63,34 @@ body.dev {
     transition: all .6s;
     cursor: pointer;
 } */
+
+.c_lovesea {
+    background-image: url('images/chamonix_lovesea.png');
+}
+
+.c_cha_street {
+    background-image: url('images/0414_Cha_Street.jpg');
+}
+
+.c_mineshine2021newyear {
+    background-image: url('images/mineshine2021newyear.jpg');
+}
+
+.c_grapeking51th {
+    background-image: url('images/grapeking51th.jpg');
+}
+
+.c_cathay_caculate {
+    background-image: url('images/cathayInsurance_cover.png');
+}
+
+.c_2021CBCNY {
+    background-image: url('images/2021CBCNY.jpg');
+}
+
+.c_3kingdom {
+    background-image: url('images/2020CBtkm-cover.png');
+}
 
 .c_family_points {
     background-image: url('images/family_points.jpg');
