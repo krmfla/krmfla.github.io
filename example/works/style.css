@@ -25,12 +25,12 @@ body.dev {
     background-color: white;
     border-radius: 10px;
     float: left;
-    box-shadow: 0 0 3px #cfc847;
+    box-shadow: 0 0 3px rgba(165, 160, 68, 1);
     border: 3px solid white;
     background-size: 100%;
     background-position: center center;
     box-sizing: border-box;
-    transition: all .6s;
+    transition: all .4s;
     cursor: pointer;
     background-repeat: no-repeat;
     position: relative;
@@ -39,6 +39,10 @@ body.dev {
 .card2 {
     width: 48%;
 }
+
+.card:hover, .card2:hover {
+    transform: scale(1.05, 1.05);
+    box-shadow: 0 0 6px 6px rgba(165, 160, 68, .15);}
 
 .card a, .card .content_btn {
     width: 100%;
@@ -228,11 +232,6 @@ body.dev {
 
 .c_run {
     background-image: url('images/run.png');
-}
-
-.card:hover, .card2:hover {
-    transform: scale(1.05, 1.05);
-    box-shadow: 0 0 8px #cfca67;
 }
 
 .c_default:hover {
