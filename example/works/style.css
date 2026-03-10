@@ -1,5 +1,6 @@
 body {
-    background-color: #faf8c8;
+    /* background-color: #faf8c8; */
+    background-color: #043d5f;
     background-image: url("images/gplay.png");
 }
 
@@ -74,6 +75,10 @@ body.dev {
     background-image: url('images/gplay.png');
     background-repeat: repeat;
     pointer-events: none;
+}
+
+.c_carrefourdiyredenvelope {
+    background-image: url('images/carrefourdiyredenvelope.png');
 }
 
 .c_tangyuan {
